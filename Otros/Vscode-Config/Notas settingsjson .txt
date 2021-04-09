@@ -1,0 +1,63 @@
+Link configuracion vsCode
+  https://code.visualstudio.com/docs/getstarted/settings
+  https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
+
+Combinaciones
+  Ctrl + F2 -> Seleccionar ocurrencias
+
+
+Comandos vim
+  Sorround    ->  Modificar "" a '' -> cs"'
+  ctrlP       ->  Buscar con ctrl+p
+  easymotion  ->  <leader><leader>s (chart) 
+  CamelCaseMotion ->  
+      <leader><leader>b ocurrencias hacia arriba 
+      <leader><leader>e ocurrencias hacia abajo 
+
+Sorround-plugin de vim-vsCode
+
+  // Controls the font size in pixels.
+  "editor.fontSize": 14,
+
+  // Controls the font weight. Accepts "normal" and "bold" keywords or numbers between 1 and 1000.
+  "editor.fontWeight": "normal",
+
+  // Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.
+  "editor.formatOnPaste": false,
+
+    // Insert spaces when pressing `Tab`. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
+  "editor.insertSpaces": true,
+
+  // Controls whether the minimap is shown.
+  "editor.minimap.enabled": true,
+
+    // Limit the width of the minimap to render at most a certain number of columns.
+  "editor.minimap.maxColumn": 120,
+  
+     // The number of spaces a tab is equal to. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
+  "editor.tabSize": 4,
+
+  // Controls how lines should wrap.
+  //  - off: Lines will never wrap.
+  //  - on: Lines will wrap at the viewport width.
+  //  - wordWrapColumn: Lines will wrap at `editor.wordWrapColumn`.
+  //  - bounded: Lines will wrap at the minimum of viewport and `editor.wordWrapColumn`.
+  "editor.wordWrap": "off",
+
+  // Controls the wrapping column of the editor when `editor.wordWrap` is `wordWrapColumn` or `bounded`.
+  "editor.wordWrapColumn": 80,
+
+  // The default character set encoding to use when reading and writing files. This setting can also be configured per language.
+  "files.encoding": "utf8",
+
+  
+  // The default language mode that is assigned to new files. If configured to `${activeEditorLanguage}`, will use the language mode of the currently active text editor if any.
+  "files.defaultLanguage": "",
+
+    // Controls sorting order of files and folders in the explorer.
+  //  - default: Files and folders are sorted by their names, in alphabetical order. Folders are displayed before files.
+  //  - mixed: Files and folders are sorted by their names, in alphabetical order. Files are interwoven with folders.
+  //  - filesFirst: Files and folders are sorted by their names, in alphabetical order. Files are displayed before folders.
+  //  - type: Files and folders are sorted by their extensions, in alphabetical order. Folders are displayed before files.
+  //  - modified: Files and folders are sorted by last modified date, in descending order. Folders are displayed before files.
+  "explorer.sortOrder": "default",

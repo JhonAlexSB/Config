@@ -1,0 +1,32 @@
+1) Google Chorme -> package Controll sublime text 3 -> Abrir primer Resultado 
+2) copiar codigo pagina Instalacion simple
+3) Barra de navegacion -> View -> Show console -> Pegar codigo en consola
+
+
+install package -> Color picker			//	Paleta de colores "ctrl + C"
+install package -> seti_Ui 			//	Thema
+install package -> future funk - Color Scheme	//  	Color para la fuente
+install package -> color highlighter		// 	Resaltar color de exadecimal
+install package -> bracket highlighter		// 	Resaltar abre y cierre de etiquetas
+install package -> Auto file name		// 	Auto completar archivos 
+install package -> Advanced New File		// 	Ctrl + Alt + N
+
+install package -> Auto file name 		
+install package -> live reload 			// Actualizacion automatica de la pagina
+	1) en el html escribir live y seleccionar la primera opcion
+	2) Activar live reload desdes_ Barra de navegacion -> Preferences -> Package Settings -> LiveReload -> Plugins -> enable
+
+install package -> SublimeCodeIntel		// Auto Completador
+install package -> emmet
+
+
+Barra de navegacion -> Preferences -> key bindings - User -> Pegar Codigo
+
+[
+// Para Auto identar el codigo
+	{"keys": ["alt+shift+s"], "command": "reindent", "args": {"single_line": false}},
+
+// Para comentar Automaticamente
+	{ "keys": ["ctrl+shift+a"], "command": "toggle_comment", "args": { "block": false } },<
+  	{ "keys": ["ctrl+shift+a"], "command": "toggle_comment", "args": { "block": true } }
+]

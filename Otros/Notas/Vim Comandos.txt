@@ -1,0 +1,79 @@
+// ------------- // Explorar // ------------- // 
+Mover
+h  	Arriba
+j	Abajo
+h	Izquierda
+l	Derecha
+
+// ------------- // Navegar en el documento // ------------- //
+
+w		Al inicio  de la primera letra de la siguiente palabra
+e		Al final de la ultima letra de la siguiente palabra
+b		Lo mismo que w pero de la anterior palabra
+{num}+keyNav	Navegar por lineas
+f+{caracter}	Buscar letra en la misma linea
+0		Ubicar al comienzo de la linea
+$		Ubicar al final de linea
+*		Buscar la siguiente palabra en la que estoy ubicado
+%		Ir a apertura y cierre de parentesis
+gg		Ir hasta la primera linea
+G		Ir hasta la ultima linea
+52G		Ir hasta la linea 52 o cualquier otra linea
+Ctrl+f		Función similar a Avpag.
+Ctrl+b		Función similar a Repag. 
+#		Ir a la anterior concidencia donde se esta parado
+*		Ir a la siguiente coincidencia donde se esta parado
+bn		Cambiar al buffer siguiente
+bp		Cambiar al buffer posterior
+{}		Moverse entre lineas
+
+// ------------- // Editar documento // ------------- //
+
+
+i		Entrar en modo insertar
+I		Entrar en modo insertar desde el primer caracter de la linea 
+o 		Modo insertar y salto de linea
+O		Modo insertar y un salto de linea antes
+A		Modo insertar y ponerse en ultima linea
+x		Borrar caracter donde esta ubicado | Funciona como suprimir
+X		Borrar caracter donde esta ubicado | Funciona como delete
+r+{letra}	Reemplazar la letra en la que estoy por la oprimida
+dw		Corta desde donde estoy ubicado hasta la ultima linea
+dd		Cortar toda una linea
+D		Eliminar texto de una linea
+yy		Copiar toda una linea
+3yy		Copiar 3 lineas
+p		Pegar
+u 		Control+z 	| Deshacer ultimo cambio
+Ctrl+r		Control+Alt+z	| Rehacer ultimo cambio
+.		Repetir ultimo comando
+v		Modo visual para seleccionar
+V		Seleccionar toda la linea en la que se esta parado
+/{caracter}	Buscar palabra	| n Buscar proxima coincidencia | N Buscar anterior coincidencia
+:%s/que/con/	Reemplazar que a con en la linea donde estoy
+:%s/que/con/g	Reemplazar que a con en todo el documento
+<<		Desplazar indentado hacia la izquierda
+>>		Desplazar indentado hacia la derecha
+
+
+
+Numeros
+Ctrl + x		Incrementar numero 
+Ctrl + a		Decrementar numero
+	Se tiene que estar encima de un numero para que sirva
+
+
+Shift+,		Quitar un tap
+Shift+.		Hacer un tap
+// ------------- // Edicion // ------------- //
+
+// ------------- // Manejo de portapapeles // ------------- //
+"+gp	->	Pegar  archivos copiados fuera de vim
+:cold	->	Lista de viejos a nuevos
+:cnew	->	Lista de nuevos a viejos
+
+esc	Modo normal
+:q	Para salir en editor vim
+:q!	Para salir sin guardar cambios
+:w	Guardar cambios
+:wq	Guardar y salir

@@ -1,0 +1,19 @@
+### Interprete de comandos zsh
+## Ruta Archivo configuracion .zshrc
+
+ctrl + a | Ir al inicio
+ctrl + e | Ir al fin 
+alt + f  | Moverse entre palabras hacia <-
+alt + b  | Moverse entre palabras asia ->
+
+### zsh + plugins
+ctrl + f  | completar con sugerencias
+ctrl + r  | Lista el historial de comandos (ctrl + jk "moverse entre sugerencias")
+ctrl + t  | Buscar archivo con fzf
+esc + esc | Agregar o quitar sudo al comienzo del comando
+
+### Funciones o alias
+countdown $((1*60*60)) | Cuenta regresiva de 1 hora
+
+ctrl + u | Eliminar hasia atras
+ctrl + k | Eliminar todo desde donde se esta hacia adelante

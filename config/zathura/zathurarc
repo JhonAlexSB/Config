@@ -1,0 +1,21 @@
+# Configuracion visual
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
+
+# dark-color default
+set recolor
+set default-bg '#1d2021'
+set recolor-lightcolor '#282828'
+
+# Configuracion funcional
+set scroll-step 50
+
+map J zoom in
+map K zoom out
+map u scroll half-up
+map d scroll half-down
+map D toggle_page_mode
+
+# Evita errores abriendo urls
+set sandbox none 

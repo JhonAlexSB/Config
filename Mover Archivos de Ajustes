@@ -1,0 +1,5 @@
+Ejecutar una terminal dentro del directorio de este archivo
+y ejecutar lo siguiente
+
+cp -r Ajustes/config/.* ~/.config/ 
+cp -r Ajustes/raiz/.* ~/

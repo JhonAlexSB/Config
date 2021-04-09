@@ -1,0 +1,35 @@
+### Gestor de terminales
+## Ruta Archivo configuracion = .tmux.conf
+
+prefix = ctrl+a
+
+-Comandos
+prefix c     | Crear otra sesion
+prefix w     | Ver sesiones creadas
+prefix ,     | Renombrar sesion
+prefix #     | Ir al numero de la pestaña
+prefix "     | Dividir la pantalla horizontal
+prefix %     | Dividir la pantalla vertical
+prefix x     | Matar la pestaña en la que estoy
+prefix space | Cambiar horientacion vertical u horizontal
+prefix {     | Cambiar de lugar el contenido
+prefix }     | Cambiar de lugar el contenido
+prefix p     | Cambiar a ventana previa
+prefix n     | Cambiar a ventana siguiente
+
+prefix arrow     | Cambiar entre pesatañas
+prefix ctrl hold | Mover tamaño de pestaña
+prefix !         | Mandar la pestaña actual a otra ventana 
+
+prefix [     | Se parece al modo normal de vim (Es modo copia)
+prefix space | Entrar a modo seleccionar
+prefixw      | Copiar lineas seleccionadas
+prefix ]     | Pegar
+
+prefix s | Comando para buscar ( Primero se entra con ctrl+b [ ) && q para salir
+
+
+:tmux kill-session -t 1 | Eliminar sesion 1
+:join-pane -s 1 -t 2    | Unir ventanas como pestañas
+:swap-window -s 2 -t 1  | Cambiar de posicion las ventanas
+

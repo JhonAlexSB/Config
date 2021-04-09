@@ -1,0 +1,27 @@
+### Visualizador de fotos 
+## Ruta Archivo configuracion = /.config/feh/keys
+
+n     | next
+p     | prev
+z     | random
+d     | position and name
+e     | description
+q - x | quit
+
+scroll_right 
+scroll_left 
+scroll_up 
+scroll_down 
+
+f | Full size
+j | Mover imagen hacia abajo
+k | Mover imagen hacia arriba
+h | Mover imagen hacia izquierda
+l | Mover imagen hacia derecha
+
+
+Source modific
+https://bbs.archlinux.org/viewtopic.php?id=67569
+https://unix.stackexchange.com/questions/599699/feh-keys-configuration-not-working
+
+

@@ -1,0 +1,149 @@
+### Editor de archivos en terminal
+## Ruta Archivo configuracion = /.config/nvim/init.vim
+
+" ------------
+" ( Mapeo de teclas ) { Nvim }
+" ------------
+
+, : Tecla lider <Leader> 
+
+### Mover cursos en modo normal
+j | Abajo
+k | Arriba
+h | Izquierda
+l | Derecha
+
+### Ajustes mas usados
+jk  | Ingresar modo normal
+,w  | Guardar
+,q  | Cerrar pestaña
+,o  | Pestaña anterios
+,a  | Cerrar nvim
+,p  | Pestaña Siguiente
+,f  | set File type
+,,h | Actualizar pwd a la posicion del archivo
+
+### Termial
+Ctrl + t | Abrir y Cerrar
+lv       | Abrir Live reload
+
+### Bloque seleccionado 
+K | Mover hacia arriba
+J | Mover hacia abajo
+< | Mover hacia la izquierda
+> | Mover hacia la derecha
+
+### Moverse entre Archivos buffers
+Tap        & ,p | Siguiente Archivo
+Ctrl + Tap & ,o | Anterior Archivo
+
+### Dependencias
+git      = Plug
+markdown = MarkdownPreview
+grip     = MarkdownPreview (just online)
+xdotool  = MarkdownPreview
+node     = Coc
+
+###plugins
+
+
+" ------------
+" ( Mapeo de teclas ) { Ferm }
+" ------------
+" Link https://github.com/lambdalisue/fern.vim
+" ------------
+
+
+,m | Abrir
+
+u  | Para devolverse una carpeta
+n  | New file
+m  | Mover o renombrar archivo
+r  | Ruta de archivo
+t  | Borrar
+s  | Seleccionar
+
+
+" ------------
+" ( Mapeo de teclas ) { Easy-aling }
+" ------------
+" Link github.com/junegunn/vim-easy-align
+" ------------
+
+
+,ga | Acomodar varias lineas con un separador como =|
+
+
+" ------------
+" ( Mapeo de teclas ) { EasyMotion }
+" ------------
+" Link github.com/easymotion/vim-easymotion
+" ------------
+
+
+,s | Mas dos letras a las que se quiera ir
+,l | Buscar hacia la derecha
+,h | Buscar hacia la izquierda
+,k | Buscar hacia la arriba
+,j | Buscar hacia la abajo
+
+
+" ------------
+" ( Mapeo de teclas ) { Vim-tmux-navigator }
+" ------------
+" Link github.com/christoomey/vim-tmux-navigator
+" ------------
+
+
+ctrl + (hjkl) | Moverse entre ventanas
+
+
+" ------------
+" ( Mapeo de teclas ) { vim-surround }
+" ------------
+" Link github.com/tpope/vim-surround
+" ------------
+
+
+"hola mundo" -> 'hola mundo'
+cs"'
+
+
+" ------------
+" ( Mapeo de teclas ) { vim-gitgutter }
+" ------------
+" Link github.com/airblade/vim-gitgutter
+" ------------
+
+
+]h | 
+[h | 
+ha | 
+gu | 
+
+
+" ------------
+" ( Mapeo de teclas ) { nerdcommenter }
+" ------------
+" Link github.com/scrooloose/nerdcommenter
+" ------------
+
+,cc | Comentar
+,cu | Descomentar
+
+
+" ------------
+" ( Mapeo de teclas ) { Markdown-Preview }
+" ------------
+" Link github.com/JamshedVesuna/vim-markdown-preview
+" ------------
+
+
+Ctrl+m | Actualizar cambios
+
+" ------------
+" ( Mapeo de teclas ) { Nombre }
+" ------------
+" Link github.com/
+" ------------
+
