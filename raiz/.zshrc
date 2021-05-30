@@ -58,7 +58,7 @@ alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
-alias cat='bat'
+#alias cat='bat'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -74,8 +74,8 @@ function mkt(){
 
 # Extract nmap information
 function extractPorts(){
-	ports="$(cat $1 | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')"
-	ip_address="$(cat $1 | grep -oP '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' | sort -u | head -n 1)"
+	#ports="$(cat $1 | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')"
+	#ip_address="$(cat $1 | grep -oP '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' | sort -u | head -n 1)"
 	echo -e "\n[*] Extracting information...\n" > extractPorts.tmp
 	echo -e "\t[*] IP Address: $ip_address"  >> extractPorts.tmp
 	echo -e "\t[*] Open ports: $ports\n"  >> extractPorts.tmp
@@ -147,4 +147,6 @@ function countdown(){
 alias asdf='setxkbmap dvorak'
 
 #switch to us qwerty
-alias aoeu='setxkbmap es,es'
+alias aoeu='setxkbmap latam' 
+alias qwer='setxkbmap us, intl, with dead keys'
+#setxkbmap -layout us -variant intl 
