@@ -1,4 +1,4 @@
-set aaa_mode=album
+set aaa_mode=all
 set altformat_current= %F 
 set altformat_playlist= %f%= %d 
 set altformat_title=%f
@@ -57,6 +57,8 @@ set dsp.ao.wav_counter=1
 set dsp.ao.wav_dir=/home/jhonalex
 set dsp.jack.resampling_quality=2
 set dsp.jack.server_name=
+set dsp.roar.role=
+set dsp.roar.server=
 set follow=true
 set format_current= %a - %l -%3n. %t%= %y 
 set format_playlist= %-21%a %3n. %t%= %y %d %{?X!=0?%3X ?    }

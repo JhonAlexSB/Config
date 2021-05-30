@@ -57,7 +57,10 @@ bindsym $mod+q kill
 # focus the child container
 #bindsym $mod+d focus child
 
-bindsym $mod+d exec dmenu_run -i -fn "Cantarell-10" -nf '#ffb52a' -sb '#ffb52a' -sf '#222'
+
+
+bindsym $mod+d exec dmenu_run -p "apps" -l 15 -fn 'Cantarell-16'
+#bindsym $mod+d exec dmenu_run -i -fn "Cantarell-10" -nf '#ffb52a' -sb '#ffb52a' -sf '#222'
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
 
@@ -72,6 +75,7 @@ bindsym $mod+mod1+Left exec ~/.config/i3/display/sl_left.sh
 
 #bindsym $mod+mod1+l 
 #exec feh --bg-fill ~/.config/i3/wallpaper/pic1.png
+# exec feh --bg-fill ~/.config/i3/wallpaper/pic1.png /l --bg-fill ~/.config/i3/wallpaper/pic0.png /r
 
 # brillantor
 bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
@@ -94,6 +98,9 @@ bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
 bindsym $mod+ntilde focus right
+# keyboard us, intl
+bindsym $mod+semicolon focus right
+
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -106,6 +113,9 @@ bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+ntilde move right
+# keyboard us, intl
+bindsym $mod+Shift+semicolon move right
+
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -176,6 +186,11 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+#switch workspace
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -207,6 +222,8 @@ mode "resize" {
         bindsym k resize grow height 3 px or 3 ppt
         bindsym l resize shrink height 3 px or 3 ppt
         bindsym ntilde resize grow width 3 px or 3 ppt
+        # keyboard us, intl 
+        bindsym semicolon resize grow width 3 px or 3 ppt
 
         # same bindings, but for the arrow keys
         bindsym Right resize shrink width 3 px or 3 ppt
@@ -233,6 +250,8 @@ bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -R
 bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
 
+# toggle mute mic
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute "alsa_input.pci-0000_00_1f.3.analog-stereo" toggle && pkill -RTMIN+10 i3blocks
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -247,7 +266,8 @@ bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN
 bar {
   position top
     #i3bar_command i3bar -t
-    status_command i3blocks
+    status_command i3blocks 
+
 #separator_symbol ""
 #separator_symbol ""
 #separator_symbol ""
@@ -284,29 +304,38 @@ assign [class="google-chrome"] $ws2
 #exec setxkbmap es
 # ~/.config/compton.conf
 
-exec ~/.config/i3/display/screenlayout_vertical.sh
-
 #Configurar inmagen de fondo
 #exec feh --bg-fill ~/.config/i3/wallpaper/pic0.png
 #https://www.reddit.com/r/unixporn/comments/6c7nlx/question_how_to_assign_dual_monitor_wallpapers/
 #https://askubuntu.com/questions/390367/using-different-wallpapers-on-multiple-monitors-gnome-2-compiz
 
-# Imagen normal repetida
-exec feh --bg-fill ~/.config/i3/wallpaper/pic1.png /l --bg-fill ~/.config/i3/wallpaper/pic0.png /r
 
-#exec feh --bg-fill --randomize ~/.wallpaper/Ds/*
+# (Walpaper random)
+
+
+# auto start aplicaciones
+## /bin/bash
+#xrandr --output eDP-1 --scale 1.3x1.3
+#exec lxql-powermanagement &
 
 # Imagen normal extendida
 #feh --bg-scale --no-xinerama ~/.config/i3/wallpaper/UW/portal-Uwide.jpg
+#
+#
+#exec_always --no-startup-id killall back4.sh 
+#exec_always --no-startup-id $HOME/.config/i3/back4.sh auto Gif/bosque.gif
+exec_always --no-startup-id $HOME/.config/i3/wp.sh 
 
 exec compton --config ~/.config/compton/compton.conf
 
 exec --no-startup-id compton
 
 exec /usr/bin/compton --config ~.compton.conf~/.config/i3/config
+#exec ~/.config/i3blocks/sp --nagbar &
 #exec compton --backend glx --paint-on-overlay --vsync opengl-swc
 #opacity-rule = ["85:class_g = 'Termite'"];
 
+#exec xsetroot -cursor_name left_ptr
 bindsym $mod+Escape exec "i3lock; sudo hibernate"
 
 #bindsym $mod+Delete exec i3-exit
@@ -314,7 +343,7 @@ bindsym $mod+Escape exec "i3lock; sudo hibernate"
 
 # https://s4vitar.github.io/bspwm-configuration-files/#
 # https://github.com/vivien/i3blocks-contrib
-#
+# https://github.com/GerrySoft/linux-config/tree/master/i3
 
 
 # zshrc

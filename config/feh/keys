@@ -4,3 +4,5 @@ scroll_left Left h
 scroll_right Right l 
 zoom_in i
 zoom_out o
+
+close u
