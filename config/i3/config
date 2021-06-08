@@ -221,7 +221,7 @@ mode "resize" {
         bindsym j resize shrink width 3 px or 3 ppt
         bindsym k resize grow height 3 px or 3 ppt
         bindsym l resize shrink height 3 px or 3 ppt
-        bindsym ntilde resize grow width 3 px or 3 ppt
+        bindsym ntilde resize grow width 3 px or 3 ppt 
         # keyboard us, intl 
         bindsym semicolon resize grow width 3 px or 3 ppt
 
@@ -344,6 +344,13 @@ bindsym $mod+Escape exec "i3lock; sudo hibernate"
 # https://s4vitar.github.io/bspwm-configuration-files/#
 # https://github.com/vivien/i3blocks-contrib
 # https://github.com/GerrySoft/linux-config/tree/master/i3
+
+# - autorandr
+# https://www.reddit.com/r/i3wm/comments/nnhtfx/efficiently_switch_between_single_monitor/gzusf98/
+# - colorscheme
+# https://thomashunter.name/i3-configurator/
+# - Terminal piway y papirus-folders
+# https://www.youtube.com/watch?v=d3S0nwrk38M
 
 
 # zshrc
