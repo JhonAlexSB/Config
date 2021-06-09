@@ -1,5 +1,5 @@
 ### Gestor de ventanas
-## Ruta Archivo configuracion = /.config/i3/config
+## Ruta Archivo configuracion = ~/.config/i3/config
 
 mod = super o windows || Alt
 

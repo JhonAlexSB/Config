@@ -1,5 +1,5 @@
 ### Lector de archivos pdf epub en terminal
-## Ruta Archivo configuracion = /.config/zathura/zathurarc
+## Ruta Archivo configuracion = ~/.config/zathura/zathurarc
 
 ----Atajos
 =          | Volver a la vista normal

@@ -1,5 +1,5 @@
 ### Reproductor de video
-## Ruta Archivo configuracion = /.config/vlc/vlcrc
+## Ruta Archivo configuracion = ~/.config/vlc/vlcrc
 
 j | Bajar volumen
 k | Subir volumen

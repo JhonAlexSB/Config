@@ -1,5 +1,5 @@
 ### Gestor de terminales
-## Ruta Archivo configuracion = .tmux.conf
+## Ruta Archivo configuracion = ~/.tmux.conf
 
 prefix = ctrl+a
 

@@ -1,5 +1,5 @@
 ### Reproductor de video en terminal
-## Ruta Archivo configuracion = /.config/mpv/input.conf
+## Ruta Archivo configuracion = ~/.config/mpv/input.conf
 
 ## Atajos por defecto
 
@@ -25,6 +25,16 @@ n | Siquiente capitulo
 p | Anterior capitulo
 
 q ó u | Quitar reproduccion
+y | Definir comienzo y final de loop && limpiar del loop
+
+z | sub delay -
+x | sub delay +
+
+ctrl - | audio delay -
+ctrl + | audio delay +
+
+A | Cambiar aspecto de video entre "16:9" "4:3" "2.35:1" "-1" 
+
 
 ## Fuentes 
 
