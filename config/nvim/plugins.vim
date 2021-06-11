@@ -15,13 +15,16 @@
 
   "Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'} 
 
-  Plug 'airblade/vim-gitgutter'
+  "Plug 'airblade/vim-gitgutter'
   Plug 'junegunn/vim-easy-align'
 
 "Plug 'Shougo/vimfiler.vim'
 "Plug 'Shougo/unite.vim'
 
+"Plug 'evprkr/galaxian-vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
+
+"Plug 'wfxr/minimap.vim'
 
 " Fern
 Plug 'antoinemadec/FixCursorHold.nvim'
@@ -29,7 +32,7 @@ Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/glyph-palette.vim' 
-"Plug 'lambdalisue/fern-git-status.vim'
+Plug 'lambdalisue/fern-git-status.vim'
 Plug 'lambdalisue/fern-bookmark.vim'
 
 " Tab lightline
