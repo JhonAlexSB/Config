@@ -24,7 +24,8 @@ nmap <leader>f :set filetype=
 ":'<,'>
 vmap <leader>i :''norm 
 nmap <leader><leader>h :cd %:h<CR> 
-nmap <leader>so :so ~/.config/nvim/init.vim<CR>
+nmap <leader>so :so%<CR>
+"nmap <leader>so :so ~/.config/nvim/init.vim<CR>
 nmap <leader>e :e ~/.config/nvim/init.vim<CR>
 nmap <leader>ds :Dashboard<CR>
 

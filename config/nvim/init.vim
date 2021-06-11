@@ -1,5 +1,4 @@
 "set rtp +=~/.config/nvim
-tnoremap lv live-server --host=127.0.0.1 --port=8080 --entry-file=index.html
 so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/maps.vim
 so ~/.config/nvim/config.vim
@@ -40,10 +39,13 @@ so ~/.config/nvim/coc.vim
 " 'https://github.com/romgrk/barbar.nvim'
 " 'https://github.com/Shougo/vimfiler.vim'
 " 'https://github.com/Shougo/unite.vim'
-"
+" 'https://github.com/wfxr/minimap.vim'
+" 'https://github.com/KabbAmine/vCoolor.vim'
 "
 "
 "
 "
 "Nymphomaniac
  
+" Fuentes de funciones agregadas
+" https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim
