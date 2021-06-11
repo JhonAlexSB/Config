@@ -477,10 +477,31 @@ let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx,*.php,*.css'
 		\ 'wxss': 'css',
 		\ }
 
-let g:coc_global_extensions = [ 'coc-snippets', 'coc-emmet', 'coc-tsserver', 'coc-phpls', 'coc-terminal', 'coc-prettier', 'coc-discord'] 
+let g:coc_global_extensions = [ 'coc-snippets', 'coc-emmet', 'coc-tsserver', 'coc-phpls', 'coc-prettier', 'coc-discord', 'coc-git'] 
 
 " g:clojure_fuzzy_indent
 "let g:fzf_buffers_jump = 0
+
+
+" ------------
+" ( Configuracion ) { Coc-git }
+" ------------
+autocmd User CocGitStatusChange {command}
+" navigate chunks of current buffer
+nmap [g <Plug>(coc-git-prevchunk)
+nmap ]g <Plug>(coc-git-nextchunk)
+" navigate conflicts of current buffer
+nmap [c <Plug>(coc-git-prevconflict)
+nmap ]c <Plug>(coc-git-nextconflict)
+" show chunk diff at current position
+nmap gs <Plug>(coc-git-chunkinfo)
+" show commit contains current position
+nmap gc <Plug>(coc-git-commit)
+" create text object for git chunks
+omap ig <Plug>(coc-git-chunk-inner)
+xmap ig <Plug>(coc-git-chunk-inner)
+omap ag <Plug>(coc-git-chunk-outer)
+xmap ag <Plug>(coc-git-chunk-outer)
 
 " ------------
 " ( Configuracion ) { Terminal }
@@ -493,6 +514,7 @@ let g:coc_global_extensions = [ 'coc-snippets', 'coc-emmet', 'coc-tsserver', 'co
 "tnoremap lv browser-sync start --server --index ".html" --files "css/*.css" "*.html" "*.js"
 "server": "live-server --host=127.0.0.1 --port=8080 --entry-file=index.html" then npm run server
 tnoremap lv live-server --host=127.0.0.1 --port=8080 --entry-file=index.html
+tnoremap zz <C-\><C-N>
 
 " ------------
 " ( Configuracion ) { ToggleTerminal }

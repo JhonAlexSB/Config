@@ -6,6 +6,9 @@
 " Helps force plug-ins to load correctly when it is turned back on below.
  filetype off
 
+" when file is modified by other editor
+au FocusGained,BufEnter * :checktime
+
 set cursorline
 " Uncomment below to set the max textwidth. Use a value corresponding to the width of your screen.
 set formatoptions=tcqrn1
@@ -142,7 +145,8 @@ augroup END
 
 
 
-set statusline=%1*\ %=\ row:%l/%L\ (%03p%%)
+set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
+set statusline+=%1*\ %=\ row:%l/%L\ (%03p%%)
 "set statusline=%=\ row:%l/%L\ (%03p%%)
 
 
