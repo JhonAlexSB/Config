@@ -9,7 +9,9 @@ Comando puertos
 sudo /etc/init.d/apache2 stop; sudo /etc/init.d/mysql stop; sudo /etc/init.d/cups stop
 sudo /etc/init.d/apache2 start; sudo /etc/init.d/mysql start;
 
-php -S localhost:4000
+
+
+php -s localhost:4000
 
 sudo ifconfig
 
