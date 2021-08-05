@@ -59,8 +59,8 @@ bindsym $mod+q kill
 
 
 
-bindsym $mod+d exec dmenu_run -p "apps" -l 15 -fn 'Cantarell-16'
-#bindsym $mod+d exec dmenu_run -i -fn "Cantarell-10" -nf '#ffb52a' -sb '#ffb52a' -sf '#222'
+#bindsym $mod+d exec dmenu_run -p "apps" -l 15 -fn 'Cantarell-16'
+bindsym $mod+d exec dmenu_run -i -fn "Cantarell-10" -nf '#ffb52a' -sb '#ffb52a' -sf '#222'
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
 
@@ -84,6 +84,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +2%
 # captura
 #bindsym Print exec spectacle
 bindsym Print exec gnome-screenshot -i
+bindsym $mod+Print exec gnome-screenshot
 
 set $bg "#444477"
 
@@ -187,9 +188,11 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 #switch workspace
-bindsym $mod+Tab workspace next
-bindsym $mod+Shift+Tab workspace prev
+#bindsym $mod+Tab workspace next
+#bindsym $mod+Shift+Tab workspace prev
 
+bindsym $mod+x workspace next
+bindsym $mod+z workspace prev
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -309,6 +312,22 @@ assign [class="google-chrome"] $ws2
 #https://www.reddit.com/r/unixporn/comments/6c7nlx/question_how_to_assign_dual_monitor_wallpapers/
 #https://askubuntu.com/questions/390367/using-different-wallpapers-on-multiple-monitors-gnome-2-compiz
 
+#Cmus controls 
+# https://apple.stackexchange.com/questions/143578/system-hotkey-to-execute-cmus-remote 
+# https://linux.die.net/man/1/cmus-remote
+# https://www.autohotkey.com/docs/KeyList.htm
+# https://excelnotes.com/names-of-the-keyboard-symbols/
+# https://raw.githubusercontent.com/qlyoung/armory-keyboard/master/layouts/keyboard-layout.png
+# https://www.reddit.com/r/i3wm/comments/okp1y2/keycode_vs_keysym/
+# https://www.reddit.com/r/i3wm/comments/okp1y2/keycode_vs_keysym/h5982af/
+bindsym $mod+n exec cmus-remote --prev
+bindsym $mod+m exec cmus-remote --pause
+bindsym $mod+comma exec cmus-remote --next 
+#xev para ver keycode
+bindcode $mod+34 exec cmus-remote --volume +5%
+bindcode $mod+35 exec cmus-remote --volume -5%
+
+#bindsym n or bindcode 57 exec foo
 
 # (Walpaper random)
 
@@ -336,7 +355,10 @@ exec /usr/bin/compton --config ~.compton.conf~/.config/i3/config
 #opacity-rule = ["85:class_g = 'Termite'"];
 
 #exec xsetroot -cursor_name left_ptr
-bindsym $mod+Escape exec "i3lock; sudo hibernate"
+bindsym $mod+Escape exec "i3lock-fancy; sudo hibernate"
+
+#Don't change focus with mouse
+focus_follows_mouse no
 
 #bindsym $mod+Delete exec i3-exit
 #for_window [class="I3-exit"] floating enable border normal

@@ -6,3 +6,5 @@ zoom_in i
 zoom_out o
 
 close u
+toggle_pause m 
+toggle_fixed_geometry F
