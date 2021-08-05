@@ -1,4 +1,5 @@
 "set rtp +=~/.config/nvim
+"set rtp+=~/.config/tabnine-vim
 so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/maps.vim
 so ~/.config/nvim/config.vim
@@ -41,11 +42,15 @@ so ~/.config/nvim/coc.vim
 " 'https://github.com/Shougo/unite.vim'
 " 'https://github.com/wfxr/minimap.vim'
 " 'https://github.com/KabbAmine/vCoolor.vim'
+" 'https://github.com/vimlab/mdown.vim'
+" 'github.com/plasticboy/vim-markdown'
 "
 "
 "
 "
 "Nymphomaniac
  
+" https://www.chrisatmachine.com/Neovim/20-live-server/
+
 " Fuentes de funciones agregadas
 " https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim

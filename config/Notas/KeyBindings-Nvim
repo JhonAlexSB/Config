@@ -32,6 +32,7 @@ K | Mover hacia arriba
 J | Mover hacia abajo
 < | Mover hacia la izquierda
 > | Mover hacia la derecha
+f | Ordenar alfabetica o numeralmente
 
 ### Moverse entre Archivos buffers
 Tap        & ,p | Siguiente Archivo

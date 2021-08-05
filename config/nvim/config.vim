@@ -12,7 +12,6 @@ au FocusGained,BufEnter * :checktime
 set cursorline
 " Uncomment below to set the max textwidth. Use a value corresponding to the width of your screen.
 set formatoptions=tcqrn1
-set softtabstop=2
 set noshiftround
 
 set backspace=indent,eol,start " Fixes common blackspace problems
@@ -44,8 +43,7 @@ set smartcase
 set matchpairs+=<:>
 
 " HTML, JSX
-let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx'
-
+let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx' 
 set nocompatible " No ser compatible con vi
 set number " Mostra numeros en la parte izquierda
 set mouse=a " Interactuar con el mouse dentro de vim
@@ -57,7 +55,9 @@ set ruler " Mostra numeros de ubicacion
 set encoding=utf-8 " Codificacion de arhivos
 set showmatch " Resalta la apretura y cierre de parentesis y semejantes
 set tabstop=2 " Taps con dos espacios " set sw=2
+set softtabstop=2
 set shiftwidth=2 " Espaciado automatico despues de enter en {}()[]
+
 set textwidth=80 " Ancho del margen del documento
 "set wrap "  Ancho del documento igual a la ventana
 set relativenumber " Numeros relativos en la parte izquierda
@@ -145,8 +145,44 @@ augroup END
 
 
 
+
+let ctrlv = "\<C-v>"
+set statusline+=%#QuickFixLine#%{(mode()==ctrlv)?'\ \ VISUAL\ BLOCK\ ':''}
+set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
+set statusline+=%#PmenuSel#%{(mode()=='i')?'\ \ INSERT\ ':''}
+set statusline+=%#DiffDelete#%{(mode()=='R')?'\ \ REPLACE\ ':''}
+set statusline+=%#Search#%{(mode()=='v')?'\ \ VISUAL\ ':''}
+set statusline+=%#QuickFixLine#%{(mode()=='t')?'\ \ TERMINAL\ ':''}
+set statusline+=%#QuickFixLine#%{(mode()=='c')?'\ \ COMMAND\ ':''}
+
+set statusline+=%#FoldColumn#
+set statusline+=\ \ %f\ %m
+
+set statusline+=%=" Right side settings
+set statusline+=%{StatuslineGit()} " git branch
+
+" info file
+set statusline+=\ %#PmenuThumb#
+set statusline+=\ %p%%
+set statusline+=\ \ Ξ
+set statusline+=\ %l/%L
+set statusline+=\ ㏑
+set statusline+=\ %c
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding} 
+set statusline+=\ \  
+
+
 set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
-set statusline+=%1*\ %=\ row:%l/%L\ (%03p%%)
+
+" Return branch name
+function! StatuslineGit()
+  let l:branchname = get(b:, 'git_branch', '') 
+  return strlen(l:branchname) > 0?'⎇  '.l:branchname:''
+endfunction
+
+"Linea comentada ---
+"set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
+"set statusline+=%1*\ %=\ row:%l/%L\ (%03p%%)
 "set statusline=%=\ row:%l/%L\ (%03p%%)
 
 

@@ -513,7 +513,7 @@ xmap ag <Plug>(coc-git-chunk-outer)
 
 "tnoremap lv browser-sync start --server --index ".html" --files "css/*.css" "*.html" "*.js"
 "server": "live-server --host=127.0.0.1 --port=8080 --entry-file=index.html" then npm run server
-tnoremap lv live-server --host=127.0.0.1 --port=8080 --entry-file=index.html
+tnoremap ;; live-server --host=127.0.0.1 --port=8080 --entry-file=index.html
 tnoremap zz <C-\><C-N>
 
 " ------------

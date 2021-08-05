@@ -46,6 +46,12 @@ xnoremap J :move '>+1<CR>gv-gv
 vnoremap < <gv
 vnoremap > >gv
 
+" Sort words and numbers
+" Ordenar Palabras y numeros
+" https://stackoverflow.com/questions/1355004/how-to-sort-numeric-and-literal-columns-in-vim#1355022 
+
+vnoremap f !sort -n -k 2<CR>
+
 " Folding
 "nmap <silent>U za<CR> 
 "nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
