@@ -20,18 +20,7 @@ markup=pango
 #border_right=0
 color=#eeeeee
 
-#[apt-upgrades]
-#command=$/home/jhonalex/i3blocks/apt-upgrades
-#signal=1
-##interval=once
-#interval=3600
-##QUIET=true
-#label= 
-#markup=pango 
-##BASE_COLOR=#5fff5f
-##UPDATE_COLOR=#FFFF85
-##AUR=true
-#signal=3
+
 
 #[battery]
 #command=~/.config/i3blocks/batt.py
@@ -73,6 +62,12 @@ signal=10
 #MIXER=[determined automatically]
 #SCONTROL=[determined automatically]
 #NATURAL_MAPPING=0
+
+# Guess the weather hourly
+[weather]
+command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
+interval=1800
+color=#A4C2F4
 
 [bandwidth3]
 command=~/.config/i3blocks/bandwidth3
@@ -129,7 +124,7 @@ align=right
 [time]
 #command=date '+%Y %H:%M:%S'
 command=date '+%H:%M:%S'
-interval=5
+interval=10
 
 
 [monitors]
@@ -150,3 +145,12 @@ interval=once
 #FONT_SIZE=11
 #CLOSE_TO_BOUNDARY_BUFFER=20
 
+[click]
+full_text=📂
+#label=📂
+command=nemo
+markup=pango
+
+# https://openweathermap.org/weather-conditions
+# https://github.com/vivien/i3blocks
+# 
