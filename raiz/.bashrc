@@ -140,4 +140,5 @@ function countdown(){
 alias asdf='setxkbmap dvorak'
 
 #switch to us qwerty
-alias aoeu='setxkbmap es,es'
+alias aoeu='setxkbmap es,es' 
+alias onivi='sh ~/oni2/_release/Onivim2.AppDir/AppRun'

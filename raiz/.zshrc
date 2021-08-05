@@ -1,5 +1,5 @@
 # Fix the Java Problem
-export _JAVA_AWT_WM_NONREPARENTING=1
+#export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Enable Powerlevel10k instant prompt. Should stay at the top of ~/.zshrc.
 #if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -15,7 +15,7 @@ prompt adam1
 setopt histignorealldups sharehistory
 
 # Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
+#bindkey -e
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -50,7 +50,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # Manual configuration
 
-PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+#PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 
 # Manual aliases
 alias ll='lsd -lh --group-dirs=first'
@@ -69,20 +69,20 @@ source /usr/share/zsh-sudo/sudo.plugin.zsh
 
 # Functions
 function mkt(){
-	mkdir {nmap,content,exploits,scripts}
+  mkdir {nmap,content,exploits,scripts}
 }
 
 # Extract nmap information
-function extractPorts(){
-	#ports="$(cat $1 | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')"
-	#ip_address="$(cat $1 | grep -oP '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' | sort -u | head -n 1)"
-	echo -e "\n[*] Extracting information...\n" > extractPorts.tmp
-	echo -e "\t[*] IP Address: $ip_address"  >> extractPorts.tmp
-	echo -e "\t[*] Open ports: $ports\n"  >> extractPorts.tmp
-	echo $ports | tr -d '\n' | xclip -sel clip
-	echo -e "[*] Ports copied to clipboard\n"  >> extractPorts.tmp
-	cat extractPorts.tmp; rm extractPorts.tmp
-}
+#function extractPorts(){
+	##ports="$(cat $1 | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')"
+	##ip_address="$(cat $1 | grep -oP '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' | sort -u | head -n 1)"
+	#echo -e "\n[*] Extracting information...\n" > extractPorts.tmp
+	#echo -e "\t[*] IP Address: $ip_address"  >> extractPorts.tmp
+	#echo -e "\t[*] Open ports: $ports\n"  >> extractPorts.tmp
+	#echo $ports | tr -d '\n' | xclip -sel clip
+	#echo -e "[*] Ports copied to clipboard\n"  >> extractPorts.tmp
+	#cat extractPorts.tmp; rm extractPorts.tmp
+#}
 
 # Set 'man' colors
 function man() {
@@ -142,7 +142,12 @@ function countdown(){
    notify-send "Hola" "Cuenta regresiva terminada" 
 }
 
+#https://es.stackoverflow.com/questions/25890/c%c3%b3mo-guardar-una-salida-de-comando-bash-en-variable#26954
+function lv(){ 
+  live-server --host=127.0.0.1 --port=8080 --entry-file=pwd${1}.html;
+}
 
+alias lvi='live-server --host=127.0.0.1 --port=8080 --entry-file=index.html'
 #switch to dvorak
 alias asdf='setxkbmap dvorak'
 
@@ -150,3 +155,11 @@ alias asdf='setxkbmap dvorak'
 alias aoeu='setxkbmap latam' 
 alias qwer='setxkbmap us, intl, with dead keys'
 #setxkbmap -layout us -variant intl 
+alias onivi='sh ~/oni2/_release/Onivim2.AppDir/AppRun'
+alias minecraft='java -jar ~/Descargas/TLauncher-2.8/TLauncher-2.8.jar'
+
+alias curls='curl -Ss' 
+alias pfetch='sh ~/.config/pfetch/pfetch'
+
+#sh ~/pfetch/pfetch
+#cowsay Tu puedes
