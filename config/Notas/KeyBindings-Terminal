@@ -23,6 +23,8 @@ ctrl + h | Es parecido al backspace o delete
 ctrl + j | Enter
 ctrl + i | Tap
 
+ctrl + shift + v | Pegar
+ctrl + shift + c | Copiar 
 
 ### zsh + plugins
 ctrl + f  | completar con sugerencias
@@ -35,3 +37,19 @@ countdown $((1*60*60)) | Cuenta regresiva de 1 hora
 
 ctrl + u | Eliminar hasia atras
 ctrl + k | Eliminar todo desde donde se esta hacia adelante
+
+### st terminal 
+## Source | https://www.youtube.com/watch?v=uqLcvKYl-Ms 
+## Source | https://github.com/lukesmithxyz/st 
+
+alt + j | scroll abajo
+alt + k | scroll arriba
+alt + shitt + j | Bajar tamaño de letra
+alt + shitt + k | Subir tamaño de letra
+
+alt + v | Pegar 
+alt + c | Copiar 
+
+alt + l | Lista de links y Al dar enter 'Abre el link en el navegador'
+alt + y | Lista de links y al dar enter 'Copia el link'
+
