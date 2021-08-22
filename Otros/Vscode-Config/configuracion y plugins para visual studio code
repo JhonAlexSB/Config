@@ -24,6 +24,25 @@
 	Ctrl + p
 
 
+ctrl + shift + p | Abrir busqueda avanzada
+ctrl + v         | pegar y dar enter con cualquier link del marketplace para instalar
+
+https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
+https://marketplace.visualstudio.com/items?itemName=fayras.simple-new-file
+https://marketplace.visualstudio.com/items?itemName=s-nlf-fh.glassit
+https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
+https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap
+https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+
+ext install ritwickdey.LiveServer
+ext install vscodevim.vim
+ext install fayras.simple-new-file
+ext install s-nlf-fh.glassit
+ext install PKief.material-icon-theme
+ext install bradgashler.htmltagwrap
+ext install esbenp.prettier-vscode
+
 
 *minify
 *svg viewer

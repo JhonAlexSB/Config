@@ -1,10 +1,6 @@
-https://www.youtube.com/watch?v=1mt2f3NXR2k
+// https://www.youtube.com/watch?v=1mt2f3NXR2k
 //    "update.mode": "none"
 {
-  // https://drive.google.com/file/d/1DpMdDQtQugdfOauJNg5_-oeBghv7XWuV/view
-  // https://code.visualstudio.com/docs/getstarted/settings
-  // https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/KeyboardReferenceSheet.png
-  "workbench.colorTheme": "Tomorrow Night Blue",
   "workbench.iconTheme": "material-icon-theme",
   "editor.wordWrap": "on",
   //  breadcrumbs.focusNextWithPicker 
@@ -19,7 +15,7 @@ https://www.youtube.com/watch?v=1mt2f3NXR2k
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "window.zoomLevel": -1,
-  "vim.sneak": true,
+  // "vim.sneak": true,
   "vim.easymotion": true,
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
@@ -48,6 +44,11 @@ https://www.youtube.com/watch?v=1mt2f3NXR2k
     {
       "before": [ "<leader>", "q" ],
       "commands": [ ":q" ]
+    },
+// Cerrar archivo sin guardar
+    {
+      "before": [ "<leader><leader>", "q" ],
+      "commands": [ ":q!" ]
     },
 // Splitear pantalla y archivo en focus posicionarlo a la derecha
     {
@@ -89,7 +90,11 @@ https://www.youtube.com/watch?v=1mt2f3NXR2k
     // Usar el explorador de archivos
     {
       "before": [ "<leader>", "f" ],
-      "commands": [ "workbench.explorer.fileView.focus" ]
+      "commands": [ "workbench.explorer.fileView.focus" ],
+                                     "when": "inFilesPicker && inQuickOpen"
+
+      // "commands": [ "workbench.action.quickopennavigatepreviousinfilepicker" ],
+      //                                "when": "inFilesPicker && inQuickOpen"
     },
 // Ir al comienzo de la linea
     {
@@ -116,12 +121,26 @@ https://www.youtube.com/watch?v=1mt2f3NXR2k
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false
-  }
+  },
+  "glassit.alpha": 220,
+  "terminal.integrated.fontFamily": "Courier New",
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.lineHeight": 1,
+  "terminal.integrated.rendererType": "dom",
+  "terminal.explorerKind": "external",
+  "terminal.external.linuxExec": "st"
+
 }
 // workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup
 // workbench.action.quickOpenNavigateNextInEditorPicker", "when": "inEditorsPicker && inQuickOpen" }
 
 /*
+https://www.alphr.com/vs-code-how-to-change-font/
+
+
+"command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+                                     "when": "inFilesPicker && inQuickOpen"
+workbench.view.explorer
 
 workbench.action.focusRightGroup
 workbench.action.focusLeftGroup
@@ -134,11 +153,13 @@ ctrl+shift+c | Abrir terminal en otra pestaña
 ctrl+/       | Comentar bloques codigo
 
 Shorcuts VimCode
-leader-leader s   | Buscar coincidencia
-leader-leader (j) | Buscar coincidencia
-leader-leader     | Buscar coincidencia
+leader-leader s 'key'  | Buscar coincidencia
+leader-leader (j k l h)| Buscar coincidencia
 
-leader o | Buscar entre archivos aviertos
+leader p | Buscar entre archivos abiertos "Arriba y Abajo con  'k j' "
+leader i | Moverse al anterior archivo
+leader o | Moverse al siguiente archivo
+
 leader l | Abrir un archivo en split
 leader h | Cerrar un archivo en split
 leader w | Guardar archivo
