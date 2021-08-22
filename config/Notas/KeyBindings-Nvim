@@ -1,5 +1,5 @@
 ### Editor de archivos en terminal
-## Ruta Archivo configuracion = /.config/nvim/init.vim
+## Ruta Archivo configuracion = ~/.config/nvim/init.vim
 
 " ------------
 " ( Mapeo de teclas ) { Nvim }
@@ -61,6 +61,7 @@ u  | Para devolverse una carpeta
 n  | New file
 m  | Mover o renombrar archivo
 r  | Ruta de archivo
+R  | Recargar
 t  | Borrar
 s  | Seleccionar
 
@@ -100,27 +101,17 @@ ctrl + (hjkl) | Moverse entre ventanas
 
 
 " ------------
-" ( Mapeo de teclas ) { vim-surround }
+" ( Mapeo de teclas ) { coc-git }
 " ------------
-" Link github.com/tpope/vim-surround
-" ------------
-
-
-"hola mundo" -> 'hola mundo'
-cs"'
-
-
-" ------------
-" ( Mapeo de teclas ) { vim-gitgutter }
-" ------------
-" Link github.com/airblade/vim-gitgutter
+" Link github.com/neoclide/coc-git
 " ------------
 
 
-]h | 
-[h | 
+]g | Siguinete linea modificada
+[g | Anterior linea modificada
 ha | 
 gu | 
+gs | informacion de la linea modificada
 
 
 " ------------
@@ -132,6 +123,22 @@ gu |
 ,cc | Comentar
 ,cu | Descomentar
 
+" ------------
+" ( Mapeo de teclas ) { surround }
+" ------------
+" Link github.com/tpope/vim-surround
+" ------------
+
+Surround Command         | Description
+y s <motion> <desired>   | Add desired surround around text defined by <motion>
+d s <existing>           | Delete existing surround
+c s <existing> <desired> | Change existing surround to desired
+S <desired>              | Surround when in visual modes (surrounds full selection)
+Some examples:
+
+"test" with cursor inside quotes type cs"' to end up with 'test'
+"test" with cursor inside quotes type ds" to end up with test
+"test" with cursor inside quotes type cs"t and enter 123> to end up with <123>test</123>
 
 " ------------
 " ( Mapeo de teclas ) { Markdown-Preview }
@@ -148,3 +155,7 @@ Ctrl+m | Actualizar cambios
 " Link github.com/
 " ------------
 
+## Comandos o Atajos
+
+# Reemplazar nombres de archivos
+:%s/oldname/replacename 
