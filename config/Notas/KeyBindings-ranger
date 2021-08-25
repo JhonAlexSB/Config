@@ -28,10 +28,25 @@ shift+tap | Desplazar un tap atras
 q         | Cerrar pestañas
 
 
-S | Abrir terminal en directorio actual
+S        | Abrir terminal en directorio actual
+Ctrl + D | Volver a ranger
 
 ## Source 
 https://github.com/ranger/ranger/wiki/Official-user-guide
+https://github.com/ranger/ranger/wiki/Plugins
+
+## Plugins
+https://github.com/cdump/ranger-devicons2
+https://github.com/maximtrp/ranger-archives
+
+## Plugins instalacion
+git clone https://github.com/cdump/ranger-devicons2 ~/.config/ranger/plugins/devicons2
+git clone https://github.com/maximtrp/ranger-archives.git ~/.config/ranger/plugins/ranger-archives
+
+## ranger-archives
+
+:extract  | Encima del archivo comprimido para descomprimir
+:compress | Encima del archivo descomprimido para comprimir
 
 ud 
 uy
