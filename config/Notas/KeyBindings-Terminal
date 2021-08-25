@@ -42,6 +42,16 @@ ctrl + k | Eliminar todo desde donde se esta hacia adelante
 ## Source | https://www.youtube.com/watch?v=uqLcvKYl-Ms 
 ## Source | https://github.com/lukesmithxyz/st 
 
+# Descargar
+git clone https://github.com/lukesmithxyz/st 
+
+# Instalar
+cd st 
+sudo make clean install
+
+# Desinstalar
+sudo make unistall
+
 alt + j | scroll abajo
 alt + k | scroll arriba
 alt + shitt + j | Bajar tamaño de letra
