@@ -58,7 +58,7 @@ bindsym $mod+q kill
 #bindsym $mod+d focus child
 
 
-
+# rofi y drun
 #bindsym $mod+d exec dmenu_run -p "apps" -l 15 -fn 'Cantarell-16'
 bindsym $mod+d exec dmenu_run -i -fn "Cantarell-10" -nf '#ffb52a' -sb '#ffb52a' -sf '#222'
 # start dmenu (a program launcher)
@@ -252,6 +252,9 @@ bindsym $mod+r mode "resize"
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks 
 bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
+
+bindsym $mod+u exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10
+#XF86AudioMute
 
 # toggle mute mic
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute "alsa_input.pci-0000_00_1f.3.analog-stereo" toggle && pkill -RTMIN+10 i3blocks

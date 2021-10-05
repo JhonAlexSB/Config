@@ -49,6 +49,11 @@ mod + e | modo normal
 mod + w | una al lado de otra
 mod + s | una encima de otra
 
+## Multimedia
+mod + n | Cmus canción Anterior
+mod + m | Cmus canción Siguiente
+mod + , | Cmus Pausar canción
+mod + u | Mute general
 
 ## Source
 Wiki    | https://i3wm.org/

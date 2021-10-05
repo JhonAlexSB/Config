@@ -7,6 +7,9 @@ h | Retroceder 5s
 l | Adelantar 5s
 n | Video Siguiente
 p | Video Posterio
+[ | Menos velocidad
+] | Más velocidad
+= | Velocidad normal
 
  | Switchear entre idiomas
  | Switchear entre subtitulos

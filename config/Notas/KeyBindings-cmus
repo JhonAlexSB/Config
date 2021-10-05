@@ -19,8 +19,10 @@ o             | Play-nextsong
 p             | Play-prevsong
 / <palabra>   | Buscar cancion
 n             | Pasar a siguiente coincidencia
-N             | Pasar a anterior coincidencia 
+N             | Pasar a anterior coincidencia
 s             | Activas/Desactivar Random
+m             | Cambiar entre los diferentes modos random
 
 # Source
 # https://github.com/cmus/cmus/blob/master/Doc/cmus-tutorial.txt
+# https://linuxadictos.com/en/cmus-a-command-line-music-player-for-those-who-prefer-something-light-to-something-pretty.html
