@@ -12,4 +12,10 @@ tap        | Mostrar indices
 f+numero   | Ir a enlaces en el archivo
 a          | Tamaño completo
 s          | Tamaño ajustado
+D          | Vista de pagina como libro
 
+J     | Zoom +
+K     | Zoom -
+
+u - e | Scrooll de pagina Arriba
+d - y | Scrooll de pagina Abajo 

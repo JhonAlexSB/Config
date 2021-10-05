@@ -13,8 +13,11 @@ set scroll-step 50
 
 map J zoom in
 map K zoom out
+map e scroll half-up
 map u scroll half-up
+
 map d scroll half-down
+map y scroll half-down
 map D toggle_page_mode
 
 # Evita errores abriendo urls
