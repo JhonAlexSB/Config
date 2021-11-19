@@ -1,0 +1,423 @@
+https://platzi.com/clases/git-github/
+🎬 Capitulo
+📖 Blog
+📝 Lecturas 
+🧰️ Herramientas
+👍 Buena Practica
+👎 Mala Practica
+
+
+git config --global user.email "tu@email.com"
+git config --global user.name "Tu Nombre"
+git config --list | Visualizar configuracion global
+git config --global core.editor "nvim"
+
+git show <file>      | Cambiar en archivo
+git init             | Iniciar proyecto
+git mv               | Mover o cambiar el nombre de un archivo
+git diff <log> <log> | Comparar un archivo en la linea de tiempo
+git log              | Historial de commits
+git commit -am       | es un (add y un commit -m) juntos "Si no anteriormente no esta seteado un archivo dara error"
+git reset            | Lo contrario a git add .
+ | Modificar editor de commits y conflictos
+
+
+  git log --all --graph --decorate --oneline  | Historial de git resumido
+git chekout <log> <file>  | revisar como era un archivo en un log especifico
+
+---
+||🎬  Cap 14
+git clone <url>: Nos permite descargar los archivos de la última versión de la rama principal y todo el historial de cambios en la carpeta .git.
+git push:        Luego de hacer git add y git commit debemos ejecutar este comando para mandar los cambios al servidor remoto.
+git fetch:       Lo usamos para traer actualizaciones del servidor remoto y guardarlas en nuestro repositorio local (en caso de que hayan, por supuesto).
+git merge:       También usamos el comando git merge con servidores remotos. Lo necesitamos para combinar los últimos cambios del servidor remoto y nuestro directorio de trabajo.
+git pull:        Básicamente, git fetch y git merge al mismo tiempo
+
+--
+||🎬  Cap 15 "Introducción a las ramas o branches de Git"
+
+git branch | Ver listado de ramas 
+git branch cabecera | Crea una nueva rama llamada 'cabecera'
+git checkout master | Moverse a rama 'master'
+git commit-id       | Va a un commit específico
+
+||🎬  Cap 16 "Fusión de ramas con Git merge"
+
+git checkout master | Para pasarnos a la rama prinicipal
+git merge cabecera  | hacer commit de "cabecera" en "master"
+
+||🎬  Cap 17 "resolucion de conflictos al hacer merge"
+
+||🎬  Cap 19 "Como funcionan las llaves públicas y privadas"
+
+git remote 
+git remote -v
+git remote add origin <url> 
+git pull origin master | traer cambios de git remoto a git local
+
+fesh | Traer cosas
+push | Enviar cosas
+
+git fesh y git merge ó
+git pull origin master | traer de remoto e integrarlo al local de master
+ 
+git pull origin master --allow-unrelated-histories | juntar dos repositorios que no tengan las historias lineales entre si
+
+||🎬  Cap 21 "Configurar tu llave SSH en local"
+
+SSH o Secure Shell: Es un protocolo de red que permite acceso remoto seguro a través de una conexión encriptada. Este método de autenticación requiere un passphrase (contraseña) o tambien puede funcionar sin passphrase sobre la clave.
+.
+En el directorio Home ~
+
+$ git config -l: Muestra la configuración dentro de Git(user y email), Este comando funciona por que Git esta instalado en todo el equipo local.
+.
+$ git config --global user.email “nombre_email_cambiado” : Se puede utilizar este mismo comando para cambiar el email.
+.
+Creamos la llave SSH
+
+-------------------------
+  $ ssh-keygen -t rsa -b 4096 -C "tu_email@gmail.com"
+-------------------------
+
+1) -t = Especifica cual es el algoritmo que vamos a usar para crear esa llave.
+2) rsa = Algoritmo a usar, hasta el momento el mas popular.
+3) -b = Especifica que tan compleja es la llave.
+4) 4096 = Complejidad de la llave desde una perspectiva matemática.
+5) -C = Indica a que correo electrónico va estar conectado esta llave
+6) "tu_email@gmail.com" = Correo electrónico.
+
+
+Dato: Guardar la llave en la dirección predeterminada.
+Dato2: Passphrase: Password con espacios o Contraseña adicional de texto que le vas a poner a tu llave pública y privada.
+.
+1er Paso:
+Una ves que tengamos la llave, tenemos que agregarlo al entorno, y el entorno es básicamente que el sistema operativo donde tu trabajas sepa que la llave existe. Para ello ejecutamos lo sgte:
+.
+revisar el servidor de llaves / Evalúa que un comando se dispare.
+
+-------------------------
+$ eval $(ssh-agent -s)
+-------------------------
+Dato: Agent pid 4724
+
+1) Agent = Significa que el servidor de SHH esta corriendo.
+2) pid = Process id o identificador del proceso.
+3) 4724 = Número que al sistema operativo le dice que el proceso esta corriendo.
+
+2do Paso:
+
+Agregamos la llave privada a nuestro sistema o al servidor por que no basta con que la llave solo exista, sino debemos decirle que existe. Para ello ejecutamos el siguiente comando:
+
+-------------------------
+$ ssh-add ~/.ssh/id_rsa
+-------------------------
+1) ~ = Home | Ejecutar desde la raiz al igual como se creo la llave
+2) .ssh = carpeta ssh
+3) id_rsa = llave privada la que nunca debemos de mostrar.
+ 
+Coma cambiar o quitar el passphrase https://www.simplified.guide/ssh/set-remove-passphrase
+
+
+||🎬  Cap 22 "Conexión a GitHub con SSH"
+
+1) cat id_rsa.pub
+2) pegar en SSH keys de settings en github
+3) en repositorio elegir usar ssh
+4.1) Revisar cual url se esta usando con '$ git remote -v'
+4.2) Cambiar a url de ssh con 'git remote set-url origin <url de github ssh'
+
+git pull origin master | Descargar cambios en el repositorio si los hay
+git push origin master | Enviar cambios echos en el local asia el repo
+
+||🎬  Cap 23 "Tags y versiones en Git y Github"
+
+git config --global alias.arbolito="log --all --graph --decorate --online" | crear un alias
+git tag -a v0.1 -m "Tag creado por el curso" f9a95c2       | se crea un tag
+git tag                                                    | ver tags creados
+git show-ref --tags                                        | ver referencia de tags
+git push origin --tags                                     | enviar tags del local al remoto
+git tag -d <dormido>                                       | Borrar el tag 'dormido' en local
+git push origin :refs/tags/<dormido>                       | Borra el tag 'dormido'  en remoto
+
+
+||🎬  Cap 24 "Manejo de ramas en GitHub"
+
+git show-branch | Ramas que existen e historia
+git show-branch --all | 
+gitk
+git pull 
+git pull origin main
+git push origin cabecera
+git branch header
+git branch footer
+git push origin header footer
+
+||🎬  Cap 25 "Configurar múltiples colaboradores en un repositorio de GitHub"
+
+git config -l        | listar los obciones de github
+agregar contribuidor | Entrar a manage access
+agregar contribuidor | se puede con una cuenta visible o con el nombre de usuario
+
+||🎬  Cap 26 "Flujo de trabajo profesional: Haciendo merge de ramas de desarrollo a master"
+
+No usar binarios como imagenes
+
+||🎬  Cap 27 "Flujo de trabajo profesional con Pull requests"
+
+pull request en gitub |  merge request en gitlab
+
+-para colaborar con un proyecto que no se es contribuidor
+forker del proyecto
+crear otra rama y enviar un pull request al original
+
+*Se puede pedir que alguien revise el pull request
+*Herramientas para manejar DevOps
+*Para resivir notificaciones de pull request es necesiario habiliatarlas en el navegador
+
+||🎬  Cap 28 "Utilizando Pull Requests en GitHub"
+
+Pull request:
+Es una funcionalidad de github (en gitlab llamada merge request y en bitbucket push request), en la que un colaborador pide que revisen sus cambios antes de hacer merge a una rama, normalmente master.
+
+Al hacer un pull request se genera una conversación que pueden seguir los demás usuarios del repositorio, así como autorizar y rechazar los cambios.
+
+El flujo del pull request es el siguiente
+
+Se trabaja en una rama paralela los cambios que se desean (git checkout -b <rama>)
+Se hace un commit a la rama (git commit -am '<Comentario>')
+Se suben al remoto los cambios (git push origin <rama>)
+En GitHub se hace el pull request comparando la rama master con la rama del fix.
+Uno, o varios colaboradores revisan que el código sea correcto y dan feedback (en el chat del pull request)
+El colaborador hace los cambios que desea en la rama y lo vuelve a subir al remoto (automáticamente jala la historia de los cambios que se hagan en la rama, en remoto)
+Se aceptan los cambios en GitHub
+Se hace merge a master desde GitHub
+Importante: Cuando se modifica una rama, también se modifica el pull request.
+
+
+||🎬  Cap 29 "Creando un Fork, contribuyendo a un repositorio"
+
+Forks o Bifurcaciones
+Es una característica única de GitHub en la que se crea una copia exacta del estado actual de un repositorio directamente en GitHub, éste repositorio podrá servir como otro origen y se podrá clonar (como cualquier otro repositorio), en pocas palabras, lo podremos utilizar como un git cualquiera
+.
+Un fork es como una bifurcación del repositorio completo, tiene una historia en común, pero de repente se bifurca y pueden variar los cambios, ya que ambos proyectos podrán ser modificados en paralelo y para estar al día un colaborador tendrá que estar actualizando su fork con la información del original.
+.
+Al hacer un fork de un poryecto en GitHub, te conviertes en dueñ@ del repositorio fork, puedes trabajar en éste con todos los permisos, pero es un repositorio completamente diferente que el original, teniendo alguna historia en común.
+.
+Los forks son importantes porque es la manera en la que funciona el open source, ya que, una persona puede no ser colaborador de un proyecto, pero puede contribuír al mismo, haciendo mejor software que pueda ser utilizado por cualquiera.
+.
+Al hacer un fork, GitHub sabe que se hizo el fork del proyecto, por lo que se le permite al colaborador hacer pull request desde su repositorio propio.
+
+|Trabajando con más de 1 repositorio remoto
+Cuando trabajas en un proyecto que existe en diferentes repositorios remotos (normalmente a causa de un fork) es muy probable que desees poder trabajar con ambos repositorios, para ésto puedes crear un remoto adicional desde consola.
+
+  git remote add <nombre_del_remoto> <url_del_remoto> 
+  git remote upstream https://github.com/freddier/hyperblog
+Al crear un remoto adicional podremos, hacer pull desde el nuevo origen (en caso de tener permisos podremos hacer fetch y push)
+
+  git pull upstream master
+  git pull <remoto> <rama>
+Éste pull nos traerá los cambios del remoto, por lo que se estará al día en el proyecto, el flujo de trabajo cambia, en adelante se estará trabajando haciendo pull desde el upstream y push al origin para pasar a hacer pull request.
+
+  git pull upstream master
+  git push origin master
+
+git remote -v | ver las fuentes de datos
+
+
+||🎬  Cap 30 "Haciendo deployment a un servidor"
+
+travis ci y jenkins herramientas DevOps
+  platzi.com/servidores
+
+Curso Básico de Jenkins 
+  https://platzi.com/jenkins/
+
+Administración de Servidores y DevOps 
+  https://platzi.com/servidores/
+
+Curso de GitLab 
+  https://platzi.com/gitlab/
+
+Curso de Digital Ocean Online | Platzi 
+  https://platzi.com/do
+
+||🎬  Cap 31 "Hazme un pull request"
+
+||🎬  Cap 32 "Ignorar archivos en el repositorio con .gitignore"
+
+||🎬  Cap 33 "Readme.md es una excelente práctica"
+
+Herramientas
+https://pandao.github.io/editor.md/en.html
+https://getemoji.com/
+https://shields.io/
+
+||🎬  Cap 34 "Tu sitio web público con GitHub Pages"
+
+repositorio con name_user.github.io
+Activar github pages
+nombre_usuario.github.io
+
+
+||🎬  Cap 35 "Git Rebase: reorganizando el trabajo realizado"
+
+☠️  Es una mala practica 
+Se hace desde la rama creada a master | git rebase master
+Despues desde master a la creada      | git rebase experimento
+Si se hace al contrario se crea un conficto y es necesario usar git reset
+
+
+||🎬  Cap 36 "Git Stash: Guardar cambios en memoria y recuperarlos después"
+
+Stashed:
+El stashed nos sirve para guardar cambios para después, Es una lista de estados que nos guarda algunos cambios que hicimos en Staging para poder cambiar de rama sin perder el trabajo que todavía no guardamos en un commit
+
+Ésto es especialmente útil porque hay veces que no se permite cambiar de rama, ésto porque porque tenemos cambios sin guardar, no siempre es un cambio lo suficientemente bueno como para hacer un commit, pero no queremos perder ese código en el que estuvimos trabajando.
+
+El stashed nos permite cambiar de ramas, hacer cambios, trabajar en otras cosas y, más adelante, retomar el trabajo con los archivos que teníamos en Staging pero que podemos recuperar ya que los guardamos en el Stash.
+
+  $ git stash
+El comando git stash guarda el trabajo actual del Staging en una lista diseñada para ser temporal llamada Stash, para que pueda ser recuperado en el futuro.
+
+Para agregar los cambios al stash se utiliza el comando:
+
+  $ git stash
+Podemos poner un mensaje en el stash, para asi diferenciarlos en git stash list por si tenemos varios elementos en el stash. Ésto con:
+
+  ($ git stash save "mensaje identificador del elemento del stashed" )
+
+-Obtener elelmentos del stash
+El stashed se comporta como una Stack de datos comportándose de manera tipo LIFO (del inglés Last In, First Out, «último en entrar, primero en salir»), así podemos acceder al método pop.
+
+El método pop recuperará y sacará de la lista el último estado del stashed y lo insertará en el staging area, por lo que es importante saber en qué branch te encuentras para poder recuperarlo, ya que el stash será agnóstico a la rama o estado en el que te encuentres, siempre recuperará los cambios que hiciste en el lugar que lo llamas.
+
+Para recuperar los últimos cambios desde el stash a tu staging area utiliza el comando:
+
+  $ git stash pop
+Para aplicar los cambios de un stash específico y eliminarlo del stash:
+
+  $ git stash pop stash@{<num_stash>}
+Para retomar los cambios de una posición específica del Stash puedes utilizar el comando:
+
+  $ git stash apply stash@{<num_stash>}
+Donde el <num_stash> lo obtienes desden el git stash list
+
+Listado de elementos en el stash
+Para ver la lista de cambios guardados en Stash y así poder recuperarlos o hacer algo con ellos podemos utilizar el comando:
+
+  $ git stash list
+Retomar los cambios de una posición específica del Stash | Aplica los cambios de un stash específico
+
+Crear una rama con el stash
+Para crear una rama y aplicar el stash mas reciente podemos utilizar el comando
+
+  $ git stash branch <nombre_de_la_rama>
+Si deseas crear una rama y aplicar un stash específico (obtenido desde git stash list) puedes utilizar el comando:
+
+  $ git stash branch nombre_de_rama stash@{<num_stash>}
+Al utilizar estos comandos crearás una rama con el nombre <nombre_de_la_rama>, te pasarás a ella y tendrás el stash especificado en tu staging area.
+
+Eliminar elementos del stash
+Para eliminar los cambios más recientes dentro del stash (el elemento 0), podemos utilizar el comando:
+
+  $ git stash drop
+Pero si en cambio conoces el índice del stash que quieres borrar (mediante git stash list) puedes utilizar el comando:
+
+  $ git stash drop stash@{<num_stash>}
+Donde el <num_stash> es el índice del cambio guardado.
+
+Si en cambio deseas eliminar todos los elementos del stash, puedes utilizar:
+
+  $ git stash clear
+Consideraciones:
+
+El cambio más reciente (al crear un stash) SIEMPRE recibe el valor 0 y los que estaban antes aumentan su valor.
+Al crear un stash tomará los archivos que han sido modificados y eliminados. Para que tome un archivo creado es necesario agregarlo al Staging Area con git add [nombre_archivo] con la intención de que git tenga un seguimiento de ese archivo, o también utilizando el comando git stash -u (que guardará en el stash los archivos que no estén en el staging).
+Al aplicar un stash este no se elimina, es buena práctica eliminarlo.
+
+git stash:                                         Guarda el trabajo actual de manera temporal. (Archivos modificados o eliminados)
+git stash -u:                                      Crea un stash con todos los archivos. (Añadiendo los creados Untracked)
+git stash save “mensaje”:                          Crea un stash con el mensaje especificado.
+git stash list:                                    Permite visualizar todos los stash existentes.
+git stash clear:                                   Elimina todos los stash existentes.
+git stash drop:                                    Elimina el stash más reciente. El que tiene num_stash=0.
+git stash drop stash@{num_stash}:                  Elimina un stash específico.
+git stash apply:                                   Aplica el stash más reciente. El que tiene num_stash=0.
+git stash apply stash@{num_stash}:                 Aplica los cambios de un stash específico.
+git stash pop:                                     Aplica el stash más reciente y lo elimina. El que tiene num_stash=0.
+git stash pop stash@{num_stash}:                   Aplica los cambios de un stash específico y elimina lo stash.
+git stash branch nombre_de_rama:                   Crea una rama y aplica el stash mas reciente.
+git stash branch nombre_de_rama stash@{num_stash}: Crea una rama y aplica el stash especificado.
+
+
+||🎬  Cap 37 "Git Clean: limpiar tu proyecto de archivos no deseados"
+
+git clean --dry-run | Saber que archivos no traqueados se borran
+git clean -f        | Borrar archivos no traqueados
+git clean -df       | Borrar carpetas no traqueados
+
+
+||🎬  Cap 38 "Git cherry-pick: traer commits viejos al head de un branch"
+
+☠️  Es una mala practica 
+git cherry-pick IDCommit
+
+
+||🎬  Cap 39 "Reconstruir commits en Git con amend"
+
+git commit --amend | Sirve para agregar cambios a un commit ya echo o cambiar el nombre del commit
+
+
+||🎬  Cap 40 "Git Reset y Reflog: úsese en caso de emergencia"
+
+Git nunca olvida, git reflog
+Git guarda todos los cambios aunque decidas borrarlos, al borrar un cambio lo que estás haciendo sólo es actualizar la punta del branch, para gestionar éstas puntas existe un mecanismo llamado registros de referencia o reflogs.
+.
+La gestión de estos cambios es mediante los hash’es de referencia (o ref) que son apuntadores a los commits.
+.
+Los recoges registran cuándo se actualizaron las referencias de Git en el repositorio local (sólo en el local), por lo que si deseas ver cómo has modificado la historia puedes utilizar el comando:
+
+git reflog
+Muchos comandos de Git aceptan un parámetro para especificar una referencia o “ref”, que es un puntero a una confirmación sobre todo los comandos:
+
+git checkout Puedes moverte sin realizar ningún cambio al commit exacto de la ref
+
+git checkout eff544f
+git reset: Hará que el último commit sea el pasado por la ref, usar este comando sólo si sabes exactamente qué estás haciendo
+
+git reset --hard eff544f # Perderá todo lo que se encuentra en staging y en el Working directory y se moverá el head al commit eff544f
+git reset --soft eff544f # Te recuperará todos los cambios que tengas diferentes al commit eff544f, los agregará al staging area y moverá el head al commit eff544f
+git merge: Puedes hacer merge de un commit en específico, funciona igual que con una branch, pero te hace el merge del estado específico del commit mandado
+
+git checkout master
+git merge eff544f # Fusionará en un nuevo commit la historia de master con el momento específico en el que vive eff544f
+
+
+||🎬  Cap 41 "Buscar en archivos y commits de Git con Grep y log"
+
+git grep la          | donde use la palabra la
+git grep -n color    | en que lineas use la palabra color
+git grep -c paltzi   | cuantas veces use la palabra platzi
+git grep -c “<p>”    | cuantas veces use la etiqueta <p>
+git log-S “cabecera” | cuantas veces use la palabra cabecera en todos los commits.
+ó  mas abreviado     | git log --all --oneline | grep "cabecera"
+
+grep–> para los archivos
+log --> para los commits.
+
+||🎬  Cap 42 "Comandos y recursos colaborativos en Git y GitHub"
+git shortlog -sn                               = muestra cuantos commit han hecho cada miembros del equipo.
+git shortlog -sn --all                         = muestra cuantos commit han hecho cada miembros del equipo hasta los que han sido eliminado
+git shortlog -sn --all --no-merge              = muestra cuantos commit han hecho cada miembros quitando los eliminados sin los merges
+git blame ARCHIVO                              = muestra quien hizo cada cosa linea por linea
+git blame -c ARCHIVO                           = muestra quien hizo cada cosa linea por linea de manera mas identada
+git COMANDO --help                             = muestra como funciona el comando.
+git blame ARCHIVO -Llinea_inicial,linea_final  = muestra quien hizo cada cosa linea por linea indicándole desde que linea ver ejemplo -L35,50
+**git branch -r **                              = se muestran todas las ramas remotas
+git branch -a                                  = se muestran todas las ramas tanto locales como remotas
+
+git config --global alias.stats "shortlog -sn -all --no-merges"
+git config --global alias.arbolito "log --all --graph --decorate --online"
+
+||🎬  Cap 43 "Tu futuro con Git y GitHub"
+

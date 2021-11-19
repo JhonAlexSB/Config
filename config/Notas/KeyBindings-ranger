@@ -48,5 +48,8 @@ git clone https://github.com/maximtrp/ranger-archives.git ~/.config/ranger/plugi
 :extract  | Encima del archivo comprimido para descomprimir
 :compress | Encima del archivo descomprimido para comprimir
 
+# https://www.nerdfonts.com/font-downloads 
+# SpaceMono
+
 ud 
 uy
