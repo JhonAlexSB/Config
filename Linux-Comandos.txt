@@ -24,11 +24,13 @@ find . -name "*describcion*"				->	Para encontrar archivo
 -- Instalar nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 
+** Instalar adb de android
+sudo apt install android-tools-adb
 
-dar permisos al puerto
+** dar permisos al puerto
 	sudo chmod 777 /dev/ttyUSB0
 
-listar puertos serie utilizados
+** listar puertos serie utilizados
 
 dmesg | grep tty
 setserial -g /dev/ttyS*
