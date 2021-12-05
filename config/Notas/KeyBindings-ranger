@@ -20,6 +20,7 @@ m<key>    | Crear Marcador
 Barra espaciadora | Selección
 uv                | Deselección
 v                 | Invertir Selección
+mkd               | Seleccionados editar nombre
 
 ## Tabs
 Ctrl + n  | Crear una pestaña
