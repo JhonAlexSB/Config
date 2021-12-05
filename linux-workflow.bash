@@ -27,7 +27,7 @@ apt install kdenlive
 apt install audacity ffmpeg rhythmbox soundkonverter
 
 # Sistema
-apt install i3 zsh tmux 
+apt install i3 zsh tmux pavucontrol keynav
 
 # Gestor de descargas
 apt install uget aria2 tilix
