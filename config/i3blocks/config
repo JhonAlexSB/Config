@@ -9,7 +9,7 @@
 # Global properties
 #separator=true
 #separator_block_width=15
-separator_block_width=8
+separator_block_width=16
 markup=pango
 
 #align=center
@@ -127,6 +127,11 @@ command=date '+%H:%M:%S'
 interval=10
 
 
+#[battery2]
+#command= ~/.config/i3blocks/battery2
+#markup=pango
+#interval=30
+
 [monitors]
 command=~/.config/i3blocks/monitor_manager
 interval=once
@@ -145,11 +150,11 @@ interval=once
 #FONT_SIZE=11
 #CLOSE_TO_BOUNDARY_BUFFER=20
 
-[click]
-full_text=📂
-#label=📂
-command=nemo
-markup=pango
+#[click]
+#full_text=📂
+##label=📂
+#command=nemo
+#markup=pango
 
 # https://openweathermap.org/weather-conditions
 # https://github.com/vivien/i3blocks
