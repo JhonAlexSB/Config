@@ -14,6 +14,41 @@ apt install psensor htop nmap cmus mpv ranger
 # Visualisacion de celular
 apt install scrcpy
 
+# La tasa de bits por defecto es de 8 Mbps. Para cambiar la tasa de bits de vídeo (por ejemplo, a 2 Mbps): 
+scrcpy --bit-rate 2M
+scrcpy -b 2M  # versión corta
+
+# Se puede limitar la tasa de fotogramas de captura: 
+scrcpy --max-fps 15
+
+# Limitar la anchura y la altura a algún valor (por ejemplo, 1024):
+scrcpy --max-size 1024
+scrcpy -m 1024  # versión corta
+
+# La velocidad de fotogramas real de la captura puede imprimirse en la consola: 
+scrcpy --print-fps
+
+# Es posible grabar la pantalla mientras se refleja: 
+scrcpy --record file.mp4
+scrcpy -r file.mkv
+
+# Configuracion personal 
+scrcpy -b 2M -m 1024 --max-fps 25 
+
+# Fuente settings scrcpy
+# https://esgeeks.com/scrcpy-controlar-dispositivo-android/
+
+adb devices
+adb tcpip 4444
+adb connect 192.168.1.89:4444
+
+# Fuente conexion tcp scrcpy
+# https://www.youtube.com/watch?v=wj73mNgoJis
+
+sndcpy
+# Fuente de audio desde celular a computador
+# https://github.com/rom1v/sndcpy
+
 # Virtualizacion
 apt install wine virtualbox 
 
