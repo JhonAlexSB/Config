@@ -2,6 +2,9 @@
 --------Instalacion Programas Consola 
 --------
 
+# Para quemar discos DvD
+apt install devede brasero
+
 # Para trabajar
 apt install nvim git nodejs rar
 
