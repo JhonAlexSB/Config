@@ -10,6 +10,23 @@ sudo /etc/init.d/apache2 stop; sudo /etc/init.d/mysql stop; sudo /etc/init.d/cup
 sudo /etc/init.d/apache2 start; sudo /etc/init.d/mysql start;
 
 
+sudo /etc/init.d/ssh stop;
+
+ps aux
+ps aux | grep -i network
+ps aux | grep -i iss-realsecure
+
+-- Virtualbox
+  sudo apt install virtualbox virtualbox-guest-additions-iso vde2 
+
+  https://linuxconfig.org/virtualbox-extension-pack-installation-on-ubuntu-22-04-jammy-jellyfish-linux
+  sudo apt install virtualbox-ext-pack
+
+Insertar disco en maquina virtual e instalar GuestAdditions
+  sudo sh VBoxLinuxAdditions.run
+
+Crear vbox user para permitir lectura de dispositivos usb
+  sudo adduser jhon vboxusers
 
 php -s localhost:4000
 
