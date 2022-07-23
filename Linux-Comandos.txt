@@ -28,6 +28,9 @@ Insertar disco en maquina virtual e instalar GuestAdditions
 Crear vbox user para permitir lectura de dispositivos usb
   sudo adduser jhon vboxusers
 
+Configuracion virtualbox para i3-wm
+  Archivo -> Preferencias -> Entrada -> Despalomiar "Autocapturar teclado"
+
 php -s localhost:4000
 
 sudo ifconfig
