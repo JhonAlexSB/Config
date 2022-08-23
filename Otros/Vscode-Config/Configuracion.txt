@@ -1,0 +1,170 @@
+// https://www.youtube.com/watch?v=1mt2f3NXR2k
+//    "update.mode": "none"
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.wordWrap": "on",
+  //  breadcrumbs.focusNextWithPicker 
+  "editor.lineNumbers": "relative",
+  // Controls whether the minimap is shown.
+  "editor.minimap.enabled": false,
+  // Limit the width of the minimap to render at most a certain number of columns.
+  "editor.minimap.maxColumn": 60,
+  // The number of spaces a tab is equal to. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
+  "editor.tabSize": 2,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": -1,
+  // "vim.sneak": true,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [ "j", "k" ],
+      "after": [ "<Esc>" ] },
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [ "<leader>", "d" ],
+      "after": [ "d", "d" ]
+    },
+    {
+      "before": [ "<C-n>" ],
+      "commands": [ ":nohl" ]
+    },
+// Guardar archivo
+    {
+      "before": [ "<leader>", "w" ],
+      "commands": [ ":w" ]
+    },
+// Cerrar archivo
+    {
+      "before": [ "<leader>", "q" ],
+      "commands": [ ":q" ]
+    },
+// Cerrar archivo sin guardar
+    {
+      "before": [ "<leader><leader>", "q" ],
+      "commands": [ ":q!" ]
+    },
+// Splitear pantalla y archivo en focus posicionarlo a la derecha
+    {
+      "before": [ "<leader>", "l" ],
+      "commands": [ "workbench.action.moveEditorToNextGroup" ]
+    },
+// Ejecutar en la parte nueva creada para volver a la normalidad
+    {
+      "before": [ "<leader>", "h" ],
+      "commands": [ "workbench.action.moveEditorToPreviousGroup" ]
+    },
+// Pasar a la pantalla dividida derecha
+    {
+      "before": [ "<leader>", "L" ],
+      "commands": [ "workbench.action.focusRightGroup" ]
+    },
+// Pasar a la pantalla dividida izquierda
+    {
+      "before": [ "<leader>", "H" ],
+      "commands": [ "workbench.action.focusLeftGroup" ]
+    },
+
+
+
+// Navegador de archivos
+    {
+      "before": [ "<leader>", "p" ],
+      "commands": [ "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup" ]
+    },
+// Ocultar explorador
+    {
+      "before": [ "<leader>", "e" ],
+      "commands": [ "workbench.action.toggleSidebarVisibility" ]
+    },
+    // {
+    //   "before": ["<leader>", "n"],
+    //   "commands": ["workbench.action.splitEditor"]
+    // },
+    // Usar el explorador de archivos
+    {
+      "before": [ "<leader>", "f" ],
+      "commands": [ "workbench.explorer.fileView.focus" ],
+                                     "when": "inFilesPicker && inQuickOpen"
+
+      // "commands": [ "workbench.action.quickopennavigatepreviousinfilepicker" ],
+      //                                "when": "inFilesPicker && inQuickOpen"
+    },
+// Ir al comienzo de la linea
+    {
+      "before": [ "<leader>", "O" ],
+      "after": [ "$" ]
+    },
+// Ir al final de la linea
+    {
+      "before": [ "<leader>", "I" ],
+      "after": [ "0" ]
+    },
+// Siguiente archivo
+    {
+      "before": [ "<leader>", "o" ],
+      "commands": [ "workbench.action.nextEditor" ]
+    },
+// Anterior archivo
+    {
+      "before": [ "<leader>", "i" ],
+      "commands": [ "workbench.action.previousEditor" ]
+    },
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "glassit.alpha": 220,
+  "terminal.integrated.fontFamily": "Courier New",
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.lineHeight": 1,
+  "terminal.integrated.rendererType": "dom",
+  "terminal.explorerKind": "external",
+  "terminal.external.linuxExec": "st"
+
+}
+// workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup
+// workbench.action.quickOpenNavigateNextInEditorPicker", "when": "inEditorsPicker && inQuickOpen" }
+
+/*
+https://www.alphr.com/vs-code-how-to-change-font/
+
+
+"command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+                                     "when": "inFilesPicker && inQuickOpen"
+workbench.view.explorer
+
+workbench.action.focusRightGroup
+workbench.action.focusLeftGroup
+workbench.action.focusAboveGroup
+workbench.action.focusBelowGroup
+
+Shorcuts linux
+ctrl+`       | Abrir terminal integrada
+ctrl+shift+c | Abrir terminal en otra pestaña
+ctrl+/       | Comentar bloques codigo
+
+Shorcuts VimCode
+leader-leader s 'key'  | Buscar coincidencia
+leader-leader (j k l h)| Buscar coincidencia
+
+leader p | Buscar entre archivos abiertos "Arriba y Abajo con  'k j' "
+leader i | Moverse al anterior archivo
+leader o | Moverse al siguiente archivo
+
+leader l | Abrir un archivo en split
+leader h | Cerrar un archivo en split
+leader w | Guardar archivo
+leader q | Cerrar archivo
+
+toggle o focus
+
+*/

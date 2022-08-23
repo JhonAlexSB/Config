@@ -1,0 +1,235 @@
+termux-setup-storage
+proot-distro install archlinux
+proot-distro login archlinux
+
+pacman -S links  lynx w3m  elinks
+pacman -S ttf-font-awesome ttf-hack
+pacman -S rxvt-unicode
+pacman -S zsh zsh-syntax-highlighting zsh-autosuggestions
+pacman -S zathura firefox midori
+
+Video Referencia https://youtu.be/fshLf6u8B-w
+ASI es el ENTORNO de un HACKER
+
+mdcat -> para markdown
+lsd -> la con esteroides
+bat -> cat con esteroides min [57:26]
+scrub -> borrado de binarios min [57:55
+rmk -> función que trabaja junto scrub min [58:20]
+
+[58:40] instalación de otra fuente
+cd /usr/share/fonts
+cp /root/Download/fuentes/<fuente.zip> .
+unzip <fuente.zip>
+
+En i3/config
+ exec urxvt
+
+
+>>>> Configurar vnc
+pacman -S tigervnc
+vncpasswd
+https://youtu.be/AjEPo8zTovo
+
+
+
+>>>> Instalar PHP y MySQL 
+pkg install apache2 php php-apache phpmyadmin mariadb
+
+cd $PREFIX/share/apache2/default-site/htdocs
+rm index.html
+
+vim index.php
+
+<?php
+phpinfo();
+?>
+
+cd
+
+httpd
+
+Abrir navegador y URL -> localhost:8080
+
+killall !!
+killall httpd
+
+cd $PREFIX/etc/apache2
+
+vim httpd.conf
+
+Descomentar
+
+#LoadModule mpm_prefork_module libexec/apache2/mod_mpm_prefork.so
+
+Comentar
+
+LoadModule mpm_worker_module libexec/apache2/mod_mpm_worker.so
+
+Añadir
+
+LoadModule php_module libexec/apache2/libphp.so
+
+<FilesMatch \.php?>
+  SetHandler application/x-httpd-php
+</FilesMatch>
+
+# esto no copiar buscar esta línea y
+# pegar arriba. Es de las ultima
+
+#
+#  Load config
+# 
+
+# pegar abajo del todo
+include etc/apache2/extra/php_module.conf
+
+cd extra/
+touch php_module.conf
+
+>>>> Vim plugins
+--------------------
+https://codingpotions.com/vim-plugins
+
+
+surround.vim
+https://github.com/tpope/vim-surround/blob/master/plugin/surround.vim
+https://github.com/tpope/vim-surround
+
+https://github.com/ap/vim-buftabline
+https://github.com/justinmk/vim-sneak
+https://github.com/jiangmiao/auto-pairs
+https://github.com/easymotion/vim-easymotion
+https://github.com/alvan/vim-closetag
+https://github.com/kien/ctrlp.vim
+
+https://github.com/preservim/nerdcommenter
+
+
+cp -r nerdcommenter/autoload/ ../.vim/
+
+cp -r vim-sneak/autoload/ ../.vim/
+cp -r vim-sneak/plugin/ ../.vim/
+
+git clone
+
+
+ https://github.com/easymotion/vim-easymotion.git ~/.vim/pack/plugins/start/vim-easymotion
+
+
+
+
+https://www.vim.org/scripts/download_script.php?src_id=21906
+
+https://www.vim.org/scripts/script.php?script_id=4940
+
+>>>> MySQL uso
+_-----------------
+
+---------Crear usuario con privilegios
+https://www.hostinger.co/tutoriales/como-crear-usuario-mysql
+
+CREATE USER 'jhon'@'localhost' IDENTIFIED BY 'Pass98';
+
+GRANT ALL PRIVILEGES ON * . * TO 'jhon'@'localhost';
+
+FLUSH PRIVILEGES;
+
+>>>> Importar bd
+mysqld_safe -u root &
+mysql
+create database sakila;
+exit
+
+
+mysql -u usuario -p nombre_basededatos < data.sql
+
+mysql -u u0_a178 -p sakila < sakila-schema.sql
+mysql -u u0_a178 -p sakila < sakila-data.sql
+
+mysql -u whoami
+
+>>>>
+Conectarse con openssh
+https://m.youtube.com/watch?v=jlYiwv5R3H8
+
+
+pkg install openssh
+openssh-server
+
+sshd
+
+ssh -p 22 user@ip
+user = whoami
+IP = ifconfig
+
+
+
+
+>>>> virtual env
+    cd ~
+    virtualenv newenv.
+    source newenv/bin/activate .
+source env/bin/activate
+
+deactivate
+
+>>>> Crear usuario
+https://www.ionos.es/ayuda/servidores-cloud/administracion-del-servidor/crear-un-usuario-con-permisos-sudo/
+
+
+https://github.com/termux/proot-distro/blob/master/README.md
+
+
+useradd nombre
+passwd nombre
+
+ver si tiene sudo
+ sudo ls -la /root
+
+Agregar permisos root
+ usermod -aG wheel jhon
+
+Comprobar si tiene permiso root
+ groups jhon
+
+proot-distro login --user jhon archlinux
+proot-distro login archlinux --user jhon
+
+
+>>>> Bash custom
+https://scriptim.github.io/bash-prompt-generator/
+
+vim ~.bashrc
+
+
+PS1='\[\e[0;91m\]\u\[\e[0m\]@\[\e[0;2m\]\H\[\e[0m\]:\[\e[0;92m\]\W \[\e[0;4m\]> \[\e[0m\]'
+
+usermod -s /bin/bash $USERNAME
+
+sudo -u root chsh -s /bin/bash
+
+Fuente: https://www.enmimaquinafunciona.com/pregunta/33928/como-se-cambia-el-shell-por-defecto-para-todos-los-usuarios-a-bash
+
+
+$PREFIX/etc/bash.bashrc
+
+>>>> zsh config
+vim zshrc
+
+# Plugins 
+source /usr/share/zsh/plugins/zsh-completions
+source /usr/share/zsh/plugins/zsh-autosuggestions
+
+>>>> lynx config
+https://superuser.com/questions/518431/how-to-i-configure-lynx-user-settings-without-changing-os-level-settings
+
+https://lynx.invisible-island.net/lynx_help/body.html
+
+alias lynxs='lynx -accept_all_cookies'
+lynx -accept_all_cookies
+
+cp /etc/lynx.cfg ~/
+lynx -cfg=~/lynx.cfg <url>
+
+alias lynx='lynx -cfg=~/lynx.cfg'

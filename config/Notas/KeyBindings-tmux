@@ -1,0 +1,73 @@
+### Gestor de terminales
+## Ruta Archivo configuracion = ~/.tmux.conf
+
+prefix = ctrl+a
+
+-Comandos
+prefix c     | Crear otra sesion
+prefix w     | Ver sesiones creadas
+prefix ,     | Renombrar sesion
+prefix #     | Ir al numero de la pestaña
+prefix "     | Dividir la pantalla horizontal
+prefix %     | Dividir la pantalla vertical
+prefix x     | Matar la pestaña en la que estoy
+prefix space | Cambiar horientacion vertical u horizontal
+prefix {     | Cambiar de lugar el contenido
+prefix }     | Cambiar de lugar el contenido
+prefix p     | Cambiar a ventana previa
+prefix n     | Cambiar a ventana siguiente
+prefix z     | toggle zoom
+
+prefix q         | Ver numeracion de pestaña 'Presionar numero para ingresar'
+prefix arrow     | Cambiar entre pesatañas
+prefix ctrl hold | Mover tamaño de pestaña
+prefix !         | Mandar la pestaña actual a otra ventana
+
+prefix [     | Se parece al modo normal de vim (Es modo copia)
+prefix space | Entrar a modo seleccionar
+prefixw      | Copiar lineas seleccionadas
+prefix ]     | Pegar
+
+prefix s | Comando para buscar ( Primero se entra con ctrl+b [ ) && q para salir
+
+
+:tmux kill-session -t 1 | Eliminar sesion 1
+:join-pane -s 1 -t 2    | Unir ventanas como pestañas
+:swap-window -s 2 -t 1  | Cambiar de posicion las ventanas
+
+
+##Plugins
+
+# Tmus-tilish
+prefix alt + (h j k l) | Desplazarse entre ventanas como nvim
+prefix alt + (H J K L) | Mover de lugar ventana
+
+
+# Instalar tmux plugins manager
+$ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+  Put this at the bottom of ~/.tmux.conf ($XDG_CONFIG_HOME/tmux/tmux.conf works too):
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+# Other examples:
+# set -g @plugin 'github_username/plugin_name'
+# set -g @plugin 'github_username/plugin_name#branch'
+# set -g @plugin 'git@github.com:user/plugin'
+# set -g @plugin 'git@bitbucket.com:user/plugin'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+
+  Reload TMUX environment so TPM is sourced:
+
+# type this in terminal if tmux is already running
+$ tmux source ~/.tmux.conf
+
+prefix + I       | Instalar Plugins
+prefix + U       | Actualizar Plugins
+prefix + alt + u | Remover/Desinstalar Plugins que no esten en la lista de plugins
+
+# type this in terminal if tmux is already runnin

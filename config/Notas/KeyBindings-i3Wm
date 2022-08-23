@@ -1,0 +1,96 @@
+### Gestor de ventanas
+## Ruta Archivo configuracion = ~/.config/i3/config
+
+mod = super o windows || Alt
+
+## Aplicaciones
+mod + d + enter | Dmenu (sirve para buscar aplicaciones instaladas)
+mod + q + enter | Cerrar Aplicacion
+mod + enter     | Abrir terminal
+
+
+## Teclas de desplazamiento
+mod + (j-k-l-ñ) | Moverse a la pestaña ←↓↑→
+
+
+## Cambiar tipo de visualizacion de ventanas
+mod + w | Pestañas apiladas horizontalmente
+mod + s | Pestañas apiladas verticalmente
+mod + e | Modo normal 
+
+
+## Sesion
+mod + shift + e | Cerrar sesion
+mod + alt + l   | Pausar sesion
+mod + shift + r | Refrescar cambios en i3config
+mod + d + enter | poweroff 
+mod + d + enter | reboot 
+
+
+## Cambiar posicion ventana
+mod + (1,2,3) + shift | Cambiar aplicacion/nes a otro workspace
+mod + (1,2,3)         | Cambiar foco a otro workspace
+mod + a | seleccionar todas las ventanas de un workspace
+mod + r | Entrar/Salir en modo rezise usar (j-k-l-ñ) para cambiar tamaño
+
+
+## Ventanas
+mod + f               | Abrir ventana en modo completo
+mod + h               | Abrir ventanas de manera horizontal
+mod + v               | Abrir ventanas de manera vertical
+mod + shift + espacio | Entrar/Salir en Ventana flotante
+mod + espacio         | Intercambiar foco entre ventana flotante y anclada
+mod + clickIzquierdo  | Mover ventana flotante
+mod + clickDerecho    | Cambiar tamaño ventana flotante
+
+
+## Cambiar orden de ventanas
+mod + e | modo normal
+mod + w | una al lado de otra
+mod + s | una encima de otra
+
+## Multimedia
+mod + n | Cmus canción Anterior
+mod + m | Cmus canción Siguiente
+mod + , | Cmus Pausar canción
+mod + u | Mute general
+
+## Source
+Wiki    | https://i3wm.org/
+Canal   | https://www.youtube.com/channel/UC08if0oBaJcpxQQaa7wJZ0g/videos
+Config  | https://github.com/GerrySoft/linux-config/tree/master/i3
+Plugins | https://github.com/vivien/i3blocks-contrib
+
+
+
+#Gestor de resolucion
+sudo apt install xrandr
+sudo apt install arandr
+
+#Gestor de archivos
+pcmanfm 
+
+#Temas para gestor de arhcivos
+apt install lxappearance
+
+#Gestor de luz
+apt install brightnessctl
+
+#Gestor de fondos de escritorio
+apt install feh
+
+#Opacidad de terminal
+apt install compton 
+
+#Notificaciones
+apt install dunst -y
+notify-send "Hola" "Es una prueba"
+
+#Dependencias de plugins
+apt install python3-tk
+apt install xrandr
+apt install fonts-font-awesome
+apt install xdotool
+
+#I3Blocks plugins
+# https://github.com/vivien/i3blocks-contrib

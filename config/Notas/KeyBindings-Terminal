@@ -1,0 +1,65 @@
+### Interprete de comandos zsh
+## Ruta Archivo configuracion ~/.zshrc
+
+# Moverse
+ctrl + a | Ir al inicio
+ctrl + e | Ir al fin
+alt + f  | Moverse entre palabras hacia <-
+alt + b  | Moverse entre palabras asia ->
+ctrl + f | Moverse entre bloques de palabras hacia <-
+ctrl + b | Moverse entre bloques de palabras asia ->
+
+alt + p  | Despazarse entre el comando anterior
+alt + n  | Despazarse entre el comando siguiente 
+
+#Editar
+ctrl + u | Corta o elimina toda la linea
+ctrl + k | Elimina la linea delantera del cursor
+ctrl + w | Elimina un bloque de linea atras del cursor
+ctrl + y | Pega lo que tiene en clipboard
+alt + d  | Borrar un bloque de texto adelante
+
+ctrl + h | Es parecido al backspace o delete
+ctrl + j | Enter
+ctrl + i | Tap
+
+ctrl + shift + v | Pegar
+ctrl + shift + c | Copiar 
+
+### zsh + plugins
+ctrl + f  | completar con sugerencias
+ctrl + r  | Lista el historial de comandos (ctrl + jk "moverse entre sugerencias")
+ctrl + t  | Buscar archivo con fzf
+esc + esc | Agregar o quitar sudo al comienzo del comando
+
+### Funciones o alias
+countdown $((1*60*60)) | Cuenta regresiva de 1 hora
+
+ctrl + u | Eliminar hasia atras
+ctrl + k | Eliminar todo desde donde se esta hacia adelante
+
+### st terminal 
+## Source | https://www.youtube.com/watch?v=uqLcvKYl-Ms 
+## Source | https://github.com/lukesmithxyz/st 
+
+# Descargar
+git clone https://github.com/lukesmithxyz/st 
+
+# Instalar
+cd st 
+sudo make clean install
+
+# Desinstalar
+sudo make unistall
+
+alt + j | scroll abajo
+alt + k | scroll arriba
+alt + shitt + j | Bajar tamaño de letra
+alt + shitt + k | Subir tamaño de letra
+
+alt + v | Pegar 
+alt + c | Copiar 
+
+alt + l | Lista de links y Al dar enter 'Abre el link en el navegador'
+alt + y | Lista de links y al dar enter 'Copia el link'
+

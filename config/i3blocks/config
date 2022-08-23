@@ -1,0 +1,161 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+#separator=true
+#separator_block_width=15
+separator_block_width=16
+markup=pango
+
+#align=center
+##markup=pango
+#border_top=0
+#border_bottom=3
+#border_left=0
+#border_right=0
+color=#eeeeee
+
+
+
+#[battery]
+#command=~/.config/i3blocks/batt.py
+#markup=pango
+##border=#3192d4
+#interval=30
+
+#[greetings]
+#color=f5af19
+#command=echo "Hello, $USER!"
+#interval=once
+
+#[connection]
+#command=nmcli device wifi list | grep '*' | awk '{print $3}'
+#interval=once
+##border=#9F78E1
+
+#[volume]
+#command=~/.config/i3blocks/volume.sh
+##LABEL=♪ 
+#label=VOL 
+#interval=once
+#signal=10
+#color=#ffa252
+#border=#ff7752
+#STEP=5%
+#step=5%
+#mixer=[determined automatically]
+#scontrol=[determined automatically]
+#natural_mapping=0
+
+[volume]
+command=~/.config/i3blocks/volume
+#LABEL=♪ 
+label=
+interval=once
+signal=10
+#STEP=5%
+#MIXER=[determined automatically]
+#SCONTROL=[determined automatically]
+#NATURAL_MAPPING=0
+
+# Guess the weather hourly
+[weather]
+command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
+interval=1800
+color=#A4C2F4
+
+[bandwidth3]
+command=~/.config/i3blocks/bandwidth3
+interval=persist
+markup=pango
+color=#91E78B
+#LABEL=<span font='FontAwesome'>  </span>
+#IFACE=[automatically determined]
+#DT=3
+#UNIT=Mb
+# Exposed variables: rx, wx, tx, unit, iface
+#PRINTF_COMMAND=printf "${LABEL}%-5.1f/%5.1f %s/s\n", rx, wx, unit;
+
+
+#[ip]
+#command=hostname -i | awk '{ print "IP:" $1 }'
+#command=ip addr | grep 192 | awk '{print $2}' | sed 's/\/.*//g'
+#interval=once
+#color=#91E78B
+##border=#91E78B
+
+[temperature]
+#label=
+label=
+command=~/.config/i3blocks/temperature
+interval=10
+color=#ff7f00
+
+#
+[memoria]
+label=
+command=~/.config/i3blocks/memoria.sh
+interval=30
+markup=pango
+color=#52aeff
+#border=#52aeff
+
+#[separator]
+[cpu]
+
+label=
+command=~/.config/i3blocks/cpu
+interval=persist
+markup=pango
+color=#dfd932
+#border=#bfb912
+#border_bottom=0
+min_width=60
+align=right
+
+
+# Date Time
+#
+[time]
+#command=date '+%Y %H:%M:%S'
+command=date '+%H:%M:%S'
+interval=10
+
+
+#[battery2]
+#command= ~/.config/i3blocks/battery2
+#markup=pango
+#interval=30
+
+[monitors]
+command=~/.config/i3blocks/monitor_manager
+interval=once
+#SHOW_ON_OFF=1
+#SHOW_NAMES=1
+#SHOW_PRIMARY=1
+#SHOW_MODE=1
+#SHOW_BLANKED=1
+#SHOW_DUPLICATE=1
+#SHOW_ROTATION=1
+#SHOW_REFLECTION=1
+#SHOW_BRIGHTNESS=1
+#SHOW_BRIGHTNESS_VALUE=0
+#SHOW_UP_DOWN=1
+#FONT_FAMILY=DejaVu Sans Mono
+#FONT_SIZE=11
+#CLOSE_TO_BOUNDARY_BUFFER=20
+
+#[click]
+#full_text=📂
+##label=📂
+#command=nemo
+#markup=pango
+
+# https://openweathermap.org/weather-conditions
+# https://github.com/vivien/i3blocks
+# 

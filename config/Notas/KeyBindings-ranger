@@ -1,0 +1,56 @@
+### Gestor de archivos en la terminal
+## Ruta Archivo configuracion ~/.config/ranger/rc.conf
+
+? = Despliega menu de ayuda
+
+r = Seleccionar con que aplicacion abrir el archivo
+a = Renombrar archivo
+
+yy | Copiar
+dd | Pegar
+
+## Movimiento
+(h-j-k-l) | Moverse en dirección ←↓↑→
+J         | Bajar 20 elementos
+K         | Subir 20 elementos
+m<key>    | Crear Marcador
+'<key>    | Ir al Marcador Creado
+
+## Selección
+Barra espaciadora | Selección
+uv                | Deselección
+v                 | Invertir Selección
+mkd               | Seleccionados editar nombre
+
+## Tabs
+Ctrl + n  | Crear una pestaña
+tap       | Desplazar un tap adelante
+shift+tap | Desplazar un tap atras
+q         | Cerrar pestañas
+
+
+S        | Abrir terminal en directorio actual
+Ctrl + D | Volver a ranger
+
+## Source 
+https://github.com/ranger/ranger/wiki/Official-user-guide
+https://github.com/ranger/ranger/wiki/Plugins
+
+## Plugins
+https://github.com/cdump/ranger-devicons2
+https://github.com/maximtrp/ranger-archives
+
+## Plugins instalacion
+git clone https://github.com/cdump/ranger-devicons2 ~/.config/ranger/plugins/devicons2
+git clone https://github.com/maximtrp/ranger-archives.git ~/.config/ranger/plugins/ranger-archives
+
+## ranger-archives
+
+:extract  | Encima del archivo comprimido para descomprimir
+:compress | Encima del archivo descomprimido para comprimir
+
+# https://www.nerdfonts.com/font-downloads 
+# SpaceMono
+
+ud 
+uy

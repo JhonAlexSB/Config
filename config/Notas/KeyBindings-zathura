@@ -1,0 +1,21 @@
+### Lector de archivos pdf epub en terminal
+## Ruta Archivo configuracion = ~/.config/zathura/zathurarc
+
+----Atajos
+=          | Volver a la vista normal
+12gg ó :12 | Ir a la pagina 12
+r          | Rotar archivo
+ctrl+r     | Cambiar a modo dark
+ma         | Añadir marcador con letra a
+'a         | Ir a marcador creado con letra a
+tap        | Mostrar indices
+f+numero   | Ir a enlaces en el archivo
+a          | Tamaño completo
+s          | Tamaño ajustado
+D          | Vista de pagina como libro
+
+J     | Zoom +
+K     | Zoom -
+
+u - e | Scrooll de pagina Arriba
+d - y | Scrooll de pagina Abajo 

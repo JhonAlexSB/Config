@@ -1,0 +1,15 @@
+### Reproductor de video
+## Ruta Archivo configuracion = ~/.config/vlc/vlcrc
+
+j | Bajar volumen
+k | Subir volumen
+h | Retroceder 5s
+l | Adelantar 5s
+n | Video Siguiente
+p | Video Posterio
+[ | Menos velocidad
+] | Más velocidad
+= | Velocidad normal
+
+ | Switchear entre idiomas
+ | Switchear entre subtitulos

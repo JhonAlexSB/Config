@@ -1,0 +1,106 @@
+
+
+#Gestor de resolucion
+sudo apt install xrandr
+sudo apt install arandr
+
+#Gestor de archivos
+pcmanfm 
+
+#Temas para gestor de arhcivos
+apt install lxappearance
+
+#Gestor de luz
+apt install brightnessctl
+
+#Gestor de fondos de escritorio
+apt install feh
+
+#Opacidad de terminal
+apt install compton 
+
+#Notificaciones
+apt install dunst -y
+notify-send "Hola" "Es una prueba"
+
+#Dependencias de plugins
+apt install python3-tk
+apt install xrandr
+apt install fonts-font-awesome
+apt install xdotool
+
+#Reproductor de musica en consola
+MOC - CMUS - MOCP - MPD
+
+#Reproductor Spotify, Soundcloud, GplayMusic
+mopidy - ncspot
+
+#Instalar Mopidy
+
+##Librerias auxiliares
+sudo apt-get install build-essential python-dev python3-pip
+
+##Pip instalacion
+sudo apt-get install python-gst0.10 gstreamer0.10-plugins-good gstreamer0.10-plugins-ugly gstreamer0.10-tools
+
+sudo apt install mopidy-spotify
+
+
+------------ #zshrc instal plugins
+which shred
+
+which scrub
+
+# Para borrar archivos de forma segura con rmk
+apt install scrub -y
+
+# Descargar lsd 
+https://github.com/Peltoche/lsd/releases/tag/0.18.0
+
+dpkg -i lsd.deb
+
+## Plugins 
+apt install zsh-syntax-highlighting zsh-autosuggestions -y
+
+# escribir al comienzo sudo con combinacion [ esc esc ]
+sudo su
+cd /usr/share
+mkdir zsh-sudo
+cd !$
+wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
+ls 
+chmod +x sudo.plugin.zsh
+cd ..
+whoami
+chown jhonalex:jhonalex -R zsh-*
+
+
+
+## fzf 
+# ctrl + r | Buscar comandos anteriores
+# ctrl + t | Buscar archivos
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+sudo su
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+
+
+## mpv -escuchar radio
+apt install mpv
+
+descargar estacion
+https://directory.shoutcast.com/
+
+------------ #Dunst
+https://github.com/GerrySoft/linux-config/tree/master/dunst
+click de rueda | Para abrir notificacion con click
+
+# Herramientas
+clipit -> Gestor de portapapeles
+albert launcher -> Abrir archivos, Buscar, Ejecutar comandos
+
+------------ #Aplicaciones de terminal
+https://www.youtube.com/watch?v=ZNNqkeeOdrk
+ranger -> Gestor de archivos 

@@ -1,0 +1,34 @@
+!URxvt.font: xtf:monospace:style=Regular:Size=40
+urxvt.font: xft:Inconsolata:pixelsize=12
+!URxvt.font: xft:Hack:style=Regular:Size=90
+
+!Colors
+*.foreground: #ffffff
+*.background: #000000
+
+!Urxvt Settings
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt*Depth: 6
+URxvt.background: [70]#000000
+URxvt.internalBorder: 20
+
+urxvt.iso14755: false
+urxvt.keysym.Alt-V: eval:paste_clipboard
+urxvt.keysym.Alt-C: eval:selection_to_clipboard
+urxvt.keysym.Shift-Control-Alt-C: eval:selection_to_clipboard
+urxvt.keysym.Shift-Alt-Control-V: eval:paste_clipboard
+
+!Extension
+URxvt.perl-ext-common: default,matcher,resize-font,url-select,keyboard-select
+URxvt.colorUL: #4682B4
+
+!!Resize font 
+
+URxvt.resize-font.smaller: C-j
+URxvt.resize-font.bigger: C-k
+
+
+!URxvt.url-launcher: /usr/bin/xdg-open
+!URxvt.matcher.button: 1
+

@@ -1,0 +1,216 @@
+inoremap
+
+Abrir Terminal en vim
+
+:term 	// version vim8+
+:shell
+Moverse entre la terminal y editor
+Ctrl+w w
+
+
+
+                           -------------------------
+                Repositorios para configuraciones de vim Manual
+                           -------------------------
+
+Instalados
+  https://github.com/tpope/vim-surround   
+		->  Modificar "" a '' -> cs"'
+		-> Elemento seleccionado  S <h2>
+  https://github.com/kien/ctrlp.vim/      ->  Buscar con ctrl+p
+  https://github.com/jiangmiao/auto-pairs ->  Insercion y auto indentado en {}
+
+                           -------------------------
+                  Repositorios para configuraciones de vimPlug
+                           -------------------------
+
+Gestor
+  https://github.com/junegunn/vim-plug  
+  -> Se descarga plug.vim y se mueve a la carpeta autoload/
+  -> Necesario instalar git para que se descarguen los plugins
+
+Instalados
+  ap/vim-css-color -> Previsualizacion de colores Heaxdecimales y rgb
+  dominikduda/vim_current_word -> Resaltado de palabras coincididas
+  morhetz/gruvbox         ->  Tema visual
+  vim-airline/vim-airline     ->  Barra inferior modificada
+  preservim/NERDTree        ->  Arbol de directorios   <tecla lider> nt
+  easymotion/vim-easymotion  ->  <tecla lider> s   "despues dos letras a las que ir"
+  neoclide/coc.nvim        ->  Auto completado
+  honza/vim-snippets  -> :CocInstall coc-snippets
+
+
+No Instalados
+  https://github.com/ryanoasis/nerd-fonts ->  Fuentes
+  https://github.com/ms-jpq/chadtree      ->  Gestor de archivos
+  emmet
+
+
+Instalacion iconos NERDTree
+https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack
+
+Repo de iconos
+  VimDevIcons para los iconos
+  https://github.com/ryanoasis/vim-devicons
+  NerdFont necesario
+  https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack
+
+  https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/AnonymousPro/complete
+
+keybr ó typingclub  ->  practicas mecanografia
+
+Videos recomendados
+https://www.youtube.com/watch?v=E-ZbrtoSuzw
+https://www.youtube.com/watch?v=MquaityA1SM&t=0s
+
+Fuente:
+https://codingornot.com/category/serie-aprendiendo-vim/temporada-01-iniciandose-en-vim/page/2
+
+
+Notas
+Para abrir guia :help :<Comando>
+
+
+:source .vimrc     ->  Para refrescar los cambios de vim
+
+d2w -> 	borrar dos palabras hacia adelante
+d2b -> 	borrar dos palabras hacia atras
+dit	->	Borra contenido de una etiqueta 
+dat ->  Borra toda la etiqueta y lo de adentro
+'		->	Posicionarme en la ultima linea que se modifico
+''	->	Posicionarme en la ante penultima linea que se modifico
+
+
+                           -------------------------
+                         Comentar y descomentar rapido
+                           -------------------------
+Comentar 
+- Seleccionar lineas con Ctrl + v
+- :norm i//
+- Enter
+
+Descomentar
+- Seleccionar lineas a borrar con Ctrl + v
+- x
+
+~ - pasar de minúscula a mayúscula y viceversa 
+
+
+                           -------------------------
+                           Desplasarce entre buffers
+                           -------------------------
+
+:bn				->	Buffer hacia adelante
+:bp				->	Buffer hacia atras
+:bf				->	Buffer inicial
+:bl				->	Buffer final
+:buffers 	-> 	Mostrar buffers abiertos
+:b[num b] -> 	Desplasarce al buffer especifico
+
+
+Abrir dos ventanas
+-o archivo1 arhcivo2 #
+-O archivo1 archivo2
+:e		  ->	Abre un nuevo archivo.
+:sp	  	->	Divide la ventana en horizontal
+:vsp  	->	Divide la ventana en verical
+:close  ->  Cerrar ventana
+  
+                           -------------------------
+                          Para moverse entre ventanas
+                           -------------------------
+Ctrl wh
+Ctrl wj
+Ctrl wk
+Ctrl wl
+
+06- El editor a tu gusto
+
+Modificar valores de vim
+:set {opción} y :set {opcion}? Muestra eel valor actual.
+:set {opcion}={valor} Asigna {valor} a {opción}.
+:set {opcion}+={valor} Suma {valor} al valor actual de {opción}.
+:set {opcion}-={valor} Resta {valor} al valor actual de {opción}.l valor actual
+
+                           -------------------------
+                                    Macros
+                           -------------------------
+  qa - grabar macro a
+  q - detener la grabación de la macro
+  @a - ejecutar macro a
+  @@ - re-ejecutar la última macro ejecutad
+
+Organizar texto
+:left
+:right
+:center
+
+                           -------------------------
+                                  Ortografia
+                           -------------------------
+set spell     ->  Activa la verificación
+set nospell   ->  Desactiva la verificación
+set spelllang ->  Cambiar idioma (es_mx)
+Link  -> https://apuntes-snicoper.readthedocs.io/es/latest/editors/vim/spell_vim_es.html
+
+-En vimrc
+
+set spell
+setlocal spell spelllang=es
+
+||Corregir
+z=      ->  Sobre la letra mal escrita
+numero  ->  De la palabra a cambiar
+
+
+- Comentado y descomentado rapido
+
+
+- Identar y comentar multiples lineas 
+  << en modo normal ( Desplasa hacia la izquierda )
+  >> en modo normal ( Desplasa hacia la derecha )
+
+- Verificar Autocompleato 
+i- Plugin emmet
+      Hello word
+:edit $MYVIMRC
+:edit $VIMRUNTIME
+:so $MYVIMRC
+
+- archivos con extension .UN~
+	https://stackoverflow.com/questions/15660669/what-is-a-un-file-or-or-why-does-vim-in-the-terminal-make-the-un-file
+:set noundofile
+
+
+
+Abrir terminal en vim
+:terminal ó :term  (disponible en vim 8+)
+:shell
+
+Uso de Nerdtree
+espacio nt	-> abrir explorador
+
+-----------------
+
+https://www.youtube.com/watch?v=8qVjioebG_w  -> Extenciones top 10
+https://www.youtube.com/watch?v=ebrEY-6EwXI  ->  Configuracion de snippets
+https://stackoverflow.com/questions/15334/how-to-create-short-snippets-in-vim
+
+snippets -> es como emmet
+:CocInstall coc-snippets
+:CocList snippets
+:help :Explore
+
+--------------
+Place holder con archivos abiertos recientemente
+Sintastic -> corretor de sintaxis
+(Opcional) -> Imagen de fondo en editor
+nerd-fonts -> Nerdtree pero con estilos visuales  (https://www.youtube.com/watch?v=fR4ThXzhQYI)
+https://stackoverflow.com/questions/16882696/settings-default-font-in-gvim
+https://stackoverflow.com/questions/23259346/fail-to-set-font-in-macvim#23260671
+https://es.play-and-more.com/9703-add-custom-fonts-to-command-prompt?__cf_chl_jschl_tk__=4c884f488ede98b223fa1fb3c9cee11a4ac54ad3-1604441876-0-AQ-_i7Ghr8LWAjdErFxZaIqhBWDDlW5I1NawUR7BqR54TWn6JQ2p0OIcjRZezm7_TJvD8oeGhnV6Z1PFFXqc18X84mkCPi8oR40nTGw_SLdzL2GootOOwABb20NP6ExyxA910Bc4tpmK8Vy6fHr5OyEAD2lPg_i6weTu-Gl7jPHZY8aJzzfCADuycjK9I40It7oLshqa3-zkjBdTT_LPeN8T4uzQdBMit7ouTzhUKohKWK1QhmN24ct-7sZw6FpxV-ObQcIcWP5qJEtK8Z3_9JJJ-Av3w4j3R2C7eCLOMVbZ-OmaSjaS32GKqqJrHOtpwAD1_HYwI7zsTsFMWECReIM
+trustedinstaller para fuentes en grupo de usuarios
+
+foldmethod -> configurar cierre de {} 
+	https://vim.fandom.com/wiki/Folding
+	https://www.vim.org/scripts/script.php?script_id=4021

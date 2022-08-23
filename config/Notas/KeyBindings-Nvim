@@ -1,0 +1,161 @@
+### Editor de archivos en terminal
+## Ruta Archivo configuracion = ~/.config/nvim/init.vim
+
+" ------------
+" ( Mapeo de teclas ) { Nvim }
+" ------------
+
+, : Tecla lider <Leader> 
+
+### Mover cursos en modo normal
+j | Abajo
+k | Arriba
+h | Izquierda
+l | Derecha
+
+### Ajustes mas usados
+jk  | Ingresar modo normal
+,w  | Guardar
+,q  | Cerrar pestaña
+,o  | Pestaña anterios
+,a  | Cerrar nvim
+,p  | Pestaña Siguiente
+,f  | set File type
+,,h | Actualizar pwd a la posicion del archivo
+
+### Termial
+Ctrl + t | Abrir y Cerrar
+lv       | Abrir Live reload
+
+### Bloque seleccionado 
+K | Mover hacia arriba
+J | Mover hacia abajo
+< | Mover hacia la izquierda
+> | Mover hacia la derecha
+f | Ordenar alfabetica o numeralmente
+
+### Moverse entre Archivos buffers
+Tap        & ,p | Siguiente Archivo
+Ctrl + Tap & ,o | Anterior Archivo
+
+### Dependencias
+git      = Plug
+markdown = MarkdownPreview
+grip     = MarkdownPreview (just online)
+xdotool  = MarkdownPreview
+node     = Coc
+
+###plugins
+
+
+" ------------
+" ( Mapeo de teclas ) { Ferm }
+" ------------
+" Link https://github.com/lambdalisue/fern.vim
+" ------------
+
+
+,m | Abrir
+
+u  | Para devolverse una carpeta
+n  | New file
+m  | Mover o renombrar archivo
+r  | Ruta de archivo
+R  | Recargar
+t  | Borrar
+s  | Seleccionar
+
+
+" ------------
+" ( Mapeo de teclas ) { Easy-aling }
+" ------------
+" Link github.com/junegunn/vim-easy-align
+" ------------
+
+
+,ga | Acomodar varias lineas con un separador como =|
+
+
+" ------------
+" ( Mapeo de teclas ) { EasyMotion }
+" ------------
+" Link github.com/easymotion/vim-easymotion
+" ------------
+
+
+,s | Mas dos letras a las que se quiera ir
+,l | Buscar hacia la derecha
+,h | Buscar hacia la izquierda
+,k | Buscar hacia la arriba
+,j | Buscar hacia la abajo
+
+
+" ------------
+" ( Mapeo de teclas ) { Vim-tmux-navigator }
+" ------------
+" Link github.com/christoomey/vim-tmux-navigator
+" ------------
+
+
+ctrl + (hjkl) | Moverse entre ventanas
+
+
+" ------------
+" ( Mapeo de teclas ) { coc-git }
+" ------------
+" Link github.com/neoclide/coc-git
+" ------------
+
+
+]g | Siguinete linea modificada
+[g | Anterior linea modificada
+ha | 
+gu | 
+gs | informacion de la linea modificada
+
+
+" ------------
+" ( Mapeo de teclas ) { nerdcommenter }
+" ------------
+" Link github.com/scrooloose/nerdcommenter
+" ------------
+
+,cc | Comentar
+,cu | Descomentar
+
+" ------------
+" ( Mapeo de teclas ) { surround }
+" ------------
+" Link github.com/tpope/vim-surround
+" ------------
+
+Surround Command         | Description
+y s <motion> <desired>   | Add desired surround around text defined by <motion>
+d s <existing>           | Delete existing surround
+c s <existing> <desired> | Change existing surround to desired
+S <desired>              | Surround when in visual modes (surrounds full selection)
+Some examples:
+
+"test" with cursor inside quotes type cs"' to end up with 'test'
+"test" with cursor inside quotes type ds" to end up with test
+"test" with cursor inside quotes type cs"t and enter 123> to end up with <123>test</123>
+
+" ------------
+" ( Mapeo de teclas ) { Markdown-Preview }
+" ------------
+" Link github.com/JamshedVesuna/vim-markdown-preview
+" ------------
+
+
+Ctrl+m | Actualizar cambios
+
+" ------------
+" ( Mapeo de teclas ) { Nombre }
+" ------------
+" Link github.com/
+" ------------
+
+## Comandos o Atajos
+
+# Reemplazar nombres de archivos
+:%s/oldname/replacename 

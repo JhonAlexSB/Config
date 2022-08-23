@@ -1,0 +1,14 @@
+## Supported server options to pass to vncserver upon invocation can be listed
+## in this file. See the following manpages for more: vncserver(1) Xvnc(1).
+## Several common ones are shown below. Uncomment and modify to your liking.
+##
+# securitytypes=vncauth,tlsvnc
+# desktop=sandbox
+#geometry=2000x1200
+#geometry=1024x768
+geometry=1100x624
+FrameRate=15
+dpi=100
+ImprovedHextile=0
+
+# https://tigervnc.org/doc/Xvnc.html

@@ -1,0 +1,90 @@
+https://www.youtube.com/watch?v=juPhP1iHWSs
+
+sudo apt update
+
+//--- Apache2---// 6.175kb
+	sudo apt install apache2
+
+//--- Mysql ---// 20,7 Mb
+	sudo apt install mysql-server mysql-common mysql-client
+
+//--- Php ---// 3.787 kb
+	sudo apt install php libapache2-mod-php php-mysql
+
+//--- Phpmyadmin ---//
+	sudo whoami -> Para saber el user
+	1)  Se dan permisos en la carpeta de apache para crear el acceso directo
+		sudo chown user:group /var/www/html
+		sudo chown jhon:adm /var/www/html
+
+	2) Se instala phpmy admin  // 13,8 mb // min 9:23
+		sudo apt install phpmyadmin
+
+	3) Se crea el acceso directo
+		ln -s /usr/share/phpmyadmin /var/www/html
+
+
+ ---------- Se prueba de la siguiente manera ----------
+
+apache
+	desde navegador en la ruta "localhost"
+
+phpmyadmin 
+	desde navegador en la ruta "localhost/phpmyadmin"
+
+mysql
+	desde consola con el comando "mysql -u root -p" ó tambiem desde phpmyadmin
+
+php
+	crear archivo .php y digitar en el
+	<?php   phpinfo();  ?>
+
+ ----------  Se detienen los servicios de la siguiente manera ---------- 
+
+sudo /etc/init.d/apache2 stop; sudo /etc/init.d/mysql stop; sudo /etc/init.d/cups stop 
+sudo /etc/init.d/apache2 start; sudo /etc/init.d/mysql start
+
+
+|| ----------  Solucionar problema mysql ----------
+https://stackoverflow.com/questions/36864206/sqlstatehy000-1698-access-denied-for-user-rootlocalhost
+
+1- log into MYSQL as root 
+--Comando--
+mysql -u root
+-- --
+
+2- Grant privileges. To a new user execute:
+--Comando--
+CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'newuser'@'localhost';
+FLUSH PRIVILEGES;
+-- --
+
+UPDATE for Google Cloud Instances 
+MySQL on Google Cloud seem to require an alternate command (mind the backticks).
+
+--Comando--
+GRANT ALL PRIVILEGES ON `%`.* TO 'newuser'@'localhost';
+-- --
+bind to all addresses:
+
+GRANT ALL PRIVILEGES ON `%`.* TO 'newuser'@'localhost' GRANT WITH OPTION;
+
+
+The easiest way is to comment out the line in your /etc/mysql/mariadb.conf.d/50-server.cnf or /etc/mysql/mysql.conf.d/mysqld.cnf file, depending on what system you are running:
+
+#bind-address = 127.0.0.1 
+exit mysql and restart mysql
+
+exit
+service mysql restart
+
+SET PASSWORD FOR ‘newuser’@’localhost’ = PASSWORD(‘Password’);
+
+mysqladmin -u nombreUsuario -p AntiguaContraseña ‘NuevaContraseña’
+mysqladmin -u newuser -p password ‘password2’
+
+|| ---------- HTTP ERROR 500 en phpmyadmin ----------
+
+sudo ln -s /usr/share/phpmyadmin /var/www/
+sudo service apache2 restart

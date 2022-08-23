@@ -1,0 +1,83 @@
+Instalacion de archivos .deb
+
+sudo dpkg -i <pakete>
+
+Borrar archivo y/o carpetas
+rm -rf files/
+
+Comando puertos
+sudo /etc/init.d/apache2 stop; sudo /etc/init.d/mysql stop; sudo /etc/init.d/cups stop
+sudo /etc/init.d/apache2 start; sudo /etc/init.d/mysql start;
+
+
+sudo /etc/init.d/ssh stop;
+
+ps aux
+ps aux | grep -i network
+ps aux | grep -i iss-realsecure
+
+-- Virtualbox
+  sudo apt install virtualbox virtualbox-guest-additions-iso vde2 
+
+  https://linuxconfig.org/virtualbox-extension-pack-installation-on-ubuntu-22-04-jammy-jellyfish-linux
+  sudo apt install virtualbox-ext-pack
+
+Insertar disco en maquina virtual e instalar GuestAdditions
+  sudo sh VBoxLinuxAdditions.run
+
+Crear vbox user para permitir lectura de dispositivos usb
+  sudo adduser jhon vboxusers
+
+Configuracion virtualbox para i3-wm
+  Archivo -> Preferencias -> Entrada -> Despalomiar "Autocapturar teclado"
+
+php -s localhost:4000
+
+sudo ifconfig
+
+rm -rf <archivo>							->	Para eliminar permanentemente
+find . -name "*describcion*"				->	Para encontrar archivo
+
+-- Puertos usb -- Permisos puerto serial
+	https://www.linuxito.com/gnu-linux/nivel-basico/101-como-listar-puertos-serie
+
+-- Instalar nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+
+** Instalar adb de android
+sudo apt install android-tools-adb
+
+** dar permisos al puerto
+	sudo chmod 777 /dev/ttyUSB0
+
+** listar puertos serie utilizados
+
+dmesg | grep tty
+setserial -g /dev/ttyS*
+
+apt update; apt upgrade
+
+## Desfragmentar Linux
+
+sudo e4defrag/dev/sda*
+
+
+### ( Mejorar arranque de linux )
+https://vidatecno.net/hacer-que-el-arranque-de-linux-sea-mas-rapido-al-deshabilitar-servicios-innecesarios/
+
+## Desactivar servicios
+sudo systemctl disable cups
+
+## Ver dependecias del servicios
+systemd-analyze blame | grep cups
+
+
+## Enmascarara servicio
+sudo systemctl mask snapd.service
+
+# 2 Minutos
+countdown $((2*60))
+# 1 Hora
+countdown $((1*60*60))
+
+

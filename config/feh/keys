@@ -1,0 +1,10 @@
+scroll_up Up k
+scroll_down Down j
+scroll_left Left h
+scroll_right Right l 
+zoom_in i
+zoom_out o
+
+close u
+toggle_pause m 
+toggle_fixed_geometry F

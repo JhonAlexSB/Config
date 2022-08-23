@@ -1,0 +1,28 @@
+### Reproductor de musica en terminal
+## Ruta Archivo configuracion = ~/.config/cmus/autosave
+
+:add <ruta>   | Agregar musica
+enter         | Reproducir
+c             | Pausar/Despausar
+v             | Parar
+x             | Reiniciar
+(jk)          | Moverse Abajo - Arriba
+(hl)          | Atrasar - Adelantar
+(zb)          | Disco Anterior - Siguiente
+suprimir      | Quitar lista agregada
+(1 al 7)      | Modos
+q             | Salir del reproductor
+tap           | Cambiar entre track y artist/album
+espacio       | Desplegar/Cerrar acordeon de Artistas
+:update-cache | sirve para refrescar cambios
+o             | Play-nextsong
+p             | Play-prevsong
+/ <palabra>   | Buscar cancion
+n             | Pasar a siguiente coincidencia
+N             | Pasar a anterior coincidencia
+s             | Activas/Desactivar Random
+m             | Cambiar entre los diferentes modos random
+
+# Source
+# https://github.com/cmus/cmus/blob/master/Doc/cmus-tutorial.txt
+# https://linuxadictos.com/en/cmus-a-command-line-music-player-for-those-who-prefer-something-light-to-something-pretty.html

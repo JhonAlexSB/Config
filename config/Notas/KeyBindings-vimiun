@@ -1,0 +1,39 @@
+### Plugin para moverse en navegadores sin el mouse
+
+f     | Buscar ubicacion para abrir
+p     | Pegar lo que esta en portapapeles y buscarlo
+P     | Lo mismo que el anterio pero en otra pestaña
+o     | Abrir marcadores
+shift | poner en mayuscula los anteriores atajos y abrirlos en otra pagina
+/     | Buscar en la pagina (N n) coincidencia anterior y siguiente
+
+(jk) | Moverse entre arriba y abajo
+(hl) | Moverse entre izquierda y derecha
+(JK) | Moverse entre pestañas
+(HL) | Moverse entre paginas abiertas
+
+
+Desplasarce por paginas
+j     | Abajo
+k     | Arriba
+h     | Izquierda
+J ó K | Desplazarse entre pestañas
+H ó L | Moverse entre el historial visitado
+l     | Derecha
+f     | Seleccion de algun elemento
+
+	
+
+Otros ajustes
+o           | abrir url, maracador de pagina, historial o pestaña creada
+	O         | lo mismo que el anterior pero en otra pagina
+b           | abrir marcador de pagina
+	B         | lo mismo pero en otra pagina
+	(tap para navegar en resultados de o y b)
+T           | Ir a pestaña abierta
+alt + d     | Poner en foco url
+gs ó ctrl+u | ver codigo fuente de la pagina
+
+
+alt + m          | Silenciar audio
+

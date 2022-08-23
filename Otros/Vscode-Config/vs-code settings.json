@@ -1,0 +1,52 @@
+{
+    "workbench.colorTheme": "Tomorrow Night Blue",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.wordWrap": "on",
+    "editor.lineNumbers": "relative",
+      // Controls whether the minimap is shown.
+  "editor.minimap.enabled": false,
+    // Limit the width of the minimap to render at most a certain number of columns.
+  "editor.minimap.maxColumn": 60,
+   // The number of spaces a tab is equal to. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
+  "editor.tabSize": 2,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+  "window.zoomLevel": -1,
+
+
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    { 
+      "before": ["<leader>","w"],
+      "commands": [":w"]
+    },
+    { 
+      "before": ["<leader>","q"],
+      "commands": [":q"]
+    },
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  }
+}

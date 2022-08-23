@@ -1,0 +1,31 @@
+background_opacity: 0.7
+
+#padding:
+  #x: 3
+  #y: 3
+
+font:
+  normal:
+    family: FiraCode Nerd Font Mono
+    #family: InconsolataGo Nerf Font Mono
+#FiraCode Nerd Font Mono Medium
+#font:
+    #normal:
+        #family: FiraCode
+        #style: MonoSpace
+    #bold:
+        #family: FiraCode
+        #style: Bold
+    #italic:
+        #family: FiraCode
+        #style: Italic
+    #bold_italic:
+        #family: FiraCode
+        #style: Bold Italic
+    #size: 13.0
+    #offset:
+        #x: 0
+        #y: 4
+        #
+        
+

@@ -1,0 +1,83 @@
+Link curso git y github
+	https://www.youtube.com/watch?v=j8CSUPIB8mA&list=PLvimn1Ins-43-1sXQmGZPWLjNjPyGNi0R&index=1
+
+
+Apuntes comandos git
+
+
+|| -------- Configuracion principal -------- ||
+
+git init				->	 Asigna la carpeta como repositorio
+
+git config --global user.email "correo@gmail.com"				-> 	Correo
+git config --global user.name "Jhon Alexander"								-> 	Nombre
+git config --global -l															->	Ver informacion nombre y correo
+
+|| -------- Subir proyecto -------- ||
+
+git remote add origin https://github.com/JhonAlex117/PaginaPs3.git	->	Preparar documentos a repositorio
+git push -u origin master														->	Subir documentos a repositorio
+
+|| -------- Basicos -------- ||
+git status															->	Ver estado de nuestros archivos
+
+git add <file> 		para agregar archivo		|	 (git add .)		Agregar todos	|	(git add /*.js)		Por Extencion
+git reset <file>	para quitar archivo 		|	 (git reset .)	Quitar todos		|	(git add /*.css)	Por Extencion
+
+git commit -m "Primer commit"									->	Para crear puntos de partida
+git diff 									->	Ver diferencias en archivo/os que tiene un status(git status) diferente
+git --help									->	Para tener documentacion de comandos
+git remote	 <comando>					->	Para obtener ayuda y atributos de ese comando
+
+|| -------- Descartar Gestion de Control -------- ||
+
+Como librerias o configuraciones ajenas al proyecto
+Para ignorar archivos o carpetas que no se desean tener un control se crea una archivo con el siguiente nombre
+Dentro de este se escriben las rutas de los archivos que no se desean separadas con un salto de linea
+
+	.gitignore
+
+|| -------- Alias a comando -------- ||
+
+git config --global alis.l "log"			ahora se puede llamar a log de dos formas		|	git log		ó	git l
+git config --global alis.s "status"		ahora se puede llamar a log de dos formas		|	git status 	ó 	git s
+para eliminar alias					git config --global --unset alias.TuAlias
+
+|| -------- Control de log -------- ||
+
+git commit --amend -m "describcion"		-> 	Se modifica la describcion del commit
+git mv <archivo> <archivo>					-> 	Modificar nombre de archivo y que se registre en log
+git rm <archivo>								->	Se borra el arhcivo y se registra en log
+git reset --soft	 <codigo de log>				->	Para volver a un punto en especifico de log en el proyecto	"sin modificar"
+git reset --hard <codigo de log>				->	Para recuperar un arhchivo borrado en ese el log del proyecto
+git reset reflog								->	Volver al ultimo punto del log en el proyecto
+
+|| -------- Branch Merge y Union de ramas -------- ||
+
+git log --oneline --decorate --all --graph		->	Manera visual de ver donde estamos "incuyendo cambio de ramas"
+git merge <nombre rama>					->	Unir ramas se recomienda estar en la rama principal merge
+git branch -d <nombre rama>				->	Borrar rama
+git branch -m <nombreV> <nombreN>		-> 	Cambiar nombre de rama
+git branch										->	Consultar ramas
+git branch <nombre> 						->	Crear rama 
+git checkout <nombre>				->	Cambiar rama
+git checkout -b <nombre>		-> 	Crear y cambiar a la rama creada
+
+|| -------- tag ó Etiquetas -------- ||
+
+git tag		<nombre etiqueta>			->	Agregar etiqueta		
+git tag -d 	<nombre etiqueta>			->	Borrar etiqueta
+git tag -a	<nombre etiqueta>
+git show 	<nombre etiqueta>			->	Ver detalles de etiqueta
+
+|| -------- Mover arhivo -------- ||
+
+git clone <url>					->	Clonar repositorio remoto al computador
+git push -u origin master
+git pull	<url>					->	Enviar de repositorio de github al repositorio local
+
+
+gitbucket		Puede crearse repositorios privados
+gitlab
+
+

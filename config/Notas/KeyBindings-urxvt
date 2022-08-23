@@ -1,0 +1,25 @@
+### Terminal urxvt
+## Ruta Archivo configuración = ~/.Xdefaults
+## Ruta Archivo configuración = ~/.Xresources
+
+# Instalacion
+pacman -S rxvt-unicode urxvt-perls
+
+# Refrescar cambios echos al archivo de configuracion
+xrdb ~/.Xdefaults
+
+# Buscar fuente dentro de las instaladas
+fc-list | grep "Hack"
+
+# Combinaciones de telclas
+Ctrl + Alt + C | Copia
+Ctrl + Alt + V | Pegar
+
+Ctrl + K | UperCase
+Ctrl + J | LowerCase
+
+Alt + Esc | Movimiento como vim
+
+## Fuentes
+# Resize-font
+https://github.com/simmel/urxvt-resize-font

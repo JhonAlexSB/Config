@@ -1,0 +1,71 @@
+*auto completado	-> predeterminado
+
+*liveserver						https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+	actualizacion en vivo cada vez que se guarda el proyecto con "ctrl + s"
+*htmltagwrap 					https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap	
+	"alt + w"	con el texto seleccionado
+*auto rename tag					https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag
+	renombrar etiquetas inicial y final cuando el cursor de escritura esta en ella
+*Bracket Pair Colorizer			https://github.com/CoenraadS/Bracket-Pair-Colorizer-2
+	Mas facil la lectura con colores
+*Prettier - Code formtatter		https://github.com/prettier/prettier-vscode
+	para activar el plugin ---->		ctrl + shift + p 	-> Format document	-> Configure	-> prettier	
+	comando por defecto en windows	->	shit + alt + f
+	Comando por defecto en linux		->	ctrl + shift + i
+*Dobri Next
+	Ctrl + Shift + P		-> Preference: Color Theme
+*Material Icon Theme	-> Cambia iconos de archivos y carpetas
+*Vim					-> Para mejorar productividad sin usar el mouse
+*Simple New File		-> Crear carpetas y archivos de manera mas facil y rapida
+	Ctrl + Alt + n
+*Code Spell Checker
+	-> Corregir ortigrafia
+*Open file				-> Predeterminado en vs Code
+	Ctrl + p
+
+
+ctrl + shift + p | Abrir busqueda avanzada
+ctrl + v         | pegar y dar enter con cualquier link del marketplace para instalar
+
+https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
+https://marketplace.visualstudio.com/items?itemName=fayras.simple-new-file
+https://marketplace.visualstudio.com/items?itemName=s-nlf-fh.glassit
+https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
+https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap
+https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+
+ext install ritwickdey.LiveServer
+ext install vscodevim.vim
+ext install fayras.simple-new-file
+ext install s-nlf-fh.glassit
+ext install PKief.material-icon-theme
+ext install bradgashler.htmltagwrap
+ext install esbenp.prettier-vscode
+
+
+*minify
+*svg viewer
+
+
+
+- Cerrrar terminal integrada 	->	Ctrl + j
+- Abrir termianl integrada	->	Ctrl + ñ
+
+
+*toogle comment	-> 	linea de comentario -> ctrl+}
+
+
+*Para que se pueda ver siempre una linea de codigo sin importar su tamaño
+	settings	->	commonly used	-> word wrap -> on
+
+*Para tener numeros de linea relativos
+	settings	-> Line Numbers 	->	relative
+
+
+Code Runner						https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
+Better align						https://marketplace.visualstudio.com/items?itemName=wwm.better-align
+abrir termina
+	open new terminal 	->	ctrl + shift + c
+	integrated terminal	->	ctrl + shift + c
+

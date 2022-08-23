@@ -1,0 +1,42 @@
+### Reproductor de video en terminal
+## Ruta Archivo configuracion = ~/.config/mpv/input.conf
+
+## Atajos por defecto
+
+j  | Cambiar entre subtitulos
+v  | Ocultar y Mostrar iconos
+f8 | Ver lista de reproduccion y video actual
+}  | Aumentar velocidad
+{  | Disminuir velocidad
+
+
+## input.conf
+
+j | Bajar Volumen
+k | Subir Volumen
+h | Retroceder 5s
+l | Adelantar 5s
+
+c | Pausar/Despausar ( o barra espaciadora )
+s | Subtitulos On/Off
+a | Cambiar entre lenguajes
+
+n | Siquiente capitulo
+p | Anterior capitulo
+
+q ó u | Quitar reproduccion
+y | Definir comienzo y final de loop && limpiar del loop
+
+z | sub delay -
+x | sub delay +
+
+ctrl - | audio delay -
+ctrl + | audio delay +
+
+A | Cambiar aspecto de video entre "16:9" "4:3" "2.35:1" "-1" 
+
+
+## Fuentes 
+
+https://defkey.com/mpv-media-player-shortcuts
+https://github.com/mpv-player/mpv/blob/master/etc/input.conf

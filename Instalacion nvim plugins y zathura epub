@@ -1,0 +1,56 @@
+
+sudo apt install python3-neovim
+npm install -g neovim
+
+------Plugins nvim
+
+----Browser-sync
+sudo npm i -g browser-sync
+browser-sync start --server --index "newtab.html" --files "css/*.css" "*.html" "*.js"
+
+
+----CHADtree
+:CHADdeps
+Si da error
+
+Descargar pip3 si no se tiene (Gestor de modulos de python)
+sudo apt -y install python3-pip
+
+sudo apt install python3-neovim
+
+Vuel a probar
+:CHADdeps
+
+let g:chadtree_settings = { 'ignore.dog': 'scratch, stratch' }
+
+
+-------Instalar soporte zathura epub
+https://askubuntu.com/questions/1145153/opening-epub-using-zathura-18-04
+
+Question
+I have downloaded zathura doc viewer. But it supports only pdf rightnow. But in archlinux wiki, they have this plugin for opening epub. But this is not available in ubuntu. I saw a PPA, but it doesn't have support for 18.04. How to get this?
+
+Asnwer
+As far I can read from ArchWiki - you need to install zathura-pdf-mupdf plugin.
+Currently there is a PPA named ppa:spvkgn/zathura-mupdf.
+After contacting PPA owner we have package for Ubuntu 18.04 LTS (Bionic Beaver).
+So if you have followed my previous method, then you can delete the pin/lock file and install binary packages from the repository as usual:
+
+sudo rm /etc/apt/preferences.d/pin-zathura
+sudo add-apt-repository ppa:spvkgn/zathura-mupdf
+https://askubuntu.com/questions/1145153/opening-epub-using-zathura-18-04
+
+
+-------Instalar Fuente nerdfont
+download nerdfont de https://www.nerdfonts.com/font-downloads
+
+--
+cd /usr/local/share/fonts
+sudo mv /home/jhonalex/Descargas/Hack.zip
+sudo su
+unzip Hack.zip
+rm Hack.zip
+exit
+
+-------Instalar Plugins zsh
+
