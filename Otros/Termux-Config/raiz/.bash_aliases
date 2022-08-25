@@ -38,8 +38,8 @@ alias p="pacman"
 alias gits='git status'
 alias gitc='git commit -m'
 alias gita='git add'
-alias gitpull='git push origin'
-alias gitpush='git pull origin'
+alias gitpush='git push origin'
+alias gitpull='git pull origin'
 alias batp='bat -p'
 
 # Copiado, Movido y borrado recursivo
