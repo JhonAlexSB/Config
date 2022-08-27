@@ -1,11 +1,11 @@
 let mapleader=","
-
-"  -----------------------------------
-"   Mapeo de tecla plugins
-"  -----------------------------------
+"so ~/.vim/plug.vim
+"so ~/.vim/plugconf.vim
+"so ~/.vim/coc.vim
 
 "  -----------------------------------
 "   Mapeo de tecla
+"   >>>>>>
 "  -----------------------------------
 
 "  <Leader> valor definido barra espacio
@@ -32,8 +32,8 @@ vmap <leader>i :''norm
 nmap <leader><leader>h :cd %:h<CR> 
 "nmap <leader>so :so%<CR>
 
-nmap <leader>so :so ~.vimrc<CR>
-nmap <leader>e :e ~.vimrc<CR>
+nmap <leader>so :so ~/.vimrc<CR>
+nmap <leader>e :e ~/.vimrc<CR>
 
 "mueve bloques de codigo en modo visual o V-Line
 "Moves Blocks of code in visual mode or V-Line
@@ -51,10 +51,29 @@ vnoremap > >gv
 
 vnoremap f !sort -n -k 2<CR>
 
+
+" ------------
+" ( Configuracion ) { Folding_and_PonintCursor_Save }
+" >>>>>>
+" ------------ 
+
+
+" https://stackoverflow.com/questions/2142402/code-folding-is-not-saved-in-my-vimrc
+
+let &viewdir=expand("~/") . ".vim/folding"
+if !isdirectory(expand(&viewdir))|call mkdir(expand(&viewdir), "p", 451)|endif
+
+autocmd BufWrite * mkview
+autocmd BufRead * silent! loadview
+
+  "Vim folding commands
+  " https://stackoverflow.com/questions/2362914/fold-function-in-vim
+
 " Folding
-"nmap <silent>U za<CR> 
-"nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
-"vnoremap <Space> zf
+nmap <silent>U za<CR> 
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
+"---------------------------------
 
 "" split resize
 "nnoremap <leader>> 10<c-w>>
@@ -68,6 +87,33 @@ nnoremap <silent> <TAB> :bnext<CR>
 nnoremap <silent> <S-TAB> :bprevious<CR>
 
 "nmap <Leader>m :VimFiler<CR>
+
+
+"Easyer window management
+map <leader>h <C-w><Left>
+map <leader>j <C-w><Down>
+map <leader>k <C-w><Up>
+map <leader>l <C-w><Right>
+
+"" Open split
+map - :vsplit<CR>
+map _ :split<CR>
+
+"" Split resize
+map = <C-W>-
+map + <C-W>+
+
+"" Vsplit resize
+nnoremap <leader>> 1<c-w>>
+nnoremap <leader>< 1<c-w><
+
+"" Full resize
+map <leader>H <C-W>h<C-W>_
+map <leader>J <C-W>j<C-W>_
+map <leader>K <C-W>k<C-W>_
+map <leader>L <C-W>l<C-W>_
+
+
 
 
 "npm install -g live-server
@@ -86,7 +132,7 @@ nnoremap <silent> <S-TAB> :bprevious<CR>
 
 "  -----------------------------------
 "  Config
-"   
+"  >>>>>>
 "  -----------------------------------
 
 
@@ -137,7 +183,8 @@ set nocompatible " No ser compatible con vi
 set number " Mostra numeros en la parte izquierda
 set mouse=a " Interactuar con el mouse dentro de vim
 set numberwidth=1 " Cambiar ancho de los numeros
-set clipboard=unnamedplus " La papelera de vim y el S.0. se maneja igual
+set clipboard=unnamed " La papelera de vim y el S.0. se maneja igual
+"set clipboard=unnamedplus " La papelera de vim y el S.0. se maneja igual
 syntax enable " Habilitar resaltado de color en sintaxis
 set showcmd " Mostrar comandos de teclas pulsadas
 set ruler " Mostra numeros de ubicacion
@@ -170,7 +217,7 @@ set si "Smart indent
 
 "  -----------------------------------
 "  Status Line
-"   
+"  >>>>>>
 "  -----------------------------------
 
 let ctrlv = "\<C-v>"
@@ -206,5 +253,4 @@ function! StatuslineGit()
   let l:branchname = get(b:, 'git_branch', '') 
   return strlen(l:branchname) > 0?'⎇  '.l:branchname:''
 endfunction
-
 
