@@ -1,3 +1,4 @@
 /config/nvim/plugged
 raiz/.vim/folding/
 raiz/.vim/pack/
+raiz/.vim/autoload/plug.vim
