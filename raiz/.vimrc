@@ -1,6 +1,7 @@
 let mapleader=","
 "so ~/.vim/plug.vim
 "so ~/.vim/plugconf.vim
+"so ~/.config/Notas/KeyBindings-Nvim
 "so ~/.vim/coc.vim
 
 "  -----------------------------------
@@ -30,7 +31,6 @@ nmap <leader>f :set filetype=
 ":'<,'>
 vmap <leader>i :''norm 
 nmap <leader><leader>h :cd %:h<CR> 
-"nmap <leader>so :so%<CR>
 
 nmap <leader>so :so ~/.vimrc<CR>
 nmap <leader>e :e ~/.vimrc<CR>
@@ -113,30 +113,13 @@ map <leader>J <C-W>j<C-W>_
 map <leader>K <C-W>k<C-W>_
 map <leader>L <C-W>l<C-W>_
 
-
-
-
 "npm install -g live-server
 "live-server file_name
-
-
-" Atajos de teclado 
-" Fern
-
-" u | para devolverse entre carpeta
-" n | new file
-" m | mover o renombrar archivo
-" r | ruta de archivo
-" t | borrar 
-" s | seleccionar 
 
 "  -----------------------------------
 "  Config
 "  >>>>>>
 "  -----------------------------------
-
-
-
 
 " Helps force plug-ins to load correctly when it is turned back on below.
  filetype off
