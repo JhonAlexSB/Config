@@ -1,13 +1,10 @@
 # some more ls aliases
 alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-# Print my public IP
-alias pubip='curl ipinfo.io/ip' 
-
-# Print time 
-alias time='curl -s https://wttr.in/' 
+alias la='ls -Ap'
+alias l='ls -CFp'
+alias ls='ls -CFp'
+alias l.='ls -ap | egrep "^\."'
+alias fclist="fc-list | grep"
 
 alias q="exit"
 alias upbash="source /etc/bash.bashrc"
@@ -23,27 +20,29 @@ alias v="vim"
 alias nv="nvim"
 alias vnc="vncserver :0 "
  
+# Python shorcuts
 alias srca="source env/bin/activate"
 alias srcd="deactivate"
 
-
+# Termux shorcuts
 alias protl="proot-distro login archlinux"
 
-
-#-RawKeyboard
-
-alias cl="clear"
-alias p="pacman"
-
+# Git shorcuts
 alias gits='git status'
 alias gitc='git commit -m'
 alias gita='git add'
 alias gitpush='git push origin'
 alias gitpull='git pull origin'
+alias gitlog='git log'
+
+#-RawKeyboard
+
+alias cl="clear"
+alias p="pacman"
 alias batp='bat -p'
 
+
 # Copiado, Movido y borrado recursivo
-alias mvr="mv -r"
 alias cpr="cp -r"
 alias rmr="rm -rf"
 alias rmd="rmdir"
@@ -52,6 +51,20 @@ alias df='df -kTh'
 alias free='free -h'
 
 alias scrcpycfg='scrcpy -b 2M -m 1024 --max-fps 25'
+
+
+
+
+# Internet
+alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
+alias extip="curl icanhazip.com"
+alias ip="curl ipinfo.io"
+
+# Print my public IP
+alias pubip='curl ipinfo.io/ip' 
+
+# Print time 
+alias time='curl -s https://wttr.in/' 
 
 mkcd ()
 {
