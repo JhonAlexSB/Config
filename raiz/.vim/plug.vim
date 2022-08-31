@@ -9,7 +9,10 @@
 Plug 'easymotion/vim-easymotion'
 
 " https://github.com/ghifarit53/tokyonight-vim 
+" Git
 Plug 'airblade/vim-gitgutter'
 
+" Snippet
+Plug 'mattn/emmet-vim'
 
 call plug#end()
