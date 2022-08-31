@@ -2,6 +2,7 @@
 ## Ruta Archivo configuracion = ~/.tmux.conf
 
 prefix = ctrl+a
+prefix = ctrl+b por defecto
 
 -Comandos
 prefix c     | Crear otra sesion
