@@ -47,4 +47,5 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
+PS1='\[\e[0m\]\u\[\e[0m\][\[\e[0m\]\W$(parse_git_branch)\[\e[0m\]]\[\e[0m\]> \[\e[0m\]'
 #PS1="\[\033[01;32m\]\u@\h {\[\033[01;34m\]\w\$(parse_git_branch)\[\033[01;32m\]} \[\033[01;34m\]\$\[\033[00m\] "
