@@ -1,4 +1,5 @@
 # some more ls aliases
+alias lss='ls -lh'
 alias ll='ls -alF'
 alias la='ls -Ap'
 alias l='ls -CFp'
@@ -34,6 +35,7 @@ alias gita='git add'
 alias gitpush='git push origin'
 alias gitpull='git pull origin'
 alias gitlog='git log'
+alias gitl='git log --decorate --oneline --graph'
 
 #-RawKeyboard
 
@@ -55,10 +57,13 @@ alias scrcpycfg='scrcpy -b 2M -m 1024 --max-fps 25'
 
 
 
-# Internet
+# >>>>>> Internet o urls
 alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
 alias extip="curl icanhazip.com"
 alias ip="curl ipinfo.io"
+
+# find
+alias fd="find -name"
 
 # Print my public IP
 alias pubip='curl ipinfo.io/ip' 
@@ -66,10 +71,42 @@ alias pubip='curl ipinfo.io/ip'
 # Print time 
 alias time='curl -s https://wttr.in/' 
 
+# >>>>> Remap
+# Delete for word
+# Src: https://unix.stackexchange.com/questions/27927/is-it-possible-to-configure-ctrl-w-delete-word
+bind '\C-w:unix-filename-rubout'
+
+
+# >>>>>> Functions
 mkcd ()
 {
 mkdir -p -- "$1" && cd -P -- "$1"
 }
+
+# Automatically do an ls after each cd
+cd() {
+  if [ -n "$1" ]; then
+    builtin cd "$@" && ls --group-directories-first
+  else
+    builtin cd ~ && ls --group-directories-first
+  fi
+}
+
+## COMPRESSION FUNCTION ##
+function compress() {
+   # credit goes to: daenyth
+   FILE=$1
+   shift
+   case $FILE in
+      *.tar.bz2) tar cjf $FILE $*  ;;
+      *.tar.gz)  tar czf $FILE $*  ;;
+      *.tgz)     tar czf $FILE $*  ;;
+      *.zip)     zip $FILE $*      ;;
+      *.rar)     rar $FILE $*      ;;
+      *)         echo "Filetype not recognized" ;;
+   esac
+}
+
 
 # Extract archive
 function extract {
@@ -100,3 +137,21 @@ function extract {
         fi
     fi
 }
+
+# Color man pages
+man() {
+  env \
+    LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+    LESS_TERMCAP_md=$(printf "\e[1;31m") \
+    LESS_TERMCAP_me=$(printf "\e[0m") \
+    LESS_TERMCAP_se=$(printf "\e[0m") \
+    LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+    LESS_TERMCAP_ue=$(printf "\e[0m") \
+    LESS_TERMCAP_us=$(printf "\e[1;32m") \
+      man "$@"
+}
+
+# fzf wrappers
+alias fzfcd='fzfcd() { cd "$(find -type d 2>/dev/null | fzf)" ;}; fzfcd'
+alias fzfed='fzfed() { $EDITOR "$(find -type f 2>/dev/null | fzf)" ;}; fzfed'
+
