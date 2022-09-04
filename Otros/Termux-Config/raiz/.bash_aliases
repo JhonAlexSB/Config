@@ -1,11 +1,12 @@
 export lsc='--color=auto -F'
+export dirs='--group-directories-first'
 # some more ls aliases
-alias lss='ls -lh  $lsc'
-alias ll='ls -alF  $lsc'
-alias la='ls -Ap $lsc'
-alias l='ls -CFp $lsc'
-alias ls='ls -CFp $lsc'
-alias l.='ls -ap $lsc | egrep "^\."'
+alias lss='ls -lh  $lsc $dirs'
+alias ll='ls -alF  $lsc $dirs'
+alias la='ls -Ap $lsc $dirs'
+alias l='ls -CFp $lsc $dirs'
+alias ls='ls -CFp $lsc $dirs'
+alias l.='ls -ap $lsc $dirs | egrep "^\."'
 alias fclist="fc-list | grep"
 
 alias q="exit"
@@ -71,6 +72,16 @@ alias pubip='curl ipinfo.io/ip'
 
 # Print time 
 alias time='curl -s https://wttr.in/' 
+
+
+#https://es.stackoverflow.com/questions/25890/c%c3%b3mo-guardar-una-salida-de-comando-bash-en-variable#26954
+function lv(){ 
+  live-server --host=127.0.0.1 --port=8080 --entry-file=pwd${1}.html;
+}
+
+alias lvi='live-server --host=127.0.0.1 --port=8080 --entry-file=index.html'
+
+
 
 # >>>>> Remap
 # Delete for word
