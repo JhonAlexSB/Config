@@ -82,7 +82,12 @@ LoadModule php_module libexec/apache2/libphp.so
 # 
 
 # pegar abajo del todo
+Include etc/apache2/conf.d/*.conf
 include etc/apache2/extra/php_module.conf
+
+ServerName localhost
+#ServerRoot "/data/data/com.termux/files/home/pagina"
+ServerRoot "/data/data/com.termux/files/usr"
 
 cd extra/
 touch php_module.conf
