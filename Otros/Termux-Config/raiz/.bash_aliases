@@ -1,10 +1,11 @@
+export lsc='--color=auto -F'
 # some more ls aliases
-alias lss='ls -lh'
-alias ll='ls -alF'
-alias la='ls -Ap'
-alias l='ls -CFp'
-alias ls='ls -CFp'
-alias l.='ls -ap | egrep "^\."'
+alias lss='ls -lh  $lsc'
+alias ll='ls -alF  $lsc'
+alias la='ls -Ap $lsc'
+alias l='ls -CFp $lsc'
+alias ls='ls -CFp $lsc'
+alias l.='ls -ap $lsc | egrep "^\."'
 alias fclist="fc-list | grep"
 
 alias q="exit"
