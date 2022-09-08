@@ -2,7 +2,7 @@
 ## Ruta Archivo configuracion = ~/.tmux.conf
 
 prefix = ctrl+a
-prefix = ctrl+b por defecto
+#prefix = ctrl+b por defecto
 
 -Comandos
 prefix c     | Crear otra sesion
@@ -26,7 +26,7 @@ prefix !         | Mandar la pestaña actual a otra ventana
 
 prefix [     | Se parece al modo normal de vim (Es modo copia)
 prefix space | Entrar a modo seleccionar
-prefixw      | Copiar lineas seleccionadas
+prefix w     | Copiar lineas seleccionadas
 prefix ]     | Pegar
 
 prefix s | Comando para buscar ( Primero se entra con ctrl+b [ ) && q para salir
