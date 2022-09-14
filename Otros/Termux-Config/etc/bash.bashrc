@@ -97,3 +97,9 @@ function parse_git_branch {
 
 PS1='\[\e[0m\]\u\[\e[0m\][\[\e[0m\]\W$(parse_git_branch)\[\e[0m\]]\[\e[0m\]> \[\e[0m\]'
 #PS1="\[\033[01;32m\]\u@\h {\[\033[01;34m\]\w\$(parse_git_branch)\[\033[01;32m\]} \[\033[01;34m\]\$\[\033[00m\] "
+
+# Urxvt cursor
+# cursor bar with blink
+echo -e "\033[5 q"
+# cursor bar without blink
+#echo -e "\033[6 q"
