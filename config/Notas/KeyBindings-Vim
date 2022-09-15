@@ -1,0 +1,45 @@
+### Editor de archivos en terminal
+## Ruta Archivo configuracion = ~/.vimrc
+
+" ------------
+" ( Configuracion ) { Easymotion }
+" >>>>>>
+" https:/github.com/easymotion/vim-easymotion
+" ------------
+
+<Leader>s |  Activar en una linea (Escribir dos caracteres)
+<Leader>t |   
+<Leader>l |  Activar en palabras hacia derecha
+<Leader>j |  Activar en palabras hacia Abajo
+<Leader>k |  Activar en palabras hacia Arriba
+<Leader>h |  Activar en palabras hacia Izquierda
+
+" ------------
+" ( Configuracion ) { Sneak }
+" >>>>>>
+" https:/github.com/justinmk/vim-sneak
+" ------------
+
+<Leader>s |  Activar en una linea (Escribir dos caracteres)
+;         |  Pasar a la Siguiente coincidencia
+gs        |  Pasar a la Anterior coincidencia
+
+" ------------
+" ( Configuracion ) { GitGutter }
+" >>>>>>
+" https:/github.com/airblade/vim-gitgutter
+" ------------
+ 
+]h  |  NextHunk
+[h  |  PrevHumk
+ghs |  Funciona como un git add
+ghu |  Funciona como un git restore
+ghp |  Funcina como un git diff (Ver cambios realiazdos)
+
+" ------------
+" ( Configuracion ) { Emmet }
+" >>>>>>
+" https:/github.com/mattn/emmet-vim
+" ------------
+
+Ctrl y , . Al final de la palabra clave para activar snipet
