@@ -10,7 +10,9 @@ prefix w     | Ver sesiones creadas
 prefix ,     | Renombrar sesion
 prefix #     | Ir al numero de la pestaña
 prefix "     | Dividir la pantalla horizontal
+prefix s     | Dividir la pantalla horizontal
 prefix %     | Dividir la pantalla vertical
+prefix v     | Dividir la pantalla vertical
 prefix x     | Matar la pestaña en la que estoy
 prefix space | Cambiar horientacion vertical u horizontal
 prefix {     | Cambiar de lugar el contenido
@@ -24,10 +26,9 @@ prefix arrow     | Cambiar entre pesatañas
 prefix ctrl hold | Mover tamaño de pestaña
 prefix !         | Mandar la pestaña actual a otra ventana
 
-prefix [     | Se parece al modo normal de vim (Es modo copia)
-prefix space | Entrar a modo seleccionar
-prefix w     | Copiar lineas seleccionadas
-prefix ]     | Pegar
+prefix [ | Se parece al modo normal de vim (Es modo copia)
+space    | Entrar a modo seleccionar
+enter    | Copiar lineas seleccionadas
 
 prefix s | Comando para buscar ( Primero se entra con ctrl+b [ ) && q para salir
 

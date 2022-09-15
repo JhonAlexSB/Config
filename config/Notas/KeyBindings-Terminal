@@ -1,5 +1,6 @@
 ### Interprete de comandos zsh
 ## Ruta Archivo configuracion ~/.zshrc
+## Ruta Archivo configuracion ~/.bashrc
 
 # Moverse
 ctrl + a | Ir al inicio
