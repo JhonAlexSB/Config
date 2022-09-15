@@ -6,7 +6,7 @@
 "
 " Plug 'SirVer/ultisnips'
 
-Plug 'easymotion/vim-easymotion'
+"Plug 'easymotion/vim-easymotion'
 
 " https://github.com/ghifarit53/tokyonight-vim 
 " Git

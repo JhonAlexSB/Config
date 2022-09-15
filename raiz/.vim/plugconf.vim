@@ -9,12 +9,20 @@
 " https:/github.com/easymotion/vim-easymotion
 " ------------
 
-nmap <Leader>s <Plug>(easymotion-s2)
-"nmap <Leader>t <Plug>(easymotion-t2)
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>h <Plug>(easymotion-linebackward)
+"nmap <Leader>s <Plug>(easymotion-s2)
+""nmap <Leader>t <Plug>(easymotion-t2)
+"map <Leader>l <Plug>(easymotion-lineforward)
+"map <Leader>j <Plug>(easymotion-j)
+"map <Leader>k <Plug>(easymotion-k)
+"map <Leader>h <Plug>(easymotion-linebackward)
+
+" ------------
+" ( Configuracion ) { Sneak }
+" >>>>>>
+" https:/github.com/justinmk/vim-sneak
+" ------------
+
+map gs <Plug>Sneak_,
 
 " ------------
 " ( Configuracion ) { GitGutter }
