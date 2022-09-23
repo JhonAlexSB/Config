@@ -8,3 +8,4 @@ zoom_out o
 close u
 toggle_pause m 
 toggle_fixed_geometry F
+--auto-zom f
