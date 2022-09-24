@@ -6,7 +6,7 @@ alias ll='ls -alF  $lsc $dirs'
 alias la='ls -Ap $lsc $dirs'
 alias l='ls -CFp $lsc $dirs'
 alias ls='ls -CFp $lsc $dirs'
-alias l.='ls -ap $lsc $dirs | egrep "^\."'
+alias l.='ls -ap $lsc $dirs | grep -E "^\."'
 alias l.s='ls -ap $lsc $dirs | grep -E "^\."'
 alias fclist="fc-list | grep"
 

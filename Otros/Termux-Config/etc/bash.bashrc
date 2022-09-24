@@ -106,3 +106,28 @@ PS1='\[\e[0m\]\u\[\e[0m\][\[\e[0m\]\W$(parse_git_branch)\[\e[0m\]]\[\e[0m\]> \[\
 echo -e "\033[5 q"
 # cursor bar without blink
 #echo -e "\033[6 q"
+
+# Display code error
+# https://stackoverflow.com/questions/16715103/bash-prompt-with-the-last-exit-code
+
+PROMPT_COMMAND=__prompt_command
+
+__prompt_command() {
+    local curr_exit="$?"
+
+    local BGreen='\[\e[0;32m\]'
+    local BRed='\[\e[0;91m\]'
+    local RCol='\[\e[0m\]'
+
+
+    PS1='\[\e[0m\]\u\[\e[0m\][\[\e[0m\]\W$(parse_git_branch)\[\e[0m\]]\[\e[0m\]> \[\e[0m\]'
+
+    if [ "$curr_exit" != 0 ]; then
+        # CodError
+        #PS1="[${BRed}$curr_exit${RCol}]$PS1"
+        PS1="\n${BRed}/\ ${RCol}$PS1"
+    else
+      PS1="\n${BGreen}/\ ${RCol}$PS1"
+    fi
+}
+
