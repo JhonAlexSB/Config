@@ -13,6 +13,9 @@ k | Arriba
 h | Izquierda
 l | Derecha
 
+u        | Undo
+ctrl + r | Redo
+
 ### Ajustes mas usados
 jk  | Ingresar modo normal
 ,w  | Guardar

@@ -134,7 +134,7 @@ _-----------------
 ---------Crear usuario con privilegios
 https://www.hostinger.co/tutoriales/como-crear-usuario-mysql
 
-CREATE USER 'jhon'@'localhost' IDENTIFIED BY 'Pass98';
+CREATE USER 'jhon'@'localhost' IDENTIFIED BY 'contrasena';
 
 GRANT ALL PRIVILEGES ON * . * TO 'jhon'@'localhost';
 
@@ -154,7 +154,7 @@ mysql -u u0_a178 -p sakila < sakila-data.sql
 
 mysql -u whoami
 
->>>>
+>>>> Open ssh
 Conectarse con openssh
 https://m.youtube.com/watch?v=jlYiwv5R3H8
 
