@@ -163,6 +163,7 @@ pkg install openssh
 openssh-server
 
 sshd
+passwd
 
 ssh -p 22 user@ip
 user = whoami
