@@ -11,8 +11,8 @@ alias l.s='ls -ap $lsc $dirs | grep -E "^\."'
 alias fclist="fc-list | grep"
 
 alias q="exit"
-alias upbash="source /etc/bash.bashrc"
-alias vbash="vim /etc/bash.bashrc"
+alias upbash="source ~/.bashrc"
+alias vbash="vim ~/.bashrc"
 alias valias="vim ~/.bash_aliases"
 alias vconf="vim ~/.vimrc"
 alias cd..="cd .."
@@ -45,6 +45,8 @@ alias gitl='git log --decorate --oneline --graph'
 alias cl="clear"
 alias p="pacman"
 alias batp='bat -p'
+alias nanon='nano -jlm' # jumpscreensize ,numbers ,mouse
+alias mysqld='mysqld_safe -u root &'
 
 
 # Copiado, Movido y borrado recursivo
