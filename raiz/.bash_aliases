@@ -68,6 +68,7 @@ alias extip="curl icanhazip.com"
 alias ip="curl ipinfo.io"
 alias rcsync="rclone sync -v"
 alias ifc="ifconfig"
+alias dirphp="cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/"
 
 # find
 alias fd="find -name"
