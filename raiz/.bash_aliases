@@ -67,6 +67,7 @@ alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/m
 alias extip="curl icanhazip.com"
 alias ip="curl ipinfo.io"
 alias rcsync="rclone sync -v"
+alias ifc="ifconfig"
 
 # find
 alias fd="find -name"

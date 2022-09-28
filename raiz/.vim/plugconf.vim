@@ -60,3 +60,16 @@ autocmd FileType html,css EmmetInstall
 "let g:user_emmet_mode='n'    "only enable normal mode functions.
 let g:user_emmet_mode='inv'  "enable all functions, which is equal to
 "let g:user_emmet_mode='a'    "enable all function in all mode.
+
+" ------------
+" ( Configuracion ) { ALE }
+" >>>>>>
+" 
+" ------------
+
+" Only run linters named in ale_linters settings.
+let g:ale_linters_explicit = 1
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+let b:ale_linters = ['php', 'javascript']

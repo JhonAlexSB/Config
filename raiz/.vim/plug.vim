@@ -12,6 +12,9 @@
 " Git
 Plug 'airblade/vim-gitgutter'
 
+" Sintax
+Plug 'dense-analysis/ale'
+
 " Snippet
 Plug 'mattn/emmet-vim'
 
