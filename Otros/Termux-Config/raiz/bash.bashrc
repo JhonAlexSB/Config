@@ -47,9 +47,9 @@ if [ -f ~/.bashfunction ]; then
     . ~/.bashfunction
 fi
 
-if [ -f ~/.log.sh ]; then
-    . ~/.log.sh
-fi
+#if [ -f ~/.log.sh ]; then
+    #. ~/.log.sh
+#fi
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options

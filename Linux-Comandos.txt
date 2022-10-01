@@ -16,6 +16,12 @@ ps aux
 ps aux | grep -i network
 ps aux | grep -i iss-realsecure
 
+-- Bloquear sitios web
+sudo cp /etc/host /etc/host.old
+sudo vim /etc/host
+
+0.0.0.0 www.youtube.com
+
 -- Virtualbox
   sudo apt install virtualbox virtualbox-guest-additions-iso vde2 
 
