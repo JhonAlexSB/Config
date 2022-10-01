@@ -103,7 +103,7 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-PS1='\[\e[0m\]\u\[\e[0m\][\[\e[0m\]\W$(parse_git_branch)\[\e[0m\]]\[\e[0m\]> \[\e[0m\]'
+#PS1='\[\e[0m\]\u\[\e[0m\][\[\e[0m\]\W$(parse_git_branch)\[\e[0m\]]\[\e[0m\]> \[\e[0m\]'
 #PS1="\[\033[01;32m\]\u@\h {\[\033[01;34m\]\w\$(parse_git_branch)\[\033[01;32m\]} \[\033[01;34m\]\$\[\033[00m\] "
 
 # Urxvt cursor
@@ -125,7 +125,12 @@ __prompt_command() {
     local RCol='\[\e[0m\]'
 
 
-    PS1='\[\e[0m\]\u\[\e[0m\][\[\e[0m\]\W$(parse_git_branch)\[\e[0m\]]\[\e[0m\]> \[\e[0m\]'
+#https://stackoverflow.com/questions/68810676/setting-value-of-command-prompt-ps1-based-on-present-directory-string-length
+PS1=''`echo ${PWD#"${PWD%/*/*}/"} | awk -v RS='/' 'length()  <=10{printf $0"/"}; length()>10{printf "%s*%s/", substr($0,1,3),  substr($0,length()-2,3)};'| tr -d "\n"`''
+dir=${PS1}
+
+
+    PS1='\[\e[0m\]\u\[\e[0m\][${dir}$(parse_git_branch)\[\e[0m\]]\[\e[0m\]> \[\e[0m\]'
 
     if [ "$curr_exit" != 0 ]; then
         # CodError
