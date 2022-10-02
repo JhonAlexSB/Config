@@ -130,6 +130,7 @@ PS1=''`echo ${PWD#"${PWD%/*/*}/"} | awk -v RS='/' 'length()  <=10{printf $0"/"};
 dir=${PS1}
 
 
+    #PS1='\[\e[0m\]\u\[\e[0m\][${dir}$(parse_git_branch)\[\e[0m\]]\[\e[0m\]> \[\e[0m\]'
     PS1='\[\e[0m\]\u\[\e[0m\][${dir}$(parse_git_branch)\[\e[0m\]]\[\e[0m\]> \[\e[0m\]'
 
     if [ "$curr_exit" != 0 ]; then
