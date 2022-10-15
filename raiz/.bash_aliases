@@ -30,6 +30,10 @@ alias srcd="deactivate"
 
 # Termux shorcuts
 alias protl="proot-distro login archlinux"
+alias txon="termux-open"
+
+alias jpgcomp="jpegoptim -m 30, 100"
+alias pngcomp="pngquant --quality 30-50 --strip"
 
 # Git shorcuts
 alias gits='git status'
