@@ -64,7 +64,7 @@ let g:user_emmet_mode='inv'  "enable all functions, which is equal to
 " ------------
 " ( Configuracion ) { ALE }
 " >>>>>>
-" 
+" https://github.com/dense-analysis/ale
 " ------------
 
 " Only run linters named in ale_linters settings.
@@ -73,3 +73,20 @@ let g:ale_sign_column_always = 1
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
 let b:ale_linters = ['php', 'javascript']
+
+" ------------
+" ( Configuracion ) { gruvbox }
+" >>>>>>
+" https://github.com/morhetz/gruvbox
+" ------------
+
+"set background=dark
+
+""""Desactivar italica
+  "let g:gruvbox_italic=0 
+"colorscheme gruvbox
+"let g:gruvbox_contrast_dark = 'hard'
+
+
+"""colorscheme darkblue
+

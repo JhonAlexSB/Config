@@ -8,6 +8,9 @@
 
 "Plug 'easymotion/vim-easymotion'
 
+" Temas
+Plug 'morhetz/gruvbox'
+
 " https://github.com/ghifarit53/tokyonight-vim 
 " Git
 Plug 'airblade/vim-gitgutter'
