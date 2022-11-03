@@ -43,6 +43,7 @@ alias gitpush='git push origin'
 alias gitpull='git pull origin'
 alias gitlog='git log'
 alias gitl='git log --decorate --oneline --graph'
+alias git-l='git config -l'
 
 #-RawKeyboard
 
