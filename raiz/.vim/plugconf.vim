@@ -91,9 +91,9 @@ let b:ale_linters = ['php', 'javascript']
 """colorscheme darkblue
 
 " ------------
-" ( Configuracion ) { gruvbox }
+" ( Configuracion ) { ultisnips }
 " >>>>>>
-" https://github.com/morhetz/gruvbox
+" https://github.com/SirVer/ultisnips
 " ------------
 
 "Trigger configuration. You need to change this to something other than <tab>
@@ -106,4 +106,16 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 "let g:UltiSnipsEditSplit="vertical"
+
+
+
+" ------------
+" ( Configuracion  ) { Coc  }
+" >>>>>>
+" https://github.com/neoclide/coc.nvim
+" ------------
+
+" CocInstall coc-prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+nnoremap <C-D> :Prettier<CR>
 
