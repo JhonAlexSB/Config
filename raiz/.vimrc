@@ -3,7 +3,7 @@ so ~/.vim/plug.vim
 so ~/.vim/plugconf.vim
 "so ~/.config/Notas/KeyBindings-Nvim
 "so ~/.config/Notas/KeyBindings-Vim
-"so ~/.vim/coc.vim
+so ~/.vim/coc.vim
 
 "  -----------------------------------
 "   Mapeo de tecla
