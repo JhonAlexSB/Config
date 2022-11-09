@@ -52,6 +52,9 @@ alias p="pacman"
 alias batp='bat -p'
 alias nanon='nano -jlm' # jumpscreensize ,numbers ,mouse
 alias mysqld='mysqld_safe -u root &'
+alias transns='trans en:es '
+alias transsn='trans es:en '
+alias backuprcall="rclone sync -v sdcard/data/Udemy/ mydropbox:Udemy/; rclone sync -v sdcard/data/Platzi/ mydropbox:Platzi; rclone sync -v sdcard/data/Dropbox mydropbox:Dropbox; rclone sync -v sdcard/Pictures/Categorias/ mydropbox:img/categorias/"
 
 
 # Copiado, Movido y borrado recursivo
