@@ -1,0 +1,51 @@
+>>>> Uso de AUR
+
+sudo pacman -S base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay && makepkg -si --noconfirm
+cd .. && sudo rm -rf yay && yay -S pamac-aur --noconfirm
+
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd .. && sudo rm -rf yay && yay -S pamac-aur --noconfirm
+Source:
+
+  https://www.youtube.com/watch?v=n1a7Uh3sVN0
+Satiel
+  https://www.youtube.com/watch?v=pNvZ-CbfOuQ
+Locos por linux
+  https://www.youtube.com/watch?v=b_nwG8IP_N4
+
+Instalados
+Telegram
+  Opcione 6: 
+  telegram-desktop-bin-dev
+keynav
+  Opcion 2:
+  keynav-git
+
+
+>>>> Mysql
+https://www.youtube.com/watch?v=Fee_F1dPOuc
+https://wiki.archlinux.org/title/MySQL
+
+> Configuracion
+sudo pacman -S mariadb
+sudo pacman -S mariadb-openrc
+
+> Instalacion
+mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+
+
+> Revisar nombre de servicio de arranque "Puede ser diferente al del paquete"
+sudo pacman -Ql mariadb-openrc
+
+> Iniciando el servicio
+sudo rc-service mariadb start
+
+> Activar bucle de sesion de mysql
+sudo rc-service mysql enable
+
+sudo mysql_secure_installation
+
+https://wiki.gentoo.org/wiki/OpenRC_to_systemd_Cheatsheet/es
+> Para ver que servicios estan corriendo
+rc-status
