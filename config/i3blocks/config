@@ -53,7 +53,7 @@ color=#eeeeee
 #natural_mapping=0
 
 [volume]
-command=~/.config/i3blocks/volume
+command= ~/.config/i3blocks/volume
 #LABEL=♪ 
 label=
 interval=once
@@ -127,10 +127,12 @@ command=date '+%H:%M:%S'
 interval=10
 
 
-#[battery2]
-#command= ~/.config/i3blocks/battery2
-#markup=pango
-#interval=30
+[battery2]
+command= ~/.config/i3blocks/battery2
+markup=pango
+interval=30
+
+#https://phoenixnap.com/kb/linux-cut
 
 [monitors]
 command=~/.config/i3blocks/monitor_manager

@@ -15,7 +15,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 10
+font pango:monospace 15
 #font pango:Noto Sans 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -60,7 +60,8 @@ bindsym $mod+q kill
 
 # rofi y drun
 #bindsym $mod+d exec dmenu_run -p "apps" -l 15 -fn 'Cantarell-16'
-bindsym $mod+d exec dmenu_run -i -fn "Cantarell-10" -nf '#ffb52a' -sb '#ffb52a' -sf '#222'
+#bindsym $mod+d exec dmenu_run -i -fn "Cantarell-10" -nf '#ffb52a' -sb '#ffb52a' -sf '#222'
+bindsym $mod+d exec rofi -show-icons -show drun
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
 
@@ -294,8 +295,8 @@ separator_symbol "|"
 }
 
 #client.focused #bf7500 #bf7500 #bf7500 #ffe570
-#gaps inner 10
-#gaps outer 14
+gaps inner 1
+gaps outer 1
 #smart_gaps on
 
 for_window [class="^.*"] border pixel 3
@@ -340,19 +341,26 @@ bindcode $mod+35 exec cmus-remote --volume -5%
 #xrandr --output eDP-1 --scale 1.3x1.3
 #exec lxql-powermanagement &
 
+exec_always killall connman-gtk
+exec_always killall wp.sh
+
+exec_always sleep 2; picom
+exec_always sleep 2; connman-gtk
+exec_always slepp 2; ~/.config/i3/wp.sh 
+
 # Imagen normal extendida
 #feh --bg-scale --no-xinerama ~/.config/i3/wallpaper/UW/portal-Uwide.jpg
 #
 #
 #exec_always --no-startup-id killall back4.sh 
 #exec_always --no-startup-id $HOME/.config/i3/back4.sh auto Gif/bosque.gif
-exec_always --no-startup-id $HOME/.config/i3/wp.sh 
+#exec_always --no-startup-id $HOME/.config/i3/wp.sh 
 
-exec compton --config ~/.config/compton/compton.conf
+#exec compton --config ~/.config/compton/compton.conf
 
-exec --no-startup-id compton
+#exec --no-startup-id compton
 
-exec /usr/bin/compton --config ~.compton.conf~/.config/i3/config
+#exec /usr/bin/compton --config ~.compton.conf~/.config/i3/config
 #exec ~/.config/i3blocks/sp --nagbar &
 #exec compton --backend glx --paint-on-overlay --vsync opengl-swc
 #opacity-rule = ["85:class_g = 'Termite'"];
