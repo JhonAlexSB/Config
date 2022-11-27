@@ -79,13 +79,17 @@ bindsym $mod+mod1+Left exec ~/.config/i3/display/sl_left.sh
 # exec feh --bg-fill ~/.config/i3/wallpaper/pic1.png /l --bg-fill ~/.config/i3/wallpaper/pic0.png /r
 
 # brillantor
-bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
-bindsym XF86MonBrightnessUp exec brightnessctl set +2%
+#bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
+#bindsym XF86MonBrightnessUp exec brightnessctl set +2%
+bindsym $mod+F4 exec brightnessctl set 2%-
+bindsym $mod+F5 exec brightnessctl set +2%
 
 # captura
 #bindsym Print exec spectacle
-bindsym Print exec gnome-screenshot -i
-bindsym $mod+Print exec gnome-screenshot
+#bindsym Print exec gnome-screenshot -i
+#bindsym $mod+Print exec gnome-screenshot
+bindsym Print exec xfce4-screenshooter
+bindsym $mod+Print exec scrot
 
 set $bg "#444477"
 
@@ -206,7 +210,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+o exec ~/.config/i3/menu/offmonitors.sh
 
 # open calendar 
-bindsym $mod+c exec gnome-calendar
+#bindsym $mod+c exec gnome-calendar
+bindsym $mod+c exec cal
 
 # options session
 #bindsym $mod+z exec ~/.config/i3/menu/opsession.sh
