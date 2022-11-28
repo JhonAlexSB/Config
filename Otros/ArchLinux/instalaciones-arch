@@ -79,3 +79,24 @@ rc-status
 yay -Yc
 pacman -Rns $(pacman -Qttdq)
 
+
+>>>> Ryzen amd
+https://wiki.archlinux.org/title/Ryzen
+
+ryzenadj
+ryzen-controller-bin
+amdctl
+zenstates
+amd-ucode
+
+Driver grafico amd
+https://www.amd.com/en/support/apu/amd-ryzen-processors/amd-ryzen-3-mobile-processors-radeon-graphics/amd-ryzen-3-3250u
+https://www.youtube.com/watch?v=Kp0cO8_XWKE 
+
+sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader
+
+sudo pacman -S vulkan-radeon 
+sudo pacman -S mesa vulkan-radeon xorg xorg-server
+
+https://github.com/Jguer/yay/issues/268
+
