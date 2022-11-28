@@ -100,3 +100,15 @@ sudo pacman -S mesa vulkan-radeon xorg xorg-server
 
 https://github.com/Jguer/yay/issues/268
 
+>>>> Instalacion Steam
+
+sudo vim /etc/pacmna.conf
+descomentar
+
+#[lib32-gremlins]
+#Include = /etc/pacman.d/mirrorlist
+
+#[lib32]
+#Include = /etc/pacman.d/mirrorlist
+
+sudo pacman -S steam
