@@ -1,4 +1,29 @@
+Defaults links instalacion artix
+https://gitea.artixlinux.org/explore/repos
+https://forum.artixlinux.org/
+https://artixlinux.org/
+
+
 >>>> Uso de AUR
+
+Dependencias i3wm
+brightnessctl rofi
+
+Clipboard de vim al sistema
+Install gvim 
+  esto en vimrc
+if has('unnamedplus')
+    set clipboard=unnamed,unnamedplus
+endif
+
+>>> Deb files
+yay -a debtap
+sudo debtap -u <archivo>.deb
+
+>>> Bluetooth
+yay -a python-pybluez
+yay -a blueman
+yay -a bluetoothctl
 
 sudo pacman -S base-devel
 git clone https://aur.archlinux.org/yay.git
@@ -49,3 +74,8 @@ sudo mysql_secure_installation
 https://wiki.gentoo.org/wiki/OpenRC_to_systemd_Cheatsheet/es
 > Para ver que servicios estan corriendo
 rc-status
+
+> Borrar cache y/o dependecias no utilizadas
+yay -Yc
+pacman -Rns $(pacman -Qttdq)
+
