@@ -3,6 +3,20 @@ https://gitea.artixlinux.org/explore/repos
 https://forum.artixlinux.org/
 https://artixlinux.org/
 
+Instalados
+
+pacman
+mpv cmus ranger ncdu htop feh
+nemo zip unzip unrar firefox
+vim git i3 pulseaudio mpn connman-gtk picom rofi
+
+pantallazos y brillo dependencias i3
+xfce4-screenshooter scrot
+
+yay
+blueberry telegram 
+
+
 
 >>>> Uso de AUR
 
@@ -21,9 +35,8 @@ yay -a debtap
 sudo debtap -u <archivo>.deb
 
 >>> Bluetooth
-yay -a python-pybluez
-yay -a blueman
-yay -a bluetoothctl
+yay -a blueberry
+
 
 sudo pacman -S base-devel
 git clone https://aur.archlinux.org/yay.git
@@ -112,3 +125,18 @@ descomentar
 #Include = /etc/pacman.d/mirrorlist
 
 sudo pacman -S steam
+
+
+>>>> Error aplicaciones con electron gpu
+Source:
+https://stackoverflow.com/questions/65679630/fatalgpu-data-manager-impl-private-cc439-gpu-process-isnt-usable-goodbye
+
+  Workaround is to disable jcef in vmoptions.
+
+  Open file:
+
+  ~/.config/JetBrains/IdeaIC2021.1/idea64.vmoptions
+
+  Add this line:
+
+  -Dide.browser.jcef.enabled=false
