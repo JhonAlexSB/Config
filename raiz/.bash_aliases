@@ -44,7 +44,7 @@ alias gitpull='git pull origin'
 alias gitlog='git log'
 alias gitl='git log --decorate --oneline --graph'
 alias git-l='git config -l'
-
+alias screenoff='xset dpms force off | tee -a ~/.bashrc > /dev/null'
 #-RawKeyboard
 
 alias cl="clear"
