@@ -174,6 +174,9 @@ set showcmd " Mostrar comandos de teclas pulsadas
 set ruler " Mostra numeros de ubicacion
 set encoding=utf-8 " Codificacion de arhivos
 
+if has('unnamedplus')
+    set clipboard=unnamed,unnamedplus
+endif
 
 
 set showmatch " Resalta la apretura y cierre de parentesis y semejantes
