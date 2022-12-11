@@ -22,8 +22,12 @@ alias ....="cd ../../../"
 alias .....="cd ../../../../"
 alias v="vim"
 alias nv="nvim"
-alias vnc="vncserver :0 "
- 
+alias vncc='vncserver :0'
+alias vnck='vncserver -kill '
+alias vnca='vncserver -autokill'
+alias vncl='vncserver -list'
+alias vncr='rm -rf ~/../usr/tmp/.X0-lock ~/../usr/tmp/.X11-unix/X0'
+
 # Python shorcuts
 alias srca="source env/bin/activate"
 alias srcd="deactivate"
