@@ -5,9 +5,12 @@ sudo dpkg -i <pakete>
 Borrar archivo y/o carpetas
 rm -rf files/
 
-Comando puertos
+-- Comando puertos
 sudo /etc/init.d/apache2 stop; sudo /etc/init.d/mysql stop; sudo /etc/init.d/cups stop
 sudo /etc/init.d/apache2 start; sudo /etc/init.d/mysql start;
+
+-- Ejecutar una aplicacion sin depender de la linea de comandos
+nohub <comando> &
 
 
 sudo /etc/init.d/ssh stop;
