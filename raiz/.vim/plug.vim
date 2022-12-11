@@ -1,4 +1,4 @@
- call plug#begin('~/.vim/pack/plugin')
+ call plug#begin('~/.Config/vim/pack/plugin')
  
 " Autocompletador coc
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -15,6 +15,7 @@ Plug 'SirVer/ultisnips'
 
 " Temas
 Plug 'morhetz/gruvbox'
+Plug 'Yggdroot/identLine'
 
 " https://github.com/ghifarit53/tokyonight-vim 
 " Git
