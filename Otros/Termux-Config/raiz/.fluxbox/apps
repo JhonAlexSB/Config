@@ -1,0 +1,10 @@
+[app] (name=fbrun)
+  [Position]	(CENTER)	{0 0}
+  [Layer]	{2}
+[end]
+[app] (name=aterm)
+  [Fullscreen]	{no}
+[end]
+[app] (name=st-256color) (class=st-256color)
+  [Maximized]	{yes}
+[end]

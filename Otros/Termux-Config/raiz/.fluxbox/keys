@@ -61,7 +61,7 @@ Mod4 9 :Tab 9
 Mod1 F1 :Exec xterm
 
 # open a dialog to run programs
-Mod1 F2 :Exec fbrun
+Mod1 f :Exec fbrun
 
 # volume settings, using common keycodes
 # if these don't work, use xev to find out your real keycodes
@@ -142,9 +142,9 @@ Mod1 Shift 12 :TakeToWorkspace 12
 #Mod4 s :Exec skippy-dx
 #Mod4 space :Exec rofi -show-icons -show drun
 
-Mod1 t :Exec aterm
+#Mod1 t :Exec aterm
+Mod1 t :Exec st -f "DejaVuSansMono:size=18"
 Mod1 a :ShowDesktop
-Mod1 d :Exec fbrun
 Mod1 s :Exec skippy-dx
 Mod1 space :Exec rofi -show-icons -show drun
 
