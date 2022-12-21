@@ -1,4 +1,4 @@
- call plug#begin('~/.Config/vim/pack/plugin')
+ call plug#begin('~/.config/vim/pack/plugin')
  
 " Autocompletador coc
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}

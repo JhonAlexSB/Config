@@ -80,15 +80,15 @@ let b:ale_linters = ['php', 'javascript']
 " https://github.com/morhetz/gruvbox
 " ------------
 
-"set background=dark
+set background=dark
 
-""""Desactivar italica
-  "let g:gruvbox_italic=0 
-"colorscheme gruvbox
-"let g:gruvbox_contrast_dark = 'hard'
+"""Desactivar italica
+  let g:gruvbox_italic=0 
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
 
 
-"""colorscheme darkblue
+""colorscheme darkblue
 
 " ------------
 " ( Configuracion ) { ultisnips }
