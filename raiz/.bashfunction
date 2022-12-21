@@ -17,6 +17,22 @@ function countdown(){
    notify-send "Hola" "Cuenta regresiva terminada" 
 }
 
+function tomp3(){
+  mkdir -v "encoded"
+
+  for i in *."$1"
+  do
+  ffmpeg -i "$i" -acodec libmp3lame -ab 128k -ar 22050 "encoded/$i.mp3"
+  done
+}
+
+function mp3low(){
+  mkdir -v "portable"
+
+  for i in *.mp3 
+  do lame -q 0 -b 60 -m j "$i" "portable/$i" 
+  done
+}
 
 mkcd ()
 {
