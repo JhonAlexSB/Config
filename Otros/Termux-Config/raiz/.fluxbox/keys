@@ -61,7 +61,7 @@ Mod4 9 :Tab 9
 Mod1 F1 :Exec xterm
 
 # open a dialog to run programs
-Mod1 f :Exec fbrun
+Mod1 g :Exec fbrun
 
 # volume settings, using common keycodes
 # if these don't work, use xev to find out your real keycodes
@@ -164,7 +164,7 @@ Mod1 x :NextWorkspace
 Mod1 q :Kill
 
 
-Ctrl n :Fullscreen
+Ctrl Shift n :Fullscreen
 Ctrl m :MaximizeWindow
 Mod1 q :KillWindow
 Mod1 o :Close
