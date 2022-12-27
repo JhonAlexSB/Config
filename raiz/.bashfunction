@@ -34,6 +34,16 @@ function mp3low(){
   done
 }
 
+# rename youtube-dl erase add caracters and .m4a
+function rendl(){
+  mkdir -v "rename"
+
+  for i in *."$1"
+  do
+    cp "$i" "rename/${i:0:${#i}-20}.mp3"
+  done
+}
+
 mkcd ()
 {
 mkdir -p -- "$1" && cd -P -- "$1"

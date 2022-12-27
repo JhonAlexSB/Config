@@ -14,6 +14,7 @@ alias q="exit"
 alias upbash="source ~/.bashrc"
 alias vbash="vim ~/.bashrc"
 alias valias="vim ~/.bash_aliases"
+alias vfunc="vim ~/.bashfunction"
 alias vconf="vim ~/.vimrc"
 alias cd..="cd .."
 alias ..="cd .."
@@ -60,6 +61,7 @@ alias transns='trans en:es '
 alias transsn='trans es:en '
 alias backuprcall="rclone sync -v sdcard/data/Udemy/ mydropbox:Udemy/; rclone sync -v sdcard/data/Platzi/ mydropbox:Platzi; rclone sync -v sdcard/data/Dropbox mydropbox:Dropbox; rclone sync -v sdcard/Pictures/Categorias/ mydropbox:img/categorias/"
 
+alias songs="play /data/data/com.termux/files/home/storage/shared/Glue70.mp3"
 
 # Copiado, Movido y borrado recursivo
 alias cpr="cp -r"
