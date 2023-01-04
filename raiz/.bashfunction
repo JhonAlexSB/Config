@@ -43,6 +43,15 @@ function rendl(){
     cp "$i" "rename/${i:0:${#i}-20}.mp3"
   done
 }
+# erase add caracteres variables to file 
+function delfs8(){
+  mkdir -v "rename"
+
+  for i in *."$1"
+  do
+    cp "$i" "rename/${i:0:${#i}-$2}.$1"
+  done
+}
 
 mkcd ()
 {
