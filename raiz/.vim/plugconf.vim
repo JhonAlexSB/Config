@@ -119,3 +119,19 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nnoremap <C-D> :Prettier<CR>
 
+
+" ------------
+" ( Configuracion  ) { Nerdtreee  }
+" >>>>>>
+" https://github.com/preservim/nerdtree
+" ------------
+
+nnoremap <leader>n :NERDTree<CR>
+
+let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen=1
+let NERDTreeAutoDeleteBuffer=1
+let NERDTreeMinimalUI=1
+let NERDTreeDirArrows=1
+let NERDTreeShowLineNumers=1
+let NERDTreeOpenInTap='\t'
