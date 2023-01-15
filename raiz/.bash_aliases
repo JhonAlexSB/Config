@@ -53,7 +53,8 @@ alias screenoff='xset dpms force off | tee -a ~/.bashrc > /dev/null'
 #-RawKeyboard
 
 alias cl="clear"
-alias p="pacman"
+alias p="python"
+alias pc="pacman"
 alias batp='bat -p'
 alias nanon='nano -jlm' # jumpscreensize ,numbers ,mouse
 alias mysqld='mysqld_safe -u root &'
