@@ -61,7 +61,7 @@ vnoremap f !sort -n -k 2<CR>
 
 " https://stackoverflow.com/questions/2142402/code-folding-is-not-saved-in-my-vimrc
 
-let &viewdir=expand("~/") . ".vim/folding"
+let &viewdir=expand("~/") . ".config/vim/folding"
 if !isdirectory(expand(&viewdir))|call mkdir(expand(&viewdir), "p", 451)|endif
 
 autocmd BufWrite * mkview
