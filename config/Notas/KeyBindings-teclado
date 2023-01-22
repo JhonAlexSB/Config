@@ -1,0 +1,20 @@
+>> Entrar en normal mode vim "estando en insert mode"
+Alt f 
+Alt espacio 
+Alt ;
+
+>> Entrar en visual mode vim "estando en insert mode"
+Alt v
+
+>> Ingresar tilde
+AltGr+e y letra
+
+>> sacar la ñ
+AltGr+n n 
+
+>> sacar la ç
+AltGr+c 
+
+>> Sacar los doble puntos ü "pocas palabras lo usan" Ej: pingüinos
+alt+u u
+

@@ -9,6 +9,8 @@
 #set fish_color_hostname 'a67523'
 set -gx fish_greeting ''
 
+#prompt_pwd --full-length-dirs=2 --dir-length=1
+
 function fish_prompt
     set last_status $status
 
@@ -26,8 +28,9 @@ function fish_prompt
     # set_color normal
 
     printf ' in '
+    #printf '%s' (echo $PWD | sed -e "s|^$HOME|~|" -e 's|^/private||' -e 's|~/Projects/liveblocks/||')
+    printf '%s' (prompt_pwd --full-length-dirs=2 --dir-length=1)
     set_color $fish_color_cwd
-    printf '%s' (echo $PWD | sed -e "s|^$HOME|~|" -e 's|^/private||' -e 's|~/Projects/liveblocks/||')
     set_color normal
 
     git_prompt
