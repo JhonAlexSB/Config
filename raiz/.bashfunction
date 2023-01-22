@@ -44,6 +44,7 @@ function rendl(){
   done
 }
 # erase add caracteres variables to file 
+# 1 input extension, 2 input number caracters to delete
 function delfs8(){
   mkdir -v "rename"
 

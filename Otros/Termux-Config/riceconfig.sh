@@ -33,3 +33,8 @@ ln -s ../${carpeta}/Config/Otros/Termux-Config/raiz/.fluxbox/keys .fluxbox/
 ln -s ../${carpeta}/Config/Otros/Termux-Config/raiz/.vnc/xstartup .vnc/
 ln -s ../${carpeta}/Config/Otros/Termux-Config/raiz/.vnc/config .vnc/
 
+# Fish
+ln -s ../${carpeta}/Config/Otros/Termux-Config/raiz/.config/fish/config.fish .config
+ln -s ../${carpeta}/Config/Otros/Termux-Config/raiz/.config/fish/aliases.fish .config
+ln -s ../${carpeta}/Config/Otros/Termux-Config/raiz/.config/fish/functions.fish .config
+
