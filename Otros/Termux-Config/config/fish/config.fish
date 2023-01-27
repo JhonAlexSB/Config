@@ -149,7 +149,7 @@ end
 # Interactive/login shells {{{
 if status is-login
     #. ~/.config/fish/env.fish
-    cowsay "let's do it" 
+    echo "let's do it" 
 end
 
 if status is-interactive

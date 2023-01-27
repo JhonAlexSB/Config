@@ -77,5 +77,13 @@ alias free 'free -h'
 
 alias scrcpycfg 'scrcpy -b 2M -m 1024 --max-fps 25'
 
+alias speedtest "curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
+alias extip "curl icanhazip.com"
+alias ip "curl ipinfo.io"
+alias rcsync "rclone sync -v"
+alias ifc "ifconfig"
+alias dirphp "cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/"
+
+
 # find
 alias fd "find -name"
