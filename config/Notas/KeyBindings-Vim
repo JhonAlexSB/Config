@@ -2,6 +2,44 @@
 ## Ruta Archivo configuracion = ~/.vimrc
 
 " ------------
+" ( Configuracion ) { maps }
+" >>>>>>
+" ------------
+
+>> Open normal mode 
+jk 
+Alt + ;
+Alt + d 
+ESC
+
+>> Open Split
+Ctrl+W v | Horizontal Split
+Ctrl+W s | Vertical Split
+
+>> Resize Split
+, < | Resize less leaft
+, > | Resize less right
+Ctrl+W - | Resize less up
+Ctrl+W _ | Resize less down
+
+>> Visual mode move text selected
+J | Move down
+K | Move up
+> | Move right
+< | Move left
+
+>> Move between buffers
+STap or <leader>o | Previous buffer
+Tap or <leader>p  | Next buffer
+
+>> In command 'into command line'
+:Explore    | Open explorer
+:Sexplore   | Open explorer in split
+:e <path>   | Open file 
+:set <conf> | Change config temporaly
+
+
+" ------------
 " ( Configuracion ) { Easymotion }
 " >>>>>>
 " https:/github.com/easymotion/vim-easymotion
