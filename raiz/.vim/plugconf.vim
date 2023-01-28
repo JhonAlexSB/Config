@@ -117,7 +117,16 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " CocInstall coc-prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-nnoremap <C-D> :Prettier<CR>
+"nnoremap <C-D> :Prettier<CR>
+"let g:coc_global_extensions = [ 'coc-snippets', 'coc-emmet', 'coc-tsserver', 'coc-phpls', 'coc-prettier', 'coc-discord', 'coc-git' ]
+
+let g:coc_snippet_next = '<C-j>'
+let g:coc_snippet_prev = '<C-k>'
+
+"snippets.textmateSnippetsRoots": ["~/.config/vim//snippets/textmate"],
+"snippets.priority": 1,
+  
+
 
 
 " ------------

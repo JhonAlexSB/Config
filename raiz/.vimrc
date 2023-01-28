@@ -4,6 +4,16 @@ so ~/.vim/plugconf.vim
 "so ~/.config/Notas/KeyBindings-Nvim
 "so ~/.config/Notas/KeyBindings-Vim
 "so ~/.vim/coc.vim
+"so ~/.vim/coc-settings.json
+" ~/.config/vim/snippets/textmate
+" ~/.config/vim/snippets/ultisnippets
+
+
+" :CocList extensions
+" :CocInstall
+" coc-snippets coc-json coc-tsserver coc-go
+
+" coc-diagnostic coc-tabnine coc-eslint
 
 "  -----------------------------------
 "   Mapeo de tecla
@@ -35,6 +45,25 @@ nmap <leader><leader>h :cd %:h<CR>
 
 nmap <leader>so :so ~/.vimrc<CR>
 nmap <leader>e :e ~/.vimrc<CR>
+
+"Colocar ; al final
+nnoremap <Leader>; $a;<Esc>
+
+"#solo instalar el primero copiar '+y   pegar  "+p
+"sudo apt install xclip
+nnoremap <Leader>y "+y<CR>
+
+"Para q las feclas no funcionen
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
+
+"Ajustar el tamano de las ventanas
+nnoremap <silent> <right> :vertical resize +5<CR>
+nnoremap <silent> <left> :vertical resize -5<CR>
+nnoremap <silent> <up> :resize +5<CR>
+nnoremap <silent> <down> :resize -5<CR>
 
 "mueve bloques de codigo en modo visual o V-Line
 "Moves Blocks of code in visual mode or V-Line
@@ -97,12 +126,12 @@ map <leader>k <C-w><Up>
 map <leader>l <C-w><Right>
 
 "" Open split
-map - :vsplit<CR>
-map _ :split<CR>
+"map - :vsplit<CR>
+"map _ :split<CR>
 
 "" Split resize
-map = <C-W>-
-map + <C-W>+
+nnoremap = <C-W>-
+nnoremap + <C-W>+
 
 "" Vsplit resize
 nnoremap <leader>> 1<c-w>>
@@ -191,7 +220,7 @@ set relativenumber " Numeros relativos en la parte izquierda
 set autoindent " Autoindenta los tap segun la linea anterior
 set nolist " No mostrar caracteres ocultos (tabuladores o espacios)
 set noshowmode " No visualizar (Insert Visual Normal)
-" Turn backup off, since most stuff is in SVN, git etc. anyway...
+" Turn backup off, since most stuff is in SVN, git etc. anyway
 set nobackup
 set nowb
 set noswapfile
@@ -230,7 +259,8 @@ set statusline+=\ %l/%L
 set statusline+=\ ㏑
 set statusline+=\ %c
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding} 
-set statusline+=\ \  
+set statusline+=\ \
+set colorcolumn=81 " cc=81
 
 
 set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
@@ -241,3 +271,5 @@ function! StatuslineGit()
   return strlen(l:branchname) > 0?'⎇  '.l:branchname:''
 endfunction
 
+set fillchars=fold:\ | set foldtext=CustomFold() " Minimalistic folding
+set listchars=tab:\│\ ,trail:· list "Alternate tab: »>
