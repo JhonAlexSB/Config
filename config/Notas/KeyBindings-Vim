@@ -6,7 +6,14 @@
 " >>>>>>
 " ------------
 
->> Expresiones regulares
+>> Dispacement 
+Ctrl y 
+Ctrl e
+
+Ctrl d 
+Ctrl u
+
+>> Regular expressions
 :s/##/>>  | reemplaza las coincidencias de php a java sobre la linea que se esta
 :%s/##/>> | reemplaza todas las coincidencias de php por java en el documento
 :g/##/d   | borra las lineas donde se encuentren las coincidencias
