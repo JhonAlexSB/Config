@@ -1,0 +1,495 @@
+termux-setup-storage
+proot-distro install archlinux
+proot-distro login archlinux
+pkg install xclip
+
+
+>> Instalaciones
+pkg i vim ranger vifm nodejs git x11-repo
+pkg i jpegoptim pngquant imagemagick rclone
+pkg i openssh fluxbox tigervnc
+pkg i zip unzip unrar 7zip tmux
+pkg i poppler termux-api
+pkg i wget tree 
+
+pkg i fbmenu
+
+pkg i firefox st fish translate-shell
+
+git clone https://github.com/JhonAlexSB/Config
+
+>>Salva pantallas
+pkg i cmatrix pipes.sh
+
+
+No optimizar la bateria
+
+npm install -g live-server
+
+
+pkg install python-vim
+
+
+pip install pynvim pylsp
+
+
+
+>>>> Entorno gráfico 
+Escritorio o manejador de ventanas
+
+https://wiki.termux.com/wiki/Graphical_Environment
+
+pkg install x11-repo
+pkg i xorg-twm
+
+
+vncserver :0
+
+>> fluxbox
+pkg i fluxbox
+
+## Fluxbox desktop.
+
+https://wiki.archlinux.org/title/fluxbox
+
+# Generate menu.
+fluxbox-generate_menu
+
+# Start fluxbox.
+fluxbox &
+
+
+
+alt+f2 gestor de aplicaciones
+.fluxbox/menu
+
+Errores
+Clipboard entre terminal y sistema
+Mayúsculas
+
+
+>> Openbox
+pkg install openbox pypanel xorg-xsetroot
+
+Put the following lines to your ~/.vnc/xstartup:
+
+#!/data/data/com.termux/files/usr/bin/sh
+
+# Start Openbox.
+openbox-session &
+Don't put anything else to file ~/.vnc/xstartup but only lines shown above since Openbox has own autostart script. It is located at ${PREFIX}/etc/xdg/openbox/autostart (or alternatively at ~/.config/openbox/autostart). Edit this file like here:
+
+# Make background gray.
+xsetroot -solid gray
+
+# Launch PyPanel.
+pypanel &
+
+
+>>>> teclado
+
+yarm install
+
+https://wiki.termux.com/wiki/Hardware_Keyboard
+
+The following shortcuts are available when using Termux with a hardware (e.g. bluetooth) keyboard by combining them with Ctrl+Alt:
+
+‘C’ → Create new session
+‘R’ → Rename current session
+Down arrow (or ‘N’) → Next session
+Up arrow (or ‘P’) → Previous session
+Right arrow → Open drawer
+Left arrow → Close drawer
+‘M’ → Show menu
+‘U’ → Select URL
+‘V’ → Paste
++/- → Adjust text size
+1-9 → Go to numbered session
+‘K’ → Enable/Disable soft keyboard
+
+
+
+https://wiki.termux.com/wiki/Touch_Keyboard
+
+
+
+
+https://wiki.termux.com/wiki/Shells
+
+Alt + Esc + | increase size font termux
+Alt + Esc - | decreace size font termux
+Ctrl + o | Enter key
+Alt + Esc | vim mode
+
+Vnc default Port : 5900
+
+Esc = vim mode
+http://dotshare.it/
+
+pacman -S links  lynx w3m  elinks
+pacman -S ttf-font-awesome ttf-hack ttf-dejavu
+pacman -S rxvt-unicode
+pacman -S zsh zsh-syntax-highlighting zsh-autosuggestions
+pacman -S zathura firefox midori
+viu pngquant jpegoptim
+dmenu tigervnc i3wm feh dmenu dunst
+vifm
+
+
+pacman -Rs mipaquete (borrar paquete y depen)
+
+Video Referencia https://youtu.be/fshLf6u8B-w
+ASI es el ENTORNO de un HACKER
+
+mdcat -> para markdown
+lsd -> la con esteroides
+bat -> cat con esteroides min [57:26]
+scrub -> borrado de binarios min [57:55
+rmk -> función que trabaja junto scrub min [58:20]
+
+[58:40] instalación de otra fuente
+cd /usr/share/fonts
+cp /root/Download/fuentes/<fuente.zip> .
+unzip <fuente.zip>
+
+En i3/config
+ exec urxvt
+
+Fuente por defecto
+fc-match
+
+Refrescar caché de fuentes
+fc-cache -fv
+
+fc-list | grep -i "Space"
+
+
+>>>> Configurar vnc
+pacman -S tigervnc
+vncpasswd
+https://youtu.be/AjEPo8zTovo
+
+
+
+>>>> Instalar PHP y MySQL 
+pkg install apache2 php php-apache phpmyadmin mariadb
+
+cd $PREFIX/share/apache2/default-site/htdocs
+rm index.html
+
+vim index.php
+
+<?php
+phpinfo();
+?>
+
+cd
+
+httpd
+
+Abrir navegador y URL -> localhost:8080
+
+killall !!
+killall httpd
+
+cd $PREFIX/etc/apache2
+
+vim httpd.conf
+
+Descomentar
+
+#LoadModule mpm_prefork_module libexec/apache2/mod_mpm_prefork.so
+
+Comentar
+
+LoadModule mpm_worker_module libexec/apache2/mod_mpm_worker.so
+
+Añadir
+
+LoadModule php_module libexec/apache2/libphp.so
+
+<FilesMatch \.php?>
+  SetHandler application/x-httpd-php
+</FilesMatch>
+
+# esto no copiar buscar esta línea y
+# pegar arriba. Es de las ultima
+
+#
+#  Load config
+# 
+
+# pegar abajo del todo
+
+Include etc/apache2/conf.d/*.conf 
+include etc/apache2/extra/php_module.conf
+
+cd extra/
+touch php_module.conf
+
+
+ln -s $PREFIX/share/apache2/default-site/htdocs
+
+ln -s ln -s /data/data/com.termux/files/home/htdocs 
+
+>>>> Vim plugins
+--------------------
+https://codingpotions.com/vim-plugins
+
+
+surround.vim
+https://github.com/tpope/vim-surround/blob/master/plugin/surround.vim
+https://github.com/tpope/vim-surround
+
+https://github.com/ap/vim-buftabline
+https://github.com/justinmk/vim-sneak
+https://github.com/jiangmiao/auto-pairs
+https://github.com/easymotion/vim-easymotion
+https://github.com/alvan/vim-closetag
+https://github.com/kien/ctrlp.vim
+
+https://github.com/preservim/nerdcommenter
+
+
+cp -r nerdcommenter/autoload/ ../.vim/
+
+cp -r vim-sneak/autoload/ ../.vim/
+cp -r vim-sneak/plugin/ ../.vim/
+
+git clone
+
+
+ https://github.com/easymotion/vim-easymotion.git ~/.vim/pack/plugins/start/vim-easymotion
+
+
+
+
+https://www.vim.org/scripts/download_script.php?src_id=21906
+
+https://www.vim.org/scripts/script.php?script_id=4940
+
+>>>> MySQL uso
+_-----------------
+
+---------Crear usuario con privilegios
+https://www.hostinger.co/tutoriales/como-crear-usuario-mysql
+
+CREATE USER 'jhon'@'localhost' IDENTIFIED BY 'contrasena';
+
+GRANT ALL PRIVILEGES ON * . * TO 'jhon'@'localhost';
+
+FLUSH PRIVILEGES;
+
+>>>> Importar bd
+mysqld_safe -u root &
+mysql
+create database sakila;
+exit
+
+
+GRANT SELECT ON * . * TO 'jhon'@'localhost';
+Permissions - All
+
+
+mysql -u usuario -p nombre_basededatos < data.sql
+
+mysql -u u0_a178 -p sakila < sakila-schema.sql
+mysql -u u0_a178 -p sakila < sakila-data.sql
+
+mysql -u root -p flujocaja < backup.sql
+mysql -u jhon -p flujocaja < backup.sql
+mysql -u u0_a178 -p flujocaja < backup.sql
+mysqldump -u u0_a178 flujocaja > backup.sql
+
+mysql -u whoami
+
+
+>>>> password MySQL
+https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql
+
+CREATE USER 'username'@'host' IDENTIFIED WITH authentication_plugin BY 'password';
+
+
+
+
+>>>>
+Conectarse con openssh
+https://m.youtube.com/watch?v=jlYiwv5R3H8
+
+
+pkg install openssh
+openssh-server
+
+sshd
+passwd
+
+ssh -p 22 user@ip
+user = whoami
+IP = ifconfig
+
+
+
+
+>>>> virtual env
+    cd ~
+    virtualenv newenv.
+    source newenv/bin/activate .
+source env/bin/activate
+
+deactivate
+
+>>>> Crear usuario
+https://www.ionos.es/ayuda/servidores-cloud/administracion-del-servidor/crear-un-usuario-con-permisos-sudo/
+
+
+https://github.com/termux/proot-distro/blob/master/README.md
+
+
+useradd nombre
+passwd nombre
+
+ver si tiene sudo
+ sudo ls -la /root
+
+Agregar permisos root
+ usermod -aG wheel jhon
+
+Comprobar si tiene permiso root
+ groups jhon
+
+proot-distro login --user jhon archlinux
+proot-distro login archlinux --user jhon
+
+
+>>>> Bash custom
+https://scriptim.github.io/bash-prompt-generator/
+
+vim ~.bashrc
+
+
+PS1='\[\e[0;91m\]\u\[\e[0m\]@\[\e[0;2m\]\H\[\e[0m\]:\[\e[0;92m\]\W \[\e[0;4m\]> \[\e[0m\]'
+
+usermod -s /bin/bash $USERNAME
+
+sudo -u root chsh -s /bin/bash
+
+Fuente: https://www.enmimaquinafunciona.com/pregunta/33928/como-se-cambia-el-shell-por-defecto-para-todos-los-usuarios-a-bash
+
+
+$PREFIX/etc/bash.bashrc
+
+>>>> zsh config
+vim zshrc
+
+# Plugins 
+source /usr/share/zsh/plugins/zsh-completions
+source /usr/share/zsh/plugins/zsh-autosuggestions
+
+>>>> lynx config
+https://superuser.com/questions/518431/how-to-i-configure-lynx-user-settings-without-changing-os-level-settings
+
+https://lynx.invisible-island.net/lynx_help/body.html
+
+alias lynxs='lynx -accept_all_cookies'
+lynx -accept_all_cookies
+
+cp /etc/lynx.cfg ~/
+lynx -cfg=~/lynx.cfg <url>
+
+alias lynx='lynx -cfg=~/lynx.cfg'
+
+>>>> Urxvr config
+
+fc-list | grep "Hack"
+Hack:style=Regular
+
+
+URxvt.background: [90]#000000
+
+*.font: xft:monospace:style=Regular:Size=30
+
+
+!Colors
+*.foreground: #ffffff
+*.background: #000000
+*.cursorColor: 7daea3
+
+!Urxvt Settings
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt*Depth: 32
+URxvt.background: [70]#000000
+URxvt.internalBorder: 20
+
+urxvt.iso14755: false
+urxvt.keysym.Shift-Control-V: eval:paste_clipboard
+urxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+
+!Extension
+URxvt.perl-ext-common: default,matcher,resize-font,url-select,keyboard-select
+URxvt.colorUL: #4682B4
+
+!!Resize font 
+
+URxvt.resize-font.smaller: C-j
+URxvt.resize-font.bigger: C-k
+
+
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-plus:      resize-font:bigger
+URxvt.keysym.C-equal:     resize-font:reset
+URxvt.keysym.C-question:  resize-font:show
+
+
+
+
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+
+
+>>>> Obtener localización
+- Se necesita la app Termux API
+pkg i termux-api
+termux-location
+
+https://wiki.termux.com/wiki/Termux:API
+
+https://www.delftstack.com/howto/linux/parse-json-in-bash/
+
+
+https://omaps.app/api
+
+https://www.openstreetmap.org/search?query=4.1474134,-76.28543624#map=5/4.127/-76.289
+
+
+https://stackoverflow.com/questions/53943485/sending-post-request-from-bash-script
+
+
+
+>>>> st simple terminal
+Cambiar tamaño fuente interactivamente
+Ctrl+Shift+Pageup
+Ctrl+Shift+PageDown
+
+https://wiki.archlinux.org/title/St
+
+
+>>>>> tmux error con locale
+tmux: need UTF-8 locale (LC_CTYPE) but have ANSI_X3.4-1968
+
+https://askubuntu.com/questions/947902/my-ubuntu-server-shows-tmux-need-utf-8-locale-lc-ctype-but-have-ansi-x3-4-196
+
+pacman -S locales-all
+pacman -S locales-all
+
+apt install locales-all
+
+
+localectl set-locale LANG=en_CA.UTF-8
+
+localectl set-locale LANG=es_Es.UTF-8
+
+
+https://tmuxcheatsheet.com/

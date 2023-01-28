@@ -1,0 +1,228 @@
+>>>> Copias de seguridad
+>> Rclone
+rsync -av imagenes1/ imagenes2/
+-v sirve para ver progreso
+
+
+rclone ncdu mydropbox:
+rclone ncdu gdrivea:
+
+rcsync Dropbox mydropbox:Dropbox/
+rcsync Platzi mydropbox:Platzi/
+rcsync Udemy mydropbox:Udemy/
+rcsync Categorias/ mydropbox:img/categorias/
+
+rcsync youtube-dl/ gdrivea:musica/variadaYoutube/
+rcsync seduccion/ gdrivea:curso/seduccion/
+
+rclone copy ingles-intermedio/ gdrivea:curso/
+rclone copy ingles-intermedio/ gdrivea:curso/ingles-avanzado/3.CursodeInglésAvanzadoGramática/
+
+rclone copy  gdrivea:curso/ingles-avanzado/4.CursodeInglésAvanzadoConversación
+
+rclone copy  gdrivea:curso/ingles-avanzado/5.CursodeInglésAvanzadoPronunciación
+
+
+rcsync sdcard/data/Udemy/ mydropbox:Udemy/
+rcsync sdcard/data/Platzi/ mydropbox:Platzi
+rcsync sdcard/data/Dropbox mydropbox:Dropbox
+rcsync sdcard/Pictures/Categorias/ mydropbox:img/categorias/
+
+
+>> Descargar playlist de youtube
+youtube-dl -i -f m4a --yes-playlist 'https://youtube.com/playlist?list=PLWR8e8f9TAuKggPzUmlDyP0rbqTk0j_N0'
+
+
+youtube-dl -i -f m4a --yes-playlist
+https://youtube.com/playlist?list=PLWR8e8f9TAuJFmA6GwPWq0w4u_A5FEWs4
+
+>> Ver espacio ocupado
+du -sh directorio/
+
+
+pkg i proot
+
+
+>>>> Reproducir música
+pkg i sox
+play archivo.mp3
+
+>>>> Abrir aplicación sin depender de terminal
+nohup zathura file.pdf &
+nohup mousepad file.txt &
+
+
+>>>> Reducir tamaño imagenes
+Install pngquant 
+convert -resize 60% *.png
+pngquant --quality 80-100 --strip *.png
+ pngquant --quality 50-100 --strip *.png
+pngquant --quality 30-100 --strip *.png
+
+
+pngquant --quality 30-100 --strip --force *.png
+
+pngquant --quality 30-70 --strip *.png
+pngquant --quality 30-50 --strip *.png
+
+find . \( -iname ‘*.jpg’ -o -iname ‘*.jpeg’ -o -iname ‘*.png’ \) -exec convert -resize 540x1200\> {} {} \;
+
+
+540x1200
+340x800
+
+>>>> Reducir espacio imágenes .jpg
+jpegoptim -m 80, 100 *.jpg
+jpegoptim -m 30, 100 *.jpg
+
+https://www.linuxparty.es/35-linux/10429-cambiar-el-tamano-y-peso-de-las-imagenes-desde-la-consola-terminal-linux.html
+
+find . -type d
+find . -type f
+
+find -exec du -h {} \;
+find -exec jpegoptim -m 30, 100 {} \;
+
+>>>> Reducir tamaño archivos mp3
+https://paraisolinux.com/reducir-el-bitrate-de-mp3s-por-consola/
+
+
+mp3 cli linux KBS reducir
+
+lame –mp3input -h «$f»; mv -f «$f».mp3 «$f»
+
+Install lame 
+ffmpeg
+
+
+>>>> matar procesos demonios
+kill -9 pid
+
+ps -v
+ps el
+ps -aux
+ps -ef
+ps -ec
+
+>>>> redimensionar tamaño imagenes
+mogrify -resize 300x *.jpg
+mogrify -resize 500x *.jpg
+mogrify -resize 260x300 *.jpg
+
+https://lignux.com/usamos-mogrify-para-cambiar-el-tamano-y-el-formato-de-las-imagenes-y-mucho-mas/
+
+>>>> Pasar video a audio
+https://qastack.mx/programming/9913032/how-can-i-extract-audio-from-video-with-ffmpeg
+
+
+ffmpeg -i input-video.avi -vn -acodec copy output-audio.aac
+
+>>>> Reducir espacio video
+https://www.easefab.com/howto/ffmpeg-compress-large-video-size-on-windows.html
+
+https://catswhocode.com/ffmpeg-commands/
+
+
+
+
+ffmpeg -i pesado.mp4 -vcodec libx264 -crf 24 salida.mp4
+
+ffmpeg -i pesado.mp4 -s 720x480 -b: v 2000k -vcodec h264 -r 15 salida.mp4
+
+ffmpeg -i pesado.mp4 -s 480x360 -vcodec h264 -r 15 salida.mp4
+
+ffmpeg -i file -s 320x280 -vcodec h264 -r 15 salida.mp4
+
+ffmpeg -i pesado.mp4 -s 480x360 -acodec -ab 128kb -b:v 1200kb -vcodec h264 -r 15 salida.mp4
+
+-b:v 515k
+
+-acodec -ab 128kb
+-b 1200kb
+
+>>>> Reducir archivos de audio
+https://stackoverflow.com/questions/63478592/how-to-use-sox-for-all-files-in-a-directory/67567687#67567687
+
+
+for i in wav/*.wav; do
+    sox -r 8000 -e unsigned -b 16 -c 1 "$i" "$i_modified"
+done
+
+for i in mp3/*.mp3; do
+    sox -r 8000 -e unsigned -b 16 -c 1 "$i" "$i_modified"
+done
+
+for i in *.mp3; do
+    sox -r 8000 -e unsigned -b 16 -c 1 "$i" "$i_modified"
+done
+
+
+https://www.thegeekstuff.com/2009/05/sound-exchange-sox-15-examples-to-manipulate-audio-files/
+
+
+>>>> Juntar video y audio
+ffmpeg -i video -i audio -vcodec copy -acodec copy -f mp4 nombresalida.mp4
+
+
+>>>> Cortar tiempo de video
+https://parzibyte.me/blog/2022/08/06/cortar-video-ffmpeg/
+
+
+ffmpeg -i vídeo_entrada.mp4 -ss TIEMPO_INICIO -to TIEMPO_FIN -c:v copy -c:a copy vídeo_cortado.mp4
+
+
+
+ffmpeg -i vídeo_entrada.mp4 -ss 00:00:00 -to 00:00:30 -c:v copy -c:a copy vídeo_cortado.mp4
+
+ffmpeg -i vídeo_entrada.mp4 -ss 00:00:30 -to 00:00:38 -c:v copy -c:a copy vídeo_cortado.mp4
+
+
+>>>> Extraer imagenes de un PDF
+https://es.phhsnews.com/how-to-extract-and-save-images-from-pdf-file-in-linux1008
+
+pkg i poppler
+pdfimages -j <pathcompleto/archivo.pdf> <pathcompleto/nombresarchivos>
+
+
+>>>> Crear un PDF con imagenes
+https://blog.desdelinux.net/convertir-imagenes-a-un-archivo-pdf/
+
+pkg i imagemagick
+convert *.jpg prueba.pdf
+
+>>>> Archivos duplicados
+https://www.linuxparty.es/35-linux/10496-4-herramientas-utiles-para-buscar-y-eliminar-archivos-duplicados-en-linux.html
+
+pkg i rdfind
+
+>>>> Revisión de archivos pdf
+https://security.stackexchange.com/questions/171716/how-to-know-if-a-pdf-file-is-infected
+
+Virus total
+
+>>>> Encontrar enlaces simbólicos rotos y borrarlos
+find /home/james -xtype l -delete
+
+https://www.freecodecamp.org/espanol/news/tutorial-de-enlace-simbolico-en-linux-como-crear-y-remover-un-enlace-simbolico/
+
+
+
+>>>> actualizar varios repos con una linea https://medium.com/@codenameyau/updating-multiple-  repos-with-one-command-9768c8cdfe46                 
+
+alias gitpullall="find . -maxdepth 3 -name .git -typ  e d | rev | cut -c 6- | rev | xargs -I {} git -C {}   pull"
+
+
+
+>>>> vim reemplazar coincidencias
+https://atareao.es/tutorial/vim/buscar-y-reemplazar-en-vim/
+
+:5,10s/casa/caso/g reemplaza casa por caso entre las líneas 5 y 10 del documento.
+
+:%s/casa/caso/g se comporta igual que el caso anterior, pero lo hace en todo el documento.
+
+
+
+>>>> claves wifi en windows
+netsh wlan show profiles
+netsh wlan show profiles name=[profile name] key=clear
+
