@@ -6,6 +6,15 @@
 " >>>>>>
 " ------------
 
+>> Expresiones regulares
+:s/##/>>  | reemplaza las coincidencias de php a java sobre la linea que se esta
+:%s/##/>> | reemplaza todas las coincidencias de php por java en el documento
+:g/##/d   | borra las lineas donde se encuentren las coincidencias
+
+echo 'hola' | sed 's/hola/adios/g'
+echo 'murcielago' | sed 's/[aeiou]/_/g'
+echo 'murcielago' | sed 's/[^aeiou]/_/g'
+
 >> Open normal mode 
 jk 
 Alt + ;
@@ -22,7 +31,24 @@ Ctrl+W s | Vertical Split
 Ctrl+W - | Resize less up
 Ctrl+W _ | Resize less down
 
->> Visual mode move text selected
+>> Start visual mode
+  in normal mode press:
+
+Ctrl v | Free select
+v      | Select since varchar
+V      | Select since all line
+
+>> Record Actions
+q + key | Start record
+q       | Stop record
+
+keys usefull from records
+w,b,e,j,k,h,l | Move buttons
+A,I,$,0       | Dispacement Buttons
+Ctrl + x      | Number edit
+Ctrl + a      | Number edit
+
+> Visual mode move text selected
 J | Move down
 K | Move up
 > | Move right
