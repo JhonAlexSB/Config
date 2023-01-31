@@ -13,6 +13,21 @@ Ctrl e
 Ctrl d 
 Ctrl u
 
+Ctrl f
+Ctrl b
+
+>> Undo/Redo Deshacer/Rehacer
+u
+Ctrl r
+
+https://vim.fandom.com/wiki/Move_cursor_by_display_lines_when_wrapping
+
+>> Move cursor by display lines when wrapping
+gj
+gk
+g0
+g$
+
 >> Regular expressions
 :s/##/>>  | reemplaza las coincidencias de php a java sobre la linea que se esta
 :%s/##/>> | reemplaza todas las coincidencias de php por java en el documento
@@ -113,4 +128,3 @@ ghp |  Funcina como un git diff (Ver cambios realiazdos)
 " https:/github.com/mattn/emmet-vim
 " ------------
 
-Ctrl y , . Al final de la palabra clave para activar snipet
