@@ -1,12 +1,11 @@
 "set rtp +=~/.config/nvim
 "set rtp+=~/.config/tabnine-vim
-so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/maps.vim
 so ~/.config/nvim/config.vim
+so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/config_plugins.vim
-so ~/.config/nvim/coc.vim
+"so ~/.config/nvim/coc.vim
 "so ~/.config/alacritty/alacritty.yml 
-"so ~/tmux/notas-tmux
 "so ~/.tmux.conf
 "so ~/.config/nvim/plugged/bracey.vim/autoload/bracey.vim
 

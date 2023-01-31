@@ -29,8 +29,6 @@ nmap <leader>so :so%<CR>
 nmap <leader>e :e ~/.config/nvim/init.vim<CR>
 nmap <leader>ds :Dashboard<CR>
 
-nmap ga <Plug>(EasyAlign)
-xmap ga <Plug>(EasyAlign)
 
 " si da error ejecutable escribir en linea de comandos
 " npm install -g prettier

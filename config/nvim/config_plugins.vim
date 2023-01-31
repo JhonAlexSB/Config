@@ -54,6 +54,13 @@ let g:dashboard_custom_header = [
 let g:indentLine_fileTypeExclude = ['dashboard']
 
 " ------------
+" ( Configuracion ) { EasyAling }
+" ------------
+
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
+
+" ------------
 " ( Configuracion ) { Easymotion }
 " ------------
 
@@ -216,7 +223,7 @@ noremap <silent> <Leader>m :Fern . -drawer -reveal=% -toggle -width=35<CR><C-w>=
 
 "colorscheme koehler
 
-set background=dark
+"set background=dark
 
 "let g:bracey_auto_start_browser=0                                
 "let g:bracey_server_allow_remote_connections=1                   
@@ -228,20 +235,26 @@ set background=dark
 " Cambiar esquema de color de vim
 " colorscheme darkblue
 
-"colorscheme darkblue
-let g:gruvbox_italic=0 "Desactivar italica
- colorscheme gruvbox
- let g:gruvbox_contrast_dark = 'hard'
-
-"set t_Co=1024 
+""colorscheme darkblue
+"let g:gruvbox_italic=0 "Desactivar italica
+" colorscheme gruvbox
+" let g:gruvbox_contrast_dark = 'hard'
+"
+""set t_Co=1024 
 
 " transparent bg
-autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+"autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 " For Vim<8, replace EndOfBuffer by NonText
 "autocmd vimenter * hi EndOfBuffer guibg=NONE ctermbg=NONE 
 
 
+" ------------
+" ( Configuracion ) { Darcula Tema Visual }
+" ------------
 
+"syntax enable
+"colorscheme darcula
+"set background=dark
 
 " ------------
 " ( Configuracion ) { TokyoNight Tema Visual }
@@ -256,9 +269,12 @@ autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 "endif
  
 " Tokyo Night
+colorscheme tokyonight
+let g:tokyonight_style = 'storm' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+"uset background=dark
 "colorscheme tokyonight
-"let g:tokyonight_style = 'night' " available: night, storm
-"let g:tokyonight_enable_italic = 1
 
 " colorscheme 
 
@@ -272,9 +288,12 @@ autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 
 nmap ]h <Plug>(GitGutterNextHunk)
 nmap [h <Plug>(GitGutterPrevHunk)
-nmap <Leader>ha <Plug>(GitGutterStageHunk)
+"nmap <Leader>ha <Plug>(GitGutterStageHunk) like git a
 nmap <Leader>ghr <Plug>(GitGutterRevertHunk)
 nmap <Leader>ghu <Plug>(GitGutterUndoHunk)
+
+set signcolumn=yes
+
 
 
 " ------------
@@ -387,10 +406,10 @@ nmap <Leader>ghu <Plug>(GitGutterUndoHunk)
 " ------------
 
 
-" Twins of word under cursor:
-let g:vim_current_word#highlight_twins = 1 "Cambiar marcado de palabras coincididas
-" The word under cursor:
-let g:vim_current_word#highlight_current_word = 0 "Desactivar marcado en la palabra del cursos
+"" Twins of word under cursor:
+"let g:vim_current_word#highlight_twins = 1 "Cambiar marcado de palabras coincididas
+"" The word under cursor:
+"let g:vim_current_word#highlight_current_word = 0 "Desactivar marcado en la palabra del cursos
 
 " ------------
 " ( Configuracion ) { kiteco-vim }
@@ -477,7 +496,7 @@ let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx,*.php,*.css'
 		\ 'wxss': 'css',
 		\ }
 
-let g:coc_global_extensions = [ 'coc-snippets', 'coc-emmet', 'coc-tsserver', 'coc-phpls', 'coc-prettier', 'coc-discord', 'coc-git'] 
+"let g:coc_global_extensions = [ 'coc-snippets', 'coc-emmet', 'coc-tsserver', 'coc-phpls', 'coc-prettier', 'coc-discord', 'coc-git'] 
 
 " g:clojure_fuzzy_indent
 "let g:fzf_buffers_jump = 0

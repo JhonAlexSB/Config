@@ -1,4 +1,3 @@
-
 "  -----------------------------------
 "   Configuraciones
 "  -----------------------------------
@@ -133,18 +132,6 @@ augroup terminal_settings
     \ endif
 augroup END
 
-"Status line
-" https://stackoverflow.com/questions/5375240/a-more-useful-statusline-in-vim
-
-
-"set statusline +=%1*\ %n\ %*            "buffer number
-"set statusline +=%5*%{&ff}%*            "file format
-"set statusline +=%3*%y%*                "file type
-"set statusline +=%4*\ %<%F%*            "full path
-"set laststatus=2
-
-
-
 
 let ctrlv = "\<C-v>"
 set statusline+=%#QuickFixLine#%{(mode()==ctrlv)?'\ \ VISUAL\ BLOCK\ ':''}
@@ -179,64 +166,6 @@ function! StatuslineGit()
   let l:branchname = get(b:, 'git_branch', '') 
   return strlen(l:branchname) > 0?'⎇  '.l:branchname:''
 endfunction
-
-"Linea comentada ---
-"set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
-"set statusline+=%1*\ %=\ row:%l/%L\ (%03p%%)
-"set statusline=%=\ row:%l/%L\ (%03p%%)
-
-
-
-"set statusline +=%2*%m%*                "modified flag
-"set statusline +=%1*%=%5l%*             "current line
-"set statusline +=%2*/%L%*               "total lines
-"set statusline +=%1*%4v\ %*             "virtual column number
-"set statusline +=%2*0x%04B\ %*          "character under cursor
-
-"set statusline=
-"set statusline +=
-"set statusline+=%7*\[%n]                                  buffernr
-"set statusline+=%1*\ %<%F\                                File+path
-"set statusline+=%2*\ %y\                                  FileType
-"set statusline+=%3*\ %{''.(&fenc!=''?&fenc:&enc).''}      Encoding
-"set statusline+=%3*\ %{(&bomb?\",BOM\":\"\")}\            Encoding2
-"set statusline+=%4*\ %{&ff}\                              FileFormat (dos/unix..) 
-"set statusline+=%5*\ %{&spelllang}\%{HighlightSearch()}\  Spellanguage & Highlight on?
-"set statusline+=%8*\ %=\ row:%l/%L\ (%03p%%)\             Rownumber/total (%)
-"set statusline+=%9*\ col:%03c\                            Colnr
-"set statusline+=%0*\ \ %m%r%w\ %P\ \                      Modified? Readonly? Top/bot.
-
-"function! HighlightSearch()
-  "if &hls
-    "return 'H'
-  "else
-    "return ''
-  "endif
-"endfunction
-
-"hi User1 guifg=#ffdad8  guibg=#880c0e
-"hi User2 guifg=#000000  guibg=#F4905C
-"hi User3 guifg=#292b00  guibg=#f4f597
-"hi User4 guifg=#112605  guibg=#aefe7B
-"hi User5 guifg=#051d00  guibg=#7dcc7d
-"hi User7 guifg=#ffffff  guibg=#880c0e gui=bold
-"hi User8 guifg=#ffffff  guibg=#5b7fbb
-"hi User9 guifg=#ffffff  guibg=#810085
-"hi User0 guifg=#ffffff  guibg=#094afe
-
-"set laststatus=2
-"set statusline=\ %f%m%r%h%w\ %=%({%{&ff}\|%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}%k\|%Y}%)\ %([%l,%v][%p%%]\ %)
-
-"set statusline=%<%f%m\ \[%{&ff}:%{&fenc}:%Y]\ %{getcwd()}\ \ \[%{strftime('%Y/%b/%d\ %a\ %I:%M\ %p')}\]\ %=\ Line:%l\/%L\ Column:%c%V\ %P
-
-
-
-
-
-
-
-
-
 
 
 "set guioptions-=m  "menu bar hidde
