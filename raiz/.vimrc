@@ -3,10 +3,11 @@ so ~/.vim/plug.vim
 so ~/.vim/plugconf.vim
 "so ~/.config/Notas/KeyBindings-Nvim
 "so ~/.config/Notas/KeyBindings-Vim
-"so ~/.vim/coc.vim
 "so ~/.vim/coc-settings.json
+so ~/.vim/coc.vim
 " ~/.config/vim/snippets/textmate
 " ~/.config/vim/snippets/ultisnippets
+
 
 
 " :CocList extensions
@@ -53,13 +54,13 @@ nnoremap <Leader>; $a;<Esc>
 "sudo apt install xclip
 nnoremap <Leader>y "+y<CR>
 
-"Para q las feclas no funcionen
+"Para q las feclas no funcionen en normal y visual mode
 noremap <up> <nop>
 noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
-"Ajustar el tamano de las ventanas
+"Ajustar el tamano de las ventanas con flechas en normal mode
 nnoremap <silent> <right> :vertical resize +5<CR>
 nnoremap <silent> <left> :vertical resize -5<CR>
 nnoremap <silent> <up> :resize +5<CR>

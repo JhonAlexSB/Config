@@ -1,7 +1,7 @@
  call plug#begin('~/.config/vim/pack/plugin')
  
 " Autocompletador coc
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
  
 """ Or build from source code by using yarn: https://yarnpkg.com
 "Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install  --frozen-lockfile'}
@@ -37,7 +37,6 @@ Plug 'SirVer/ultisnips'
 "Plug 'terryma/vim-multiple-cursors' " ctrl n   v 
 "Plug 'easymotion/vim-easymotion'  "buscar una palabra en nuestra pagina actual <leader>s +(letra)
 "Plug 'Yggdroot/indentLine'              "indentacion
-"Plug 'scrooloose/nerdcommenter' "comentarios
 "Plug 'jiangmiao/auto-pairs'             "autocompletado de llaves, corchetes, etc
 "Plug 'osyo-manga/vim-over' "OverCommandLine%s/ ENTER palabra/
 "Plug 'tpope/vim-surround'  "Para envolver una palabra en un signo, corchete, parentesis
@@ -52,3 +51,12 @@ Plug 'SirVer/ultisnips'
 ""funciona con <leader> t  #salir q, mantener ventana y volver a pantalla e
 
 call plug#end()
+
+
+"Plug 'ycm-core/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
+" pkg i cmake golang
+" yarn add npm
+" /data/data/com.termux/files/home/.config/vim/pack/plugin/YouCompleteMe/third_party/ycmd/build.py
+" /data/data/com.termux/files/home/.config/vim/pack/plugin/YouCompleteMe/install.py  --all
+

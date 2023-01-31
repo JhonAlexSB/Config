@@ -1,13 +1,12 @@
 {
+  "suggest.noselect": false,
   "snippets.priority": 1,
   "snippets.trace": "verbose",
   "snippets.enableStatusItem": false,
-  "snippets.userSnippetsDirectory": "~/.config/nvim/snippets/ultisnips",
-  "snippets.ultisnips.enable": true,
-  "snippets.ultisnips.usePythonx": true,
-  "snippets.ultisnips.directories": [
-    "UltiSnips"
-  ],
+  //"snippets.userSnippetsDirectory": "~/.config/nvim/snippets/ultisnips",
+  //"snippets.ultisnips.enable": true,
+  //"snippets.ultisnips.usePythonx": true,
+  //"snippets.ultisnips.directories": [ "UltiSnips" ],
   "snippets.snipmate.enable": true,
   "prettier.enable": true,
   "snippets.textmateSnippetsRoots": [

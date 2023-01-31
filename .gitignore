@@ -3,3 +3,4 @@ config/nvim/folding/
 raiz/.vim/folding/
 raiz/.vim/pack/
 raiz/.vim/autoload/plug.vim
+raiz/.vim/.netrwhist
