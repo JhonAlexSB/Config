@@ -27,5 +27,15 @@
     "typescript",
     "typescriptreact",
     "json"
-  ]
+  ],
+  "languageserver": {
+    "javascript": {
+      "filetypes": [
+        "js"
+      ],
+      "rootPatterns": [
+        "~/.config/vim/snippets/textmate/javascript.json"
+      ]
+    }
+  }
 }

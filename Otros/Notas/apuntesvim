@@ -1,0 +1,55 @@
+>>> Curso de NEOVIM/VIM desde 0 hasta configurarlo como VSCODE
+https://www.youtube.com/watch?v=4mstXImyxOQ
+git clone https://github.com/joseunico01/NEOVIM_GUIABASICA
+min 24:50
+  explicacion de plugins para sintaxis
+
+git reset --hard
+
+>>> GUÍA PARA CONFIGURAR NEO VIM DESDE CERO - Temas, plugins y autocompletado
+https://www.youtube.com/watch?v=2dG_Nl_r6s0
+
+git reset --hard
+
+{14:10} "Configuracion de lsp"
+
+{39:} "Instalacion snippets javascript"
+
+{39:07} "Instalacion emmet"
+
+{44:20} "Instalacion prettier"
+
+{51:40} "Instalacion identline"
+Plug 'Yggdroot/identLine'
+
+>>> Snippets en Neovim | coc.nvim y coc-snippets | Usa Snippets de VSCode en Vim!
+https://www.youtube.com/watch?v=o3i5pJ89DjM
+git clone https://github.com/UltiRequiem/UltiVim
+
+Lista snippets vscode
+
+>go 
+{11:00}
+  https://raw.githubusercontent.com/golang/vscode-go/master/snippets/go.json
+>javascript
+{17:47}
+https://github.com/akamud/vscode-javascript-snippet-pack/tree/master/snippets
+  https://raw.githubusercontent.com/akamud/vscode-javascript-snippet-pack/master/snippets/javascript.json
+>markdown
+{5:50}{17:30}
+
+https://github.com/peleek/nvim/blob/stable-snapshot-CoC/snips/markdown.snippets
+  https://raw.githubusercontent.com/peleek/nvim/stable-snapshot-CoC/snips/markdown.snippets
+
+
+>>> Taller de Neovim 2021
+https://www.youtube.com/watch?v=LFIp7-TGmNU
+
+
+>>> En internet
+php
+
+https://gist.githubusercontent.com/Nhany14/55f7a0bcdafb5819704e0f939ce3af34/raw/e9bffcac3497eb367740c8bee3aef2acb5b96f94/php.json
+
+
+
