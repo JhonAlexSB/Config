@@ -163,3 +163,15 @@ let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 let NERDTreeShowLineNumers=1
 let NERDTreeOpenInTap='\t'
+
+" ------------
+"  " ( Configuracion  ) { EasyAling  }
+" >>>>>>
+" https://github.com/junegunn/vim-easy-align
+"  " ------------
+
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
+
+
+

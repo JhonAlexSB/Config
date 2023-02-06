@@ -54,6 +54,22 @@ nnoremap <Leader>; $a;<Esc>
 "sudo apt install xclip
 nnoremap <Leader>y "+y<CR>
 
+"echo 'hello' | xclip -selection clipboard
+
+""map <Leader>y :w !xclip<CR><CR>
+""vmap <Leader>y "*y
+""map <Leader>y :r!xclip -o<CR>
+"set guioptions=aAimrLT
+
+""vmap <space>y :!xclip -f -sel clip<CR>
+""vmap <space>y :'<,'>w !xclip<CR>
+
+""vnoremap <silent><Leader>y "yy <Bar> :call system('xclip', @y)<CR>
+""vnoremap <Leader>y "yy <Bar> :call system('termux-clipboard-get', @y)<CR>
+"vnoremap <Leader>y "yy <Bar> :call system('termux-clipboard-set', @y)<CR>
+
+"echo 'hello' | xclip -selection clipboard
+
 "Para q las feclas no funcionen en normal y visual mode
 noremap <up> <nop>
 noremap <down> <nop>
