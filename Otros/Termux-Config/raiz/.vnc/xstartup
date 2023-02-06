@@ -9,3 +9,9 @@ aterm -geometry 80x24+10+10 -ls &
 # Launch Tab Window Manager.
 # Requires package 'xorg-twm'.
 twm &
+
+# Generate menu.
+fluxbox-generate_menu
+
+# Start fluxbox.
+fluxbox &

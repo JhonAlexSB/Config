@@ -9,6 +9,6 @@
 geometry=1100x624
 FrameRate=15
 dpi=100
-ImprovedHextile=0
+#ImprovedHextile=0
 
 # https://tigervnc.org/doc/Xvnc.html
