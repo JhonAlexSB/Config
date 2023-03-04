@@ -136,9 +136,11 @@ dir=${PS1}
     if [ "$curr_exit" != 0 ]; then
         # CodError
         #PS1="[${BRed}$curr_exit${RCol}]$PS1"
-        PS1="\n${BRed}𝈺𝈻 ${RCol}$PS1"
+        #PS1="\n${BRed}𝈺𝈻 ${RCol}$PS1"
+        PS1="\n${BRed}/\ ${RCol}$PS1"
     else
-      PS1="\n${BGreen}𝈺𝈻 ${RCol}$PS1"
+      #PS1="\n${BGreen}𝈺𝈻 ${RCol}$PS1"
+      PS1="\n${BGreen}/\ ${RCol}$PS1"
     fi
 }
 

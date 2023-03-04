@@ -24,6 +24,8 @@ alias .... "cd ../../../"
 alias ..... "cd ../../../../"
 alias v "vim"
 alias nv "nvim"
+alias discordt "nohup ~/Descargas/programas/Discord/Discord &"
+alias filezillat "nohup ~/Descargas/programas/FileZilla3/bin/filezilla &"
 
 # Vnc Shorcuts
 alias vncc 'vncserver :0'

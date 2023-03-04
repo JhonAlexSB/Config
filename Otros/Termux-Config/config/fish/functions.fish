@@ -6,6 +6,10 @@ function sshp
   ssh -p $argv[1] hostname@192.168.$argv[2]
 end
 
+function noh
+  nohup $argv[1] $argv[2] &
+end
+
 # need 1 var enter how extension ogg for example
 function tomp3
   mkdir -v "encoded"
