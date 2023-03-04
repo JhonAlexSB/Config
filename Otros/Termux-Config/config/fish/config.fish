@@ -149,7 +149,8 @@ end
 # Interactive/login shells {{{
 if status is-login
     #. ~/.config/fish/env.fish
-    echo "let's do it" 
+    # echo "let's do it" 
+    fortune
 end
 
 if status is-interactive

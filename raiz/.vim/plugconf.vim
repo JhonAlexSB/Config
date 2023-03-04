@@ -122,8 +122,8 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 let g:coc_snippet_next = '<C-J>'
 let g:coc_snippet_prev = '<C-K>'
-imap let g:coc_snippet_next = '<c-j>'
-imap let g:coc_snippet_prev = '<c-k>'
+"imap let g:coc_snippet_next = '<c-j>'
+"imap let g:coc_snippet_prev = '<c-k>'
 
 "imap <C-j> <Plug>(coc-snippets-expand-jump)
 "imap <C-j> <Plug>(coc-snippets-expand-jump)

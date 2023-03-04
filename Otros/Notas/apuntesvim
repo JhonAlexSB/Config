@@ -4,12 +4,10 @@ git clone https://github.com/joseunico01/NEOVIM_GUIABASICA
 min 24:50
   explicacion de plugins para sintaxis
 
-git reset --hard
+git reset --hard b466e4b734effae5384c97c1f9ab863c937e5979
 
 >>> GUÍA PARA CONFIGURAR NEO VIM DESDE CERO - Temas, plugins y autocompletado
 https://www.youtube.com/watch?v=2dG_Nl_r6s0
-
-git reset --hard
 
 {14:10} "Configuracion de lsp"
 
@@ -25,6 +23,8 @@ Plug 'Yggdroot/identLine'
 >>> Snippets en Neovim | coc.nvim y coc-snippets | Usa Snippets de VSCode en Vim!
 https://www.youtube.com/watch?v=o3i5pJ89DjM
 git clone https://github.com/UltiRequiem/UltiVim
+
+git reset --hard 0c52e1476be1c9fd445081879ddb8ba32e3b2b11
 
 Lista snippets vscode
 
@@ -45,11 +45,23 @@ https://github.com/peleek/nvim/blob/stable-snapshot-CoC/snips/markdown.snippets
 >>> Taller de Neovim 2021
 https://www.youtube.com/watch?v=LFIp7-TGmNU
 
+git clone https://gitlab.com/Groctel/dotfiles.git
+
+01:25:31
+git reset --hard 7a39505596ce4db0a4adbf30776e64f86774fa3c
+or
+git reset --hard 91c6eceea8a1927844af7d3aaaaf3d5bd080e5a2
 
 >>> En internet
 php
 
 https://gist.githubusercontent.com/Nhany14/55f7a0bcdafb5819704e0f939ce3af34/raw/e9bffcac3497eb367740c8bee3aef2acb5b96f94/php.json
 
+" Autoinstall vim-plug on first run
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+	!curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC | qa!
+endif
 
 
