@@ -29,6 +29,7 @@ prefix !         | Mandar la pestaña actual a otra ventana
 prefix [ | Se parece al modo normal de vim (Es modo copia)
 space    | Entrar a modo seleccionar
 enter    | Copiar lineas seleccionadas
+prefix ] | Pegar lineas seleccionadas
 
 prefix s | Comando para buscar ( Primero se entra con ctrl+b [ ) && q para salir
 

@@ -23,6 +23,14 @@ N             | Pasar a anterior coincidencia
 s             | Activas/Desactivar Random
 m             | Cambiar entre los diferentes modos random
 
+- | Bajar volumen (-10)
+= | Subir volumen (-10)
+
+{ | (-1) Bajar volumen Izquierda
+} | (-1) Bajar volumen Derecha
+[ | (+1) Subir volumen Izquierda 
+] | (+1) Subir volumen Derecha
+
 # Source
 # https://github.com/cmus/cmus/blob/master/Doc/cmus-tutorial.txt
 # https://linuxadictos.com/en/cmus-a-command-line-music-player-for-those-who-prefer-something-light-to-something-pretty.html
