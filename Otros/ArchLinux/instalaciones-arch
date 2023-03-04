@@ -61,16 +61,29 @@ keynav
   keynav-git
 
 
+
+>>> Php Apache 'Version lampp'
+yay -S xampp
+
+sudo xampp startapache
+sudo xampp stopapache
+
+https://askubuntu.com/questions/890818/ubuntu-16-04-how-to-start-xampp-control-panel
+
+>>open gui
+sudo /opt/lampp/manager-linux-x64.run 
+
 >>>> Mysql
 https://www.youtube.com/watch?v=Fee_F1dPOuc
 https://wiki.archlinux.org/title/MySQL
+https://wiki.archlinux.org/title/MariaDB
 
 > Configuracion
 sudo pacman -S mariadb
 sudo pacman -S mariadb-openrc
 
 > Instalacion
-mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 
 
 > Revisar nombre de servicio de arranque "Puede ser diferente al del paquete"
