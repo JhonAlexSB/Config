@@ -380,6 +380,7 @@ exec_always feh --bg-scale $HOME/.wallpaper/Jinx/1193347.jpg;
 
 #exec xsetroot -cursor_name left_ptr
 bindsym $mod+Escape exec "i3lock-fancy; sudo hibernate"
+#bindsym $mod+Escape exec "i3lock; sudo hibernate"
 
 #Don't change focus with mouse
 focus_follows_mouse no
