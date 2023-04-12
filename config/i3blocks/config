@@ -118,6 +118,12 @@ color=#dfd932
 min_width=60
 align=right
 
+[disk]
+command=~/.config/i3blocks/disk
+#LABEL=HOME 
+#DIR=$HOME
+#ALERT_LOW=10
+interval=30
 
 # Date Time
 #
