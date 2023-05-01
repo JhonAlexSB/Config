@@ -34,6 +34,27 @@ endif
 yay -a debtap
 sudo debtap -u <archivo>.deb
 
+>>> Descomprimir y usar deb files
+
+Ejemplo de discord
+
+ar x nombrearchivo.deb
+tar -xf data.tar.gz
+tar -xf control.tar.gz
+
+# Ejecutar el archivo y/o crear un enlace de este para abrir
+# Lo unico necesario es lo contenido dentro de la carpeta share
+
+usr/share/discord/Discord
+
+
+Ejemplo
+alias discordt "nohup ~/Descargas/programas/Discord/Discord &"
+
+# Esto es para que se ejecute sin depender de la terminal
+nohub 'patch' &
+
+
 >>> Bluetooth
 yay -a blueberry
 
