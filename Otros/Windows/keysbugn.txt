@@ -1,0 +1,71 @@
+url link default hotkeys    | https://github.com/fuhsjr00/bug.n/blob/master/doc/Default_hotkeys.md
+path config file on windows | /c/Users/Usuario/AppData/Roaming/bugn.n/Config.ini
+open config with hot key    | #^e
+
+
+>>> abbreviation keys
+! Alt
+^ Ctrl, Control
+# Win / LWin, the left Windows key
++ Shift
+
+
+#^q | Exit app
+#^r | Reload Config
+
+>>> Open
+#y  | open command gui2
+
+>>> Move
+#+x             | full size
+#c              | close windows
+#+(numero)      | move windows
+#+ UP ó Down    | Mover Ventana
+# UP ó Down     | Moverse entre Ventanas
+# j ó ;     | Moverse entre Ventanas (Custom config)
+#^ Left & Right | Increase & Decrease variable n   nxb
+#^ Up & Down    | Increase & Decrease variable n   axn
+
+>>> Layout
+#f   | floating layout
+#m   | monocle layout
+#t   | tiling layout
+#Tap | Change at the previus layout
+
+>>> Show
+#d      | show desktop
+#+d     | toggle the title bar
+#^s     | save current sesion states
+#!space | toggle monitor task bar
+#space  | toggle menu bar
+
+>>> Grid layout
+#+ Right & Left | Decrease & Increase Grid layout
+
+>>>>> msys2
+shift + insert | Pegar
+
+>>>>> tmux
+Ctrl + [ | Copiar
+Ctrl + ] | Pegar 
+
+>>>>> pasos instalar
+
+>> ir a la pagina scoop.sh
+copiar y ejecutar las lineas de codigo en power shell
+
+ejecutar en powershell 
+> scoop bucket add extras
+> scoop search autohotkey 
+> scoop install autohotkey
+
+>> Or download from officials webs
+https://www.autohotkey.com/download/
+https://www.donationcoder.com/software/mouser/popular-apps/farr
+https://github.com/msys2/msys2-installer/releases
+
+Source:
+https://www.youtube.com/watch?v=nZWySF1cwnM
+https://github.com/fuhsjr00/bug.n/wiki/Configuration-examples
+https://github.com/fuhsjr00/bug.n
+https://github.com/fuhsjr00/bug.n/blob/master/doc/Default_hotkeys.md
