@@ -3,10 +3,11 @@
 ## Windows Config: 
 ![windows config img](https://res.cloudinary.com/dd60okmsj/image/upload/v1684459571/Desk/Windows1.png "Configuracion Windows")
 
-[Wallaper Jinx](https://wall.alphacoders.com/big.php?i=1193347)
 
 ## Linux Config: 
 ![linux config img](https://res.cloudinary.com/dd60okmsj/image/upload/v1684459571/Desk/Linux1.png "Configuracion Linux")
+
+[Wallaper Jinx](https://wall.alphacoders.com/big.php?i=1193347)
 
 ---
 > Windows Basic Programs
