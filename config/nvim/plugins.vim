@@ -1,4 +1,4 @@
- call plug#begin('~/.config/nvim/plugged')
+ call plug#begin('~/.config/pluginsVim')
 
 "Plug 'vim-syntastic/syntastic'
 "Plug 'vim-airline/vim-airline'
