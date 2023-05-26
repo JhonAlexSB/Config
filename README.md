@@ -1,13 +1,16 @@
 # Config
 
-## Windows Config: 
+## Windows Config:
 ![windows config img](https://res.cloudinary.com/dd60okmsj/image/upload/v1684459571/Desk/Windows1.png "Configuracion Windows")
 
 
-## Linux Config: 
+## Linux Config:
 ![linux config img](https://res.cloudinary.com/dd60okmsj/image/upload/v1684459571/Desk/Linux1.png "Configuracion Linux")
 
 [Wallaper Jinx](https://wall.alphacoders.com/big.php?i=1193347)
+
+## Termux Config:
+![linux config img](https://res.cloudinary.com/dd60okmsj/image/upload/v1685119637/Desk/Android1.png "Configuracion Termux")
 
 ---
 > Windows Basic Programs
@@ -37,7 +40,7 @@ cmus mpv zathura gvim neovim
 scrot xfce4-screenshooter feh picom xrandr brightnessctl
 
 ### Search Menu
-dmenu rofi
+rofi or dmenu
 
 ### File manager
 nemo pcmanfm ranger
@@ -50,3 +53,20 @@ ttf-font-awesome
 
 Full config path **Otros/ArchiLinux/instalaciones-arch** Or 
 [Full config url](https://github.com/JhonAlexSB/Config/blob/main/Otros/ArchLinux/instalaciones-arch)
+
+---
+> Temux Basic Programs
+
+### Tiling Manager
+fluxbox
+
+### Tools
+tigervnc st tmux fish vim
+
+### Apps on Screenshot
+neofetch pipes.sh cmatrix vifm
+
+Notes: If you uses the  log.sh solved make sure to use .profile for only set user and password once. Credits to xShin, and not use log.sh in a desktop maybe don't start the gui
+
+Full config path **Otros/Termux-config/riceconfig.sh** Or 
+[Full config url](https://github.com/JhonAlexSB/Config/blob/main/Otros/Termux-Config/riceconfig.sh)
