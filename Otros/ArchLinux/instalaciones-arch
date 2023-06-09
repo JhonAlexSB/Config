@@ -18,7 +18,7 @@ blueberry telegram
 
 
 
->>>> Uso de AUR
+>>>> {topic} Uso de AUR
 
 Dependencias i3wm
 brightnessctl rofi
@@ -34,7 +34,7 @@ endif
 yay -a debtap
 sudo debtap -u <archivo>.deb
 
->>> Descomprimir y usar deb files
+>>>> {topic} Descomprimir y usar deb files
 
 Ejemplo de discord
 
@@ -55,7 +55,7 @@ alias discordt "nohup ~/Descargas/programas/Discord/Discord &"
 nohub 'patch' &
 
 
->>> Bluetooth
+>>>> {topic} Bluetooth
 yay -a blueberry
 
 
@@ -83,7 +83,7 @@ keynav
 
 
 
->>> Php Apache 'Version lampp'
+>>>> {topic} Php Apache 'Version lampp'
 yay -S xampp
 
 sudo xampp startapache
@@ -94,7 +94,7 @@ https://askubuntu.com/questions/890818/ubuntu-16-04-how-to-start-xampp-control-p
 >>open gui
 sudo /opt/lampp/manager-linux-x64.run 
 
->>>> Mysql
+>>>> {topic} Mysql
 https://www.youtube.com/watch?v=Fee_F1dPOuc
 https://wiki.archlinux.org/title/MySQL
 https://wiki.archlinux.org/title/MariaDB
@@ -127,7 +127,7 @@ yay -Yc
 pacman -Rns $(pacman -Qttdq)
 
 
->>>> Ryzen amd
+>>>> {topic} Ryzen amd
 https://wiki.archlinux.org/title/Ryzen
 
 ryzenadj
@@ -152,7 +152,7 @@ sudo pacman -S mesa vulkan-radeon xorg xorg-server
 
 https://github.com/Jguer/yay/issues/268
 
->>>> Instalacion Steam
+>>>> {topic} Instalacion Steam
 
 sudo vim /etc/pacmna.conf
 descomentar
@@ -165,6 +165,41 @@ descomentar
 
 sudo pacman -S steam
 
+>>>> {topic} scrcpy USB
+sudo pacman -S scrcpy
+
+>en celular:
+Activar depuracion usb 
+Activar uso de archivos compartidos
+
+>en computador
+adb devices
+
+adb shell ifconfig
+> serial_number device
+
+# in bash
+export ANDROID_SERIAL=0123456789abcdef
+
+scrcpy
+
+>>>> {topic} scrcpy WIFI
+# with the phone connect and scrcpy run in usb 
+adb tcpip 5555
+adb connect ip_phone
+
+scrcpy -d 
+scrcpy -b 2M -m 1024 --max-fps 25 
+
+# Source 
+# https://www.youtube.com/watch?v=vuTdxa-w1js
+# https://github.com/Genymobile/scrcpy
+
+>>>> {topic} Administrar disco externo
+
+lsblk                          | Listar particiones disponibles
+udisksctl mount -b /dev/sdb1   | Montar unidad especifica
+udisksctl unmount -b /dev/sdb1 | Desmontar unidad especifica
 
 >>>> Error aplicaciones con electron gpu
 Source:
