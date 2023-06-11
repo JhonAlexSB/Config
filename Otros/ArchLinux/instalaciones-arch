@@ -163,7 +163,38 @@ descomentar
 #[lib32]
 #Include = /etc/pacman.d/mirrorlist
 
+>> Others configs pacman
+Color
+CheckSpace
+ILoveCandy
+
 sudo pacman -S steam
+
+>>>> {topic} cambiar hora linux
+
+sudo date -s '2023-06-09 18:08:56'
+
+>>>> {topic} administracion usuario
+
+>> Creacion
+
+Lightdm seleccionar gestor de ventanas predeterminado por usuario
+
+dentro del usuairo de interes abrir /~.dmrc
+
+y guardar el escritorio de preferencia
+
+[Desktop]
+Session=xfce
+
+
+>> Creacion de usuario
+
+
+sudo useradd -m nuevo_usuario
+sudo passwd nuevo_usuario
+sudo usermod -aG users nuevo_usuario
+
 
 >>>> {topic} scrcpy USB
 sudo pacman -S scrcpy
