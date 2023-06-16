@@ -59,6 +59,13 @@ alias git-l 'git config -l'
 alias screenoff 'xset dpms force off | tee -a ~/.bashrc > /dev/null'
 #-RawKeyboard
 
+# https://stackoverflow.com/questions/49635100/fishshell-aliases-using
+
+function spk -a text_input
+  espeak -q --ipa $text_input
+end
+
+#alias spk "speak -q --ipa "
 alias cl "clear"
 alias p "python"
 alias pc "pacman"

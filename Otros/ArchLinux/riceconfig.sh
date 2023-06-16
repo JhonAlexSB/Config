@@ -145,6 +145,7 @@ echo -e '\n------//----- '
 echo '1) Basica de i3 '
 echo '2) Complementaria de i3 '
 echo '3) Enlaces simbolicos'
+echo '4) Apps yay'
 echo '*) Salir '
 echo -e '------//----- \n'
 
@@ -158,16 +159,20 @@ read -p "Por favor seleccione una opcion de instalacion: `echo $'\n> '`" num1
   case "$num1" in
       "1")
         opt=$(seleccionar_distro)
-        eval $opt ' feh i3-wm i3blocks scrot rofi ttf-font-awesome picom  fish arandr '
+        eval $opt ' feh i3-wm i3blocks scrot rofi ttf-font-awesome picom fish arandr '
         eval $opt ' cmus mpv tmux ncdu dunst '
         crear_wallpaper
           ;;
       "2")
         opt=$(seleccionar_distro)
         eval $opt ' brightnessctl xfce4-screenshooter rclone gvim neovim nodejs '
+        eval $opt ' htop nemo xclip'
           ;;
       "3")
         crear_rutas
+          ;;
+      "4")
+        eval 'yay -S brave espeak translate-shell-git'
           ;;
       *)
         echo "Opcion invalida"

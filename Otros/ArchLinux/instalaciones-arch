@@ -126,6 +126,14 @@ rc-status
 yay -Yc
 pacman -Rns $(pacman -Qttdq)
 
+>>>> {topic} Nvidia drivers
+
+lspci
+
+https://www.youtube.com/watch?v=anLwd3fxL2g
+https://www.youtube.com/watch?v=C8fs5y0yIAQ
+https://www.nvidia.com/Download/index.aspx?lang=es
+
 
 >>>> {topic} Ryzen amd
 https://wiki.archlinux.org/title/Ryzen
@@ -203,6 +211,18 @@ sudo pacman -S scrcpy
 Activar depuracion usb 
 Activar uso de archivos compartidos
 
+scrcpy -d 
+scrcpy -b 2M -m 1024 --max-fps 25 
+
+scrcpy
+
+>>>> {topic} scrcpy WIFI
+# with the phone connect and scrcpy run in usb 
+adb tcpip 5555
+adb connect ip_phone
+
+A00000K580161903805
+
 >en computador
 adb devices
 
@@ -212,19 +232,10 @@ adb shell ifconfig
 # in bash
 export ANDROID_SERIAL=0123456789abcdef
 
-scrcpy
-
->>>> {topic} scrcpy WIFI
-# with the phone connect and scrcpy run in usb 
-adb tcpip 5555
-adb connect ip_phone
-
-scrcpy -d 
-scrcpy -b 2M -m 1024 --max-fps 25 
-
 # Source 
 # https://www.youtube.com/watch?v=vuTdxa-w1js
 # https://github.com/Genymobile/scrcpy
+# https://github.com/Genymobile/scrcpy/blob/master/doc/device.md
 
 >>>> {topic} Administrar disco externo
 
