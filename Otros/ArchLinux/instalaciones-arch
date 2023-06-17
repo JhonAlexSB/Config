@@ -178,6 +178,13 @@ ILoveCandy
 
 sudo pacman -S steam
 
+>>>> {topic} establecer tiempo apagado pantalla, suspencion
+https://unix.stackexchange.com/questions/638744/arch-linux-i3wm-set-lock-time-out-xss-lock-i3lock
+
+
+xset q           | ver Configuracion
+xset dpms 30 0 0 | Standby: 0 Suspend: 0 Off:0
+
 >>>> {topic} cambiar hora linux
 
 sudo date -s '2023-06-09 18:08:56'

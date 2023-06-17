@@ -128,11 +128,17 @@ echo -e '\nEnlaces Creados o Atualizados con exito >.<' >&2
 # '------//----- '
 
 crear_wallpaper(){
-  if [ ! -d ~/.wallpaper ]; then
-    mkdir ~/.wallpaper/
-    mkdir ~/.wallpaper/Jinx/
+  if [ ! -e ~/.wallpaper/Jinx/1193347.jpg ]; then
+    if [ ! -d ~/.wallpaper/ ]; then
+      mkdir ~/.wallpaper/
+      if [ ! -d ~/.wallpaper/Jinx/ ]; then
+        mkdir ~/.wallpaper/Jinx/
+      fi
+    fi
+
+
     cd ~/.wallpaper/Jinx/
-    eval $opt ' wget'
+    eval $opt
     wget 'https://images6.alphacoders.com/119/1193347.jpg'
   fi
 }
@@ -161,7 +167,6 @@ read -p "Por favor seleccione una opcion de instalacion: `echo $'\n> '`" num1
         opt=$(seleccionar_distro)
         eval $opt ' feh i3-wm i3blocks scrot rofi ttf-font-awesome picom fish arandr '
         eval $opt ' cmus mpv tmux ncdu dunst '
-        crear_wallpaper
           ;;
       "2")
         opt=$(seleccionar_distro)
@@ -170,6 +175,7 @@ read -p "Por favor seleccione una opcion de instalacion: `echo $'\n> '`" num1
           ;;
       "3")
         crear_rutas
+        crear_wallpaper
           ;;
       "4")
         eval 'yay -S brave espeak translate-shell-git'
