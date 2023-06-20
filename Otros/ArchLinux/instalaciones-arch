@@ -250,6 +250,15 @@ lsblk                          | Listar particiones disponibles
 udisksctl mount -b /dev/sdb1   | Montar unidad especifica
 udisksctl unmount -b /dev/sdb1 | Desmontar unidad especifica
 
+
+>> Permisos de escritura
+https://askubuntu.com/questions/90339/how-do-i-set-read-write-permissions-my-hard-drives
+
+sudo chmod ugo+wx /media/username/your_drive
+OR
+sudo chmod ugo+wx run/media/username/your_drive
+
+
 >>>> Error aplicaciones con electron gpu
 Source:
 https://stackoverflow.com/questions/65679630/fatalgpu-data-manager-impl-private-cc439-gpu-process-isnt-usable-goodbye

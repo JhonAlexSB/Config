@@ -93,8 +93,9 @@ if [ ! -d ~/.config/ranger ]; then
   ln -fs ~/${carpeta}/Config/config/ranger/ ~/.config
 fi
 
+ln -fs ~/${carpeta}/Config/config/mpv/ ~/.config
 ln -fs ~/${carpeta}/Config/config/dunst/ ~/.config
-ln -fs ~/${carpeta}/Config/config/cmus/ ~/.config
+ln -fs ~/${carpeta}/Config/config/cmus/autosave ~/.config
 ln -fs ~/${carpeta}/Config/config/vlc/ ~/.config
 ln -fs ~/${carpeta}/Config/config/vlc/ ~/.config
 ln -fs ~/${carpeta}/Config/config/zathura/ ~/.config
