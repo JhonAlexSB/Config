@@ -1,0 +1,55 @@
+Get-AppxPackage
+
+
+Get-WindowsOptionalFeature -Online | Where-Object {$_.State -eq "Enabled"}
+
+
+Ejecutar powershell como administrador
+
+
+Get-AppxPackage NombrePaquete | Remove-AppxPackage
+
+Cortana | Microsoft.549981C3F5F10
+Microsoft Edge | Microsoft.MicrosoftEdge
+Alarms y Clock | Microsoft.WindowsAlarms
+Calculator | Microsoft.WindowsCalculator
+Groove Music | Microsoft.ZuneMusic
+Get Started | Microsoft.Getstarted
+Mail and Calendar | Microsoft.windowscommunicationsapps
+Maps | Microsoft.WindowsMaps
+Movies y TV | Microsoft.ZuneVideo
+OneNote | Microsoft.Office.OneNote
+People | Microsoft.People
+Photos | Microsoft.Windows.Photos
+Paint 3D | Microsoft.MSPaint
+Store | Microsoft.WindowsStore
+Voice Recorder | Microsoft.SoundRecorder
+Weather | Microsoft.BingWeather
+Xbox | Microsoft.XboxApp
+3D viewer | Microsoft.Microsoft3DViewer
+Camera | Microsoft.WindowsCamera
+
+Xbox | Microsoft.XboxGamingOverlay
+xbox | Microsoft.XboxSpeechToTextOverlay
+xbox | Microsoft.XboxIdentityProvider
+xbox | Microsoft.XboxGameOverlay
+xbox | Microsoft.MicrosoftStickyNotes
+xbox | Microsoft.XboxGameCallableUI
+
+unknow | Microsoft.Wallet
+unknow | Microsoft.Windows.CloudExperienceHost
+
+screensketch | Microsoft.ScreenSketch
+get help | Microsoft.GetHelp
+people | Microsoft.Windows.PeopleExperienceHost
+mixed realiyty portal | Microsoft.MixedReality.Portal
+
+xbox game bar
+3d viewer
+camera
+get help
+mixed reality portal
+phone link
+
+:: Source @paco.web
+https://vm.tiktok.com/ZM2DxWQ6W/
