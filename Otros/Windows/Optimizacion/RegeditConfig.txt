@@ -1,0 +1,28 @@
+  "eliminar aplicaciones de inicio aplicaciones de inicio"
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+	"eliminar aplicaciones de actualizacion"
+HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+	"optimizacion"
+		"NetworkThrottlingIndex -> ffffffff" default a
+		"SystemResponsiveness -> 1" default 20 [es mejor 0] da prioridad a la aplicacion que es esta ejecutando
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile
+	"ruta games prioridad a aplicaciones de alto rendmiento"
+		"GPU Priority -> 8"
+		"Priority -> 6" default 2
+		"Scheduling Category -> High" default Meduim
+		"SFIO Priority -> High" default Normal
+Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games
+	"no especifica"
+		"value -> 0" default 1
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\default\ApplicationManagement\AllowGameDVR
+	"no especifica"
+		"GameDVR_DXGIHonorFSEWindowsCompatible 1" default 0
+		"GameDVR_EFSEFeatureFlags -> 0"
+		"GameDVR_Enabled -> 0"
+		"GameDVR_FSEBehaviorMode -> 2" default 0
+		"GameDVR_HonorUserFSEBehaviorMode -> 0"	[es mejor 1] prioriza al usuario
+HKEY_CURRENT_USER\System\GameConfigStore
+
+
+SOURCE regedit config
+https://youtu.be/5nyi84LELjI?t=1062

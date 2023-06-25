@@ -1,0 +1,51 @@
+///////////
+Instalaciones gestores
+///////////
+
+-- Ejecutar como administrador y pegar el/los comando del link
+https://chocolatey.org/install
+
+-- Ejecutar sin administracion y pegar el/los comando del link
+https://scoop.sh/
+
+///////////
+Comando actualizacion
+///////////
+
+choco upgrade all -y
+scoop update --all
+winget upgrade --all
+
+
+///////////
+Buscar Apps
+///////////
+https://community.chocolatey.org/packages
+scoop.sh
+
+///////////
+Instalaciones Apps
+///////////
+
+--------- chocolatey
+choco install chocolateygui autohotkey brave scrcpy msiafterburner mpv find-and-run-robot
+
+--------- scoop
+scoop install git
+
+scoop bucket add extras
+scoop install extras/bugn
+
+scoop bucket add nonportable
+scoop install nonportable/dshidmini-np
+
+scoop bucket add versions
+scoop install versions/steam
+
+// Optener ayuda
+scoop help
+choco help
+
+
+// Source
+https://www.youtube.com/watch?v=Et221rnnrac
