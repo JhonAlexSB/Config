@@ -1,0 +1,130 @@
+>>>> {topic} ADB uninstall defaults apps
+https://stackoverflow.com/questions/13534935/adb-uninstall-failed
+
+adb shell
+pm list packages | grep google
+pm uninstall --user 0 <package.name>
+
+#youtube music
+pm uninstall --user 0 com.google.android.apps.youtube.music
+pm uninstall com.google.android.apps.youtube.music
+
+#Gallery
+pm uninstall --user 0 com.google.android.apps.photosgo
+pm uninstall com.google.android.apps.photosgo
+
+#Gboard
+pm uninstall --user 0 com.google.android.inputmethod.latin
+pm uninstall com.google.android.inputmethod.latin
+
+#Google assinstant Go
+m uninstall --user 0 com.google.android.apps.assistant
+pm uninstall com.google.android.apps.assistant
+
+#Google Go
+pm uninstall --user 0 com.google.android.apps.searchlite
+pm uninstall com.google.android.apps.searchlite
+
+#GoogleTV
+pm uninstall --user 0 com.google.android.videos
+pm uninstall com.google.android.videos
+
+#Meta
+pm uninstall --user 0 com.facebook.system
+pm uninstall com.facebook.system
+
+pm uninstall --user 0 com.facebook.appmanager
+pm uninstall com.facebook.appmanager
+
+pm uninstall --user 0 com.facebook.services
+pm uninstall com.facebook.services
+
+#Meet 
+pm uninstall --user 0 com.google.android.apps.tachyon
+pm uninstall com.google.android.apps.tachyon
+
+#camera
+pm uninstall --user 0 com.google.android.apps.cameralite
+pm uninstall com.google.android.apps.cameralite
+
+#carrier services
+pm uninstall --user 0 com.google.android.ims
+pm uninstall com.google.android.ims
+
+#calendar
+pm uninstall --user 0 com.google.android.calendar
+pm uninstall com.google.android.calendar
+
+#clock
+pm uninstall --user 0 com.google.android.deskclock
+pm uninstall com.google.android.deskclock
+
+#files by google
+pm uninstall --user 0 com.google.android.apps.nbu.files
+pm uninstall com.google.android.apps.nbu.files
+
+#google location services
+pm uninstall --user 0 com.google.android.gms.location.history
+pm uninstall com.google.android.gms.location.history
+
+#google speech services
+pm uninstall --user 0 com.google.android.apps.speechservices
+pm uninstall com.google.android.apps.speechservices
+
+#speech services by google
+pm uninstall --user 0 com.google.android.tts
+pm uninstall com.google.android.tts
+
+#styles & wallpapers
+pm uninstall --user 0 com.google.android.apps.wallpaper
+pm uninstall com.google.android.apps.wallpaper
+
+com.hmdglobal.support
+#mydevice
+
+pm uninstall --user 0 
+pm uninstall 
+
+# otras aplicaciones google sin revisar
+package:com.google.android.ext.services
+package:com.google.android.onetimeinitializer
+package:com.google.android.ext.shared
+package:com.google.android.apps.messaging
+package:com.google.android.configupdater
+package:com.google.android.overlay.modules.permissioncontroller
+package:com.google.android.marvin.talkback
+package:com.google.android.apps.work.oobconfig
+package:com.google.android.gm
+package:com.google.android.overlay.gmsconfig.common
+package:com.google.android.apps.searchlite
+package:com.google.android.permissioncontroller
+package:com.google.android.setupwizard
+package:com.google.android.overlay.modules.ext.services
+package:com.google.android.overlay.gmsconfig.gallerygo
+package:com.google.android.apps.wellbeing
+package:com.google.android.dialer
+package:com.google.android.overlay.gmsconfig.comms
+package:com.google.android.apps.docs
+package:com.google.android.apps.maps
+package:com.google.android.modulemetadata
+package:com.google.android.webview
+package:com.google.android.contacts
+package:com.google.android.syncadapters.contacts
+package:com.google.android.calculator
+package:com.google.android.packageinstaller
+package:com.google.android.gsf
+package:com.google.android.gmsintegration
+package:com.google.android.partnersetup
+package:com.google.android.overlay.modules.permissioncontroller.forframework
+package:com.google.android.feedback
+package:com.google.android.printservice.recommendation
+package:com.google.android.gms.policy_sidecar_aps
+package:com.google.android.apps.translate
+package:com.google.android.overlay.gmsconfig.assistantgo
+package:com.google.android.wfcactivation
+package:com.google.android.apps.turbo
+package:com.google.android.gmsintegration.overlay
+package:com.google.android.overlay.modules.modulemetadata.forframework
+package:com.google.android.overlay.gmsconfig.go
+package:com.google.android.apps.restore
+

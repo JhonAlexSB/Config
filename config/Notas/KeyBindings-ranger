@@ -32,6 +32,10 @@ q         | Cerrar pestañas
 S        | Abrir terminal en directorio actual
 Ctrl + D | Volver a ranger
 
+## Maps | Mapeos
+mkd | :mkdir
+ouc | :touch
+
 ## Source 
 https://github.com/ranger/ranger/wiki/Official-user-guide
 https://github.com/ranger/ranger/wiki/Plugins

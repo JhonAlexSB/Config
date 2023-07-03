@@ -76,6 +76,10 @@ if [ ! -d ~/.config/fish ]; then
   mkdir  ~/.config/fish
 fi
 
+if [ ! -d ~/.config/feh ]; then
+  mkdir ~/.config/feh
+fi
+
 ln -fs ~/${carpeta}/Config/config/i3/ ~/.config
 ln -fs ~/${carpeta}/Config/config/i3blocks/ ~/.config
 ln -fs ~/${carpeta}/Config/config/Notas/ ~/.config
@@ -89,10 +93,16 @@ ln -fs ~/${carpeta}/Config/Otros/Termux-Config/config/fish/functions.fish ~/.con
 
 ### Other programs
 ##
-if [ ! -d ~/.config/ranger ]; then
-  ln -fs ~/${carpeta}/Config/config/ranger/ ~/.config
+if [ ! -d ~/.config/ranger/rc.config ]; then
+  if [ ! -d ~/.config/ranger/ ]; then
+    mkdir ~/.config/ranger/
+    ln -fs ~/${carpeta}/Config/config/ranger/rc.config ~/.config/ranger/
+  else
+    ln -fs ~/${carpeta}/Config/config/ranger/.config ~/.config/ranger/
+  fi
 fi
 
+ln -fs ~/${carpeta}/Config/config/feh/ ~/.config/
 ln -fs ~/${carpeta}/Config/config/mpv/ ~/.config
 ln -fs ~/${carpeta}/Config/config/dunst/ ~/.config
 ln -fs ~/${carpeta}/Config/config/cmus/autosave ~/.config
