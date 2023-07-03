@@ -28,7 +28,7 @@ Instalaciones Apps
 ///////////
 
 --------- chocolatey
-choco install chocolateygui autohotkey brave scrcpy msiafterburner mpv find-and-run-robot
+choco install chocolateygui autohotkey brave scrcpy msiafterburner mpv find-and-run-robot msys2
 
 --------- scoop
 scoop install git
