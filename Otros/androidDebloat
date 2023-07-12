@@ -79,8 +79,56 @@ pm uninstall com.google.android.tts
 pm uninstall --user 0 com.google.android.apps.wallpaper
 pm uninstall com.google.android.apps.wallpaper
 
-com.hmdglobal.support
+#calculadora
+pm uninstall --user 0 com.google.android.calculator
+pm uninstall com.google.android.calculator
+
+#contactos
+pm uninstall --user 0 com.google.android.contacts
+pm uninstall com.google.android.contacts
+
+#google contacts sync {error}
+pm uninstall --user 0 com.google.android.syncadapters.contacts
+pm uninstall com.google.android.syncadapters.contacts
+
+#phone
+pm uninstall --user 0 com.google.android.dialer
+pm uninstall com.google.android.dialer
+
 #mydevice
+pm uninstall --user 0 com.hmdglobal.support
+pm uninstall com.hmdglobal.support
+
+#gmail
+pm uninstall --user 0 com.google.android.gm
+pm uninstall com.google.android.gm
+
+#fmradio {error}
+pm uninstall --user 0 com.hmdglobal.app.fmradio
+pm uninstall com.hmdglobal.app.fmradio
+
+#sound recorder {error}
+pm uninstall --user 0 com.android.soundrecorder
+pm uninstall com.android.soundrecorder
+
+#andorid accessibility suite
+pm uninstall --user 0 com.google.android.marvin.talkback
+pm uninstall com.google.android.marvin.talkback
+
+#mensajes
+pm uninstall --user 0 com.google.android.apps.messaging
+pm uninstall com.google.android.apps.messaging
+
+#maps
+pm uninstall --user 0 com.google.android.apps.maps
+pm uninstall com.google.android.apps.maps
+
+#pai configuration
+pm uninstall --user 0 android.autoinstalls.config.hmdglobal.cable
+pm uninstall android.autoinstalls.config.hmdglobal.cable
+
+#
+com.hmdglobal.support
 
 pm uninstall --user 0 
 pm uninstall 
@@ -89,12 +137,9 @@ pm uninstall
 package:com.google.android.ext.services
 package:com.google.android.onetimeinitializer
 package:com.google.android.ext.shared
-package:com.google.android.apps.messaging
 package:com.google.android.configupdater
 package:com.google.android.overlay.modules.permissioncontroller
-package:com.google.android.marvin.talkback
 package:com.google.android.apps.work.oobconfig
-package:com.google.android.gm
 package:com.google.android.overlay.gmsconfig.common
 package:com.google.android.apps.searchlite
 package:com.google.android.permissioncontroller
@@ -102,15 +147,10 @@ package:com.google.android.setupwizard
 package:com.google.android.overlay.modules.ext.services
 package:com.google.android.overlay.gmsconfig.gallerygo
 package:com.google.android.apps.wellbeing
-package:com.google.android.dialer
 package:com.google.android.overlay.gmsconfig.comms
 package:com.google.android.apps.docs
-package:com.google.android.apps.maps
 package:com.google.android.modulemetadata
 package:com.google.android.webview
-package:com.google.android.contacts
-package:com.google.android.syncadapters.contacts
-package:com.google.android.calculator
 package:com.google.android.packageinstaller
 package:com.google.android.gsf
 package:com.google.android.gmsintegration
