@@ -36,7 +36,7 @@ esc + esc | Agregar o quitar sudo al comienzo del comando
 ### Funciones o alias
 countdown $((1*60*60)) | Cuenta regresiva de 1 hora
 
-ctrl + u | Eliminar hasia atras
+ctrl + u | Eliminar asia atras
 ctrl + k | Eliminar todo desde donde se esta hacia adelante
 
 ### st terminal 

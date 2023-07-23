@@ -20,7 +20,14 @@ prefix }     | Cambiar de lugar el contenido
 prefix p     | Cambiar a ventana previa
 prefix n     | Cambiar a ventana siguiente
 prefix z     | toggle zoom
+prefix enter | Cambiar layout 
 
+# Tamaño de la pestaña
+prefix < | incrementar asia la izquierda
+prefix > | incrementar asia la derecha
+prefix - | incrementar asia abajo
+prefix + | incrementar asia arriba
+ 
 prefix q         | Ver numeracion de pestaña 'Presionar numero para ingresar'
 prefix arrow     | Cambiar entre pesatañas
 prefix ctrl hold | Mover tamaño de pestaña
