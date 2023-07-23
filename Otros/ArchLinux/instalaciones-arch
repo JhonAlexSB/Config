@@ -250,6 +250,10 @@ lsblk                          | Listar particiones disponibles
 udisksctl mount -b /dev/sdb1   | Montar unidad especifica
 udisksctl unmount -b /dev/sdb1 | Desmontar unidad especifica
 
+>>>> {topic} ejecutar programas no disponibles 
+
+# https://www.reddit.com/r/unixporn/comments/66dsdu/how_do_i_make_a_program_available_to_rofi/
+* Enlace simbolico o archivo .desktop ejemplo = discord.desktop en ruta /usu/share/applications/
 
 >> Permisos de escritura
 https://askubuntu.com/questions/90339/how-do-i-set-read-write-permissions-my-hard-drives
