@@ -22,3 +22,6 @@ map D toggle_page_mode
 
 # Evita errores abriendo urls
 set sandbox none 
+
+# Desabilitar statusbar
+set guioptions none
