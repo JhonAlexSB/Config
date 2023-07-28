@@ -64,9 +64,10 @@ ln -fs ${carpeta}/Config/raiz/.bash_aliases ~/
 ## Vim
 ##
 if [ ! -d ~/.config/vim ]; then
-  ln -fs ~/${carpeta}/Config/config/vim ~/.config
+  mkdir ~/.config/vim
 fi
 
+ln -fs ~/${carpeta}/Config/config/vim/snippets/ ~/.config/vim/
 ln -fs ~/${carpeta}/Config/raiz/.vim ~/
 ln -fs ~/${carpeta}/Config/raiz/.vimrc ~/
 
