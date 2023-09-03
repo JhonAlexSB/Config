@@ -23,6 +23,11 @@ N             | Pasar a anterior coincidencia
 s             | Activas/Desactivar Random
 m             | Cambiar entre los diferentes modos random
 
+
+:pl-create my-playlist | crear playlist
+y | agregar disco/discos seleccionados modo(2) al playlist seleccionado modo(3)
+
+
 - | Bajar volumen (-10)
 = | Subir volumen (-10)
 
@@ -34,3 +39,7 @@ m             | Cambiar entre los diferentes modos random
 # Source
 # https://github.com/cmus/cmus/blob/master/Doc/cmus-tutorial.txt
 # https://linuxadictos.com/en/cmus-a-command-line-music-player-for-those-who-prefer-something-light-to-something-pretty.html
+#
+# Playlist
+# https://linux.die.net/man/7/cmus-tutorial
+# https://unix.stackexchange.com/questions/593727/how-can-i-create-a-playlist-and-add-songs-to-it-in-cmus

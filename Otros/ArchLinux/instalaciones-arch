@@ -54,6 +54,16 @@ alias discordt "nohup ~/Descargas/programas/Discord/Discord &"
 # Esto es para que se ejecute sin depender de la terminal
 nohub 'patch' &
 
+>>>> cambiar terminal
+
+chsh -s $(which fish)
+
+
+>>>> Apagar/Encender wifi meidante linea de comandos
+
+connmanctl wifi disable
+connmanctl wifi enable
+
 
 >>>> {topic} Bluetooth
 yay -a blueberry
@@ -162,7 +172,7 @@ https://github.com/Jguer/yay/issues/268
 
 >>>> {topic} Instalacion Steam
 
-sudo vim /etc/pacmna.conf
+sudo vim /etc/pacman.conf
 descomentar
 
 #[lib32-gremlins]
