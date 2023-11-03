@@ -71,6 +71,10 @@ pm uninstall com.google.android.gms.location.history
 pm uninstall --user 0 com.google.android.apps.speechservices
 pm uninstall com.google.android.apps.speechservices
 
+#google drive
+pm uninstall --user 0 com.google.android.apps.docs
+pm uninstall com.google.android.apps.docs
+
 #speech services by google
 pm uninstall --user 0 com.google.android.tts
 pm uninstall com.google.android.tts
@@ -148,7 +152,6 @@ package:com.google.android.overlay.modules.ext.services
 package:com.google.android.overlay.gmsconfig.gallerygo
 package:com.google.android.apps.wellbeing
 package:com.google.android.overlay.gmsconfig.comms
-package:com.google.android.apps.docs
 package:com.google.android.modulemetadata
 package:com.google.android.webview
 package:com.google.android.packageinstaller
