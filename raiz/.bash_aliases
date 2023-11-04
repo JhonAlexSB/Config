@@ -23,6 +23,7 @@ alias ...="cd ../../"
 alias ....="cd ../../../"
 alias .....="cd ../../../../"
 alias v="vim"
+alias n.="nemo"
 alias nv="nvim"
 alias vncc='vncserver :0'
 alias vnck='vncserver -kill '

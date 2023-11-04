@@ -43,6 +43,16 @@ function rendl(){
     cp "$i" "rename/${i:0:${#i}-20}.mp3"
   done
 }
+function addtag(){
+
+  for i in *.mp3
+  do
+    id3 -g "$1" "$i"
+
+  done
+}
+
+
 # erase add caracteres variables to file 
 # 1 input extension, 2 input number caracters to delete
 function delfs8(){

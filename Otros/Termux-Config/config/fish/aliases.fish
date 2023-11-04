@@ -76,6 +76,7 @@ alias transns 'trans en:es '
 alias transsn 'trans es:en '
 alias backuprcall "rclone sync -v sdcard/data/Udemy/ mydropbox:Udemy/; rclone sync -v sdcard/data/Platzi/ mydropbox:Platzi; rclone sync -v sdcard/data/Dropbox mydropbox:Dropbox; rclone sync -v sdcard/Pictures/Categorias/ mydropbox:img/categorias/"
 
+alias n. "nemo ."
 alias songs "play /data/data/com.termux/files/home/storage/shared/Glue70.mp3"
 
 alias cpr "cp -r"
