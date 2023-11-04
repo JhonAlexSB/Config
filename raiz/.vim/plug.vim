@@ -9,7 +9,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'easymotion/vim-easymotion'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/vim-easy-align'
-
+Plug 'preservim/vimux'
 
 " Temas
 Plug 'morhetz/gruvbox'

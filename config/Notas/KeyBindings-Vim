@@ -128,3 +128,17 @@ ghp |  Funcina como un git diff (Ver cambios realiazdos)
 " https:/github.com/mattn/emmet-vim
 " ------------
 
+
+" ------------
+"  " ( Configuracion  ) { Vimux  }
+" >>>>>>
+" https://github.com/preservim/vimux
+"  " ------------
+
+Primero usar tmux en linea comando
+abrir dos pestañas una con vim y otra vacia
+
+vp | Ejecutar comando
+vl | Ejecutar el ultimo comando
+vi | Ejecutar inspector
+

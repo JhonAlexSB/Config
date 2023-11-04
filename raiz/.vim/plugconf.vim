@@ -174,4 +174,19 @@ nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
 
 
+" ------------
+"  " ( Configuracion  ) { Vimux  }
+" >>>>>>
+" https://github.com/preservim/vimux
+"  " ------------
+
+" https://www.bugsnag.com/blog/tmux-and-vim/
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+
+" Inspect runner pane
+map <Leader>vi :VimuxInspectRunner<CR>
 
