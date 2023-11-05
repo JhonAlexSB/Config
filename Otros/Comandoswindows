@@ -1,0 +1,198 @@
+>>>>> combinacion de teclas
+>>> con powertoys
+Win+Mayus+T : capturar letra de imagen
+
+>>>> programas
+Victoria
+Bugn
+Autohotkey
+
+scrcpy --no-audio --max-fps 18
+
+Update defaults apps windows
+Antivirus licence life time
+
+>>>> {win}💻🪟🌎 donde se guarda la licencia oem
+
+https://www.techpowerup.com/gpu-specs/geforce-920mx.c2826
+https://www.mundodeportivo.com/urbantecno/windows/como-extraer-la-licencia-de-windows-10-almacenada-en-la-bios
+
+>>>> {win}💻🪟🌎 Arrancar aplicación al iniciar windows
+Win + R 'Shell:startup'
+C:/Users/Usuario/AppData/Roaming/Microsoft/Windows/Menú Inicio/Programas/Inicio
+
+>>>> {win}💻🪟🌎 Permisos de lectura y escritura
+
+>>>> Usar sandboxie o entorno aislado
+https://www.youtube.com/watch?v=sUr5KpHdYlM
+
+>>>> configurar find AND run robot con bugn para no abrir completo
+
+>>>> configurar find AND run para pasar entre opciones sin números o flechas
+
+>>>> {win}💻🪟🌎 abrir terminal con win+ enter
+
+>>>> alternativas a (mpv, cmus, keynav, zathura)
+
+Dexpot 1.6
+
+>>>> {win}💻🪟🌎 Msys2
+pacman -S mingw-w64-x86_64-nodejs
+
+
+>>>> {win}💻🪟🌎 modificar tiempo aviso bateria baja
+Click derecho en boton inicio
+Opciones de energia
+Configuracion de plan
+
+— niveo de bateria baja 
+. con bateria x%
+— niveo critico de bateria
+. con bateria x%
+
+>>>> {win}💻🪟🌎 entrar en modo seguro
+Msconfig
+Arranque
+
+>>>>💻🪟🌎 pantalla completa
+Win+m+enter
+Shift+enter
+https://www.youtube.com/watch?v=mwLv3XSojM4
+
+>>>> {win}💻🪟🌎 restauracion y recuperacion
+>>>> {win}💻🪟🌎 ñ y tildes en windows
+
+>>>> {win}💻🪟🌎 powertoys
+>>>> {win}💻🪟🌎 chocolatey
+
+
+
+https://community.chocolatey.org/packages/autohotkey
+https://community.chocolatey.org/packages/find-and-run-robot.install
+https://community.chocolatey.org/packages/msiafterburner
+https://community.chocolatey.org/packages/msys2
+
+https://community.chocolatey.org/packages/git
+https://community.chocolatey.org/packages/brave/1.52.126
+https://community.chocolatey.org/packages/epicgameslauncher
+https://community.chocolatey.org/packages/wps-office-free
+https://community.chocolatey.org/packages/vlc
+https://community.chocolatey.org/packages/mpv
+
+https://community.chocolatey.org/packages/goggalaxy
+
+choco install autohotkey
+choco install find-and-run-robot.install
+choco install msiafterburner
+choco install msys2
+
+choco install git
+choco install brave
+choco install wps-office-free
+choco install vlc
+choco install mpv
+
+choco install goggalaxy
+
+>>>> {win}💻🪟🌎 comando actualizcacion
+choco upgrade all -y
+scoop update --all
+winget upgrade --all
+
+
+indiegala, gog
+Victoria
+Scrcpy
+
+
+Paquetes, repositorios
+
+
+https://scoop.sh/
+https://community.chocolatey.org/packages/
+https://community.chocolatey.org/
+
+scoop install main/scrcpy
+scoop install extras/bugn
+scoop install extras/playnite
+
+>>>> {win}💻🪟🌎 aplicaciones con conexiones a internet
+netstat -b
+
+>>>> {win}💻🪟🌎 debloat
+>>>> {win}💻🪟🌎 texto
+.bat for check temperature windows 10
+
+https://stackoverflow.com/questions/24004300/batch-file-get-cpu-temperature-in-c-and-set-as-variable
+https://stackoverflow.com/questions/39738494/get-cpu-temperature-in-cmd-power-shell
+Bat 
+
+>>>> {win}💻🪟🌎 mando ps3
+— 🎮Nuevo! Como Conectar/Usar Mando de PS3 en PC Bluetooth y con Cable💻|2023 |Actualizado|No SCPdriver
+https://www.youtube.com/watch?v=fxBaoJbmEI8
+
+
+https://github.com/ViGEm/DsHidMini/releases/tag/v2.2.282.0
+https://github.com/ViGEm/BthPS3/releases/tag/setup-v2.1.153
+https://github.com/ViGEm/BthPS3/releases/tag/setup-v2.6.174.0
+
+
+scoop bucket add nonportable
+scoop install nonportable/dshidmini-np
+
+scoop bucket add extras
+scoop install extras/magpie
+
+Nvidia scaling
+
+>>>> {win}💻🪟🌎 compartir pantalla cast
+Win + K
+>>>> {win}💻🪟🌎 power toys, text extractor
+Alt + Shift + T
+
+netsh wlan show profile name 
+
+>>>> {win}💻🪟🌎 historial dns
+ipconfig /displaydns
+ipconfig /flushdns
+
+>>>> {win}💻🪟🌎 contraseñas almacenadas 
+
+⠀:netsh interface tcp set global autotuning=high
+ netsh interface tcp show global
+autotuning=normal
+
+@Gingy:Control Panel > Hardware and Sound > Change what the power buttons do > Change settings that are currently unavailable > Turn off fast startup
+https://vm.tiktok.com/ZM2UXTrwM/
+
+Mouse aceleration:
+https://vm.tiktok.com/ZM2UXTrwM/
+U can also just put m_mousespeed 0 in the console so acceleration is turned off and ignores windows pre settings
+
+Background apps:
+https://vm.tiktok.com/ZM2UXpyUN/
+
+Upgrade:
+https://vm.tiktok.com/ZM2U4BGnt/
+winget upgrade, winget upgrade -h --all and or winget upgrade -h --all --include-unknown
+
+Sound settings:
+App 
+https://vm.tiktok.com/ZM2U4U4SD/
+Or Just press Win Key + G…same thing.
+
+
+>>>> {win} 💻🪟🌎 Plan máximo rendimiento
+powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61
+>>>> {win} texto
+>>>> {win} texto
+>>>> {win} texto
+>>>> {win} texto
+>>>> {win} texto
+
+https://stackoverflow.com/questions/56220823/retrieve-state-of-windows-10-power-mode-slider
+
+📑🎼🎞️ Conexiones y abrir CMD como admin
+https://vm.tiktok.com/ZM28qc6hb/
+Ctrl+shift enter cmd : abrir como admin
+netstat -bn
