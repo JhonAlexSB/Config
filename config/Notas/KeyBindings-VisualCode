@@ -1,0 +1,32 @@
+>>> Shorcuts linux
+ctrl+`       | Abrir terminal integrada
+ctrl+shift+c | Abrir terminal en otra pestaña
+ctrl+/       | Comentar bloques codigo
+
+leader = espacio
+
+>>> Shorcuts VimCode
+leader e | Swith on/off explorer
+leader f | Acceder al explorer
+leader i | Moverse al anterior archivo
+leader o | Moverse al siguiente archivo
+leader p | Buscar entre archivos abiertos "Arriba y Abajo con  'k j' "
+
+leader m | ir al comienzo de la linea
+leader , | ir al final de la linea
+
+leader leader l | Crear split a la derecha del archivo actual
+leader leader h | Contraer split a la derecha del archivo actual
+leader l        | moverse al split derecho
+leader h        | moverse al split izquierdo
+
+
+leader w                | Guardar archivo
+leader q                | Cerrar archivo
+leader leader q         | Cerrar archivo sin guardar
+leader leader s (chart) | buscar coincidencia
+
+>>> Shorcuts VisualCode Plugins
+alt + l and alt + o | go live html
+alt + l and alt + c | stop live live html
+

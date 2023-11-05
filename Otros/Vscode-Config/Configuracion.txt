@@ -47,27 +47,27 @@
     },
 // Cerrar archivo sin guardar
     {
-      "before": [ "<leader><leader>", "q" ],
+      "before": [ "<leader>","<leader>", "q" ],
       "commands": [ ":q!" ]
     },
 // Splitear pantalla y archivo en focus posicionarlo a la derecha
     {
-      "before": [ "<leader>", "l" ],
+      "before": [ "<leader>","<leader>", "l" ],
       "commands": [ "workbench.action.moveEditorToNextGroup" ]
     },
 // Ejecutar en la parte nueva creada para volver a la normalidad
     {
-      "before": [ "<leader>", "h" ],
+      "before": [ "<leader>","<leader>", "h" ],
       "commands": [ "workbench.action.moveEditorToPreviousGroup" ]
     },
 // Pasar a la pantalla dividida derecha
     {
-      "before": [ "<leader>", "L" ],
+      "before": [ "<leader>", "l" ],
       "commands": [ "workbench.action.focusRightGroup" ]
     },
 // Pasar a la pantalla dividida izquierda
     {
-      "before": [ "<leader>", "H" ],
+      "before": [ "<leader>", "h" ],
       "commands": [ "workbench.action.focusLeftGroup" ]
     },
 
@@ -96,14 +96,14 @@
       // "commands": [ "workbench.action.quickopennavigatepreviousinfilepicker" ],
       //                                "when": "inFilesPicker && inQuickOpen"
     },
-// Ir al comienzo de la linea
-    {
-      "before": [ "<leader>", "O" ],
-      "after": [ "$" ]
-    },
 // Ir al final de la linea
     {
-      "before": [ "<leader>", "I" ],
+      "before": [ "<leader>", "," ],
+      "after": [ "$" ]
+    },
+// Ir al comienzo de la linea
+    {
+      "before": [ "<leader>", "m" ],
       "after": [ "0" ]
     },
 // Siguiente archivo
