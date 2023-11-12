@@ -162,6 +162,11 @@ ipconfig /flushdns
  netsh interface tcp show global
 autotuning=normal
 
+>>>> {win}💻🪟🌎 claves wifi en windows
+netsh wlan show profiles
+netsh wlan show profiles name=[profile name] key=clear
+
+
 @Gingy:Control Panel > Hardware and Sound > Change what the power buttons do > Change settings that are currently unavailable > Turn off fast startup
 https://vm.tiktok.com/ZM2UXTrwM/
 
