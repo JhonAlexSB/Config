@@ -130,6 +130,24 @@ ghp |  Funcina como un git diff (Ver cambios realiazdos)
 
 
 " ------------
+" ( Configuracion  ) { Nerdtreee  }
+" >>>>>>
+" https://github.com/preservim/nerdtree
+" ------------
+
+,n | Abrir file manager
+
+" ------------
+" ( Configuracion  ) { Coc  }
+" >>>>>>
+" https://github.com/neoclide/coc.nvim
+" https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
+" ------------
+
+
+
+
+" ------------
 "  " ( Configuracion  ) { Vimux  }
 " >>>>>>
 " https://github.com/preservim/vimux

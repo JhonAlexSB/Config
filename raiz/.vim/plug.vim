@@ -2,6 +2,7 @@
  
 " Autocompletador coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
  
 """ Or build from source code by using yarn: https://yarnpkg.com
 "Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install  --frozen-lockfile'}
@@ -10,6 +11,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'junegunn/vim-easy-align'
 Plug 'preservim/vimux'
+
+Plug 'bling/vim-bufferline'
+
 
 " Temas
 Plug 'morhetz/gruvbox'

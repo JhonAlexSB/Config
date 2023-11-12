@@ -113,6 +113,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " ( Configuracion  ) { Coc  }
 " >>>>>>
 " https://github.com/neoclide/coc.nvim
+" https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
 " ------------
 
 " CocInstall coc-prettier
