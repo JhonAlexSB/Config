@@ -21,18 +21,6 @@ call :disableFunc SEMgrSvc
 :: Propagación de certificados {dependencia} [tarjetas inteligentes]
 call :disableFunc CertPropSvc
 
-REM ----- Impresora
-:: Cola de impresión {dependencia} [impresora o fax]
-call :disableFunc Spooler
-:: Extensiones y notificaciones de impresora {dependencia} [impresora]
-call :disableFunc PrintNotify
-:: Fax
-call :disableFunc Fax
-:: PrintWorkflow_314914e {dependencia} [impresora]
-call :disableFunc PrintWorkflowUserSvc_314914e
-:: Servidor {dependencias} [compartir archivos, impresoras, de forma remota]
-call :disableFunc LanmanServer
-
 REM ----- Virtualizacion
 :: interfaz de servicio invitado de Hyper-V {dependencia} [virtualizacion]
 call :disableFunc vmicguestinterface
