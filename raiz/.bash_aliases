@@ -23,6 +23,7 @@ alias ...="cd ../../"
 alias ....="cd ../../../"
 alias .....="cd ../../../../"
 alias v="vim"
+alias ppp="tmux new-session  \; split-window -h cmus\; split-window -v keynav\; attach"
 alias n.="nemo"
 alias nv="nvim"
 alias vncc='vncserver :0'
