@@ -197,7 +197,7 @@ xset dpms 30 0 0 | Standby: 0 Suspend: 0 Off:0
 
 >>>> {topic} cambiar hora linux
 
-sudo date -s '2023-06-09 18:08:56'
+sudo date -s '2023-12-14 10:08:56'
 
 >>>> {topic} administracion usuario
 
@@ -230,6 +230,7 @@ Activar uso de archivos compartidos
 
 scrcpy -d 
 scrcpy -b 2M -m 1024 --max-fps 25 
+scrcpy --max-fps 15 -m 1024 --video-bit-rate=1000000 --crop 1024:1285:0:150 --display-buffer=50 --audio-buffer=200 --audio-bit-rate=64K
 
 scrcpy
 
