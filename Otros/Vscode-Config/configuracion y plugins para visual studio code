@@ -34,6 +34,8 @@ https://marketplace.visualstudio.com/items?itemName=s-nlf-fh.glassit
 https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
 https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap
 https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+https://marketplace.visualstudio.com/items?itemName=wwm.better-align
+https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
 
 ext install ritwickdey.LiveServer
 ext install vscodevim.vim
@@ -42,11 +44,17 @@ ext install s-nlf-fh.glassit
 ext install PKief.material-icon-theme
 ext install bradgashler.htmltagwrap
 ext install esbenp.prettier-vscode
+ext install wwm.better-align
+ext install formulahendry.code-runner
+ext install ms-python.python
+ext install MS-CEINTL.vscode-language-pack-es
+
 
 
 *minify
 *svg viewer
 
+@command:workbench.action.terminal.new
 
 
 - Cerrrar terminal integrada 	->	Ctrl + j
@@ -63,8 +71,6 @@ ext install esbenp.prettier-vscode
 	settings	-> Line Numbers 	->	relative
 
 
-Code Runner						https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
-Better align						https://marketplace.visualstudio.com/items?itemName=wwm.better-align
 abrir termina
 	open new terminal 	->	ctrl + shift + c
 	integrated terminal	->	ctrl + shift + c
