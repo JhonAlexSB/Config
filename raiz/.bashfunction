@@ -69,12 +69,12 @@ mkcd ()
 mkdir -p -- "$1" && cd -P -- "$1"
 }
 
-# Automatically do an ls after each cd
+# Automatically do an ls after each cd (limit to 10 results)
 cd() {
   if [ -n "$1" ]; then
-    builtin cd "$@" && ls --group-directories-first
+    builtin cd "$@" && ls --group-directories-first | head -n 10
   else
-    builtin cd ~ && ls --group-directories-first
+    builtin cd ~ && ls --group-directories-first | head -n 10
   fi
 }
 
