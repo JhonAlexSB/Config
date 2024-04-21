@@ -9,6 +9,9 @@ alias ls='ls -CFp $lsc $dirs'
 alias l.='ls -ap $lsc $dirs | grep -E "^\."'
 alias l.s='ls -ap $lsc $dirs | grep -E "^\."'
 alias fclist="fc-list | grep"
+alias sion="/home/jhon/Descargas/velneo-lin64-vclient-setup-34.1.4/Velneo-vClient/vClient.sh"
+alias vadmin="/home/jhon/Descargas/velneo-lin64-vadmin-setup-34.2.5/Velneo-vAdmin/vAdmin.sh"
+alias conf="gnome-control-center"
 
 alias q="exit"
 alias upbash="source ~/.bashrc"
