@@ -26,11 +26,11 @@ set $brightness brightnessctl
 
 set $red connman-gtk
 set $compositor picom
-set $output eDP1
-set $save_screen xset dpms 60 0 0
+set $output eDP-1
+set $save_screen xset dpms 1000 0 0
 # xset dpms | Standby: 60 Suspend: 0 Off: 0
 # xset q    | show config
-set $wallpaper feh --bg-scale $HOME/.wallpaper/Jinx/1188254.jpg
+set $wallpaper feh --bg-scale $HOME/.wallpaper/Jinx/1193347.jpg
 
 # i3 config file (v4)
 #
@@ -337,8 +337,8 @@ separator_symbol "|"
 }
 
 #client.focused #bf7500 #bf7500 #bf7500 #ffe570
-gaps inner 1
-gaps outer 1
+#gaps inner 1
+#gaps outer 1
 #smart_gaps on
 
 for_window [class="^.*"] border pixel 3
