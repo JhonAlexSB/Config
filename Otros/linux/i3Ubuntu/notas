@@ -22,3 +22,23 @@ $ pair AA:BB:CC:DD:EE:FF
 $$
 gnome-control-center
 
+
+--------- install third-party software for graphics and wifi hardware and additional media formats
+--------- instalacion de drivers de terceros que se hace al inicio de ubuntu desde boot
+
+https://askubuntu.com/questions/290293/how-can-i-install-the-third-party-software-option-after-ive-skipped-it-in-the
+
+sudo apt-get install ubuntu-restricted-extras
+
+
+--------- esm-apps quitar mensaje
+
+https://ugeek.github.io/blog/post/2023-04-13-ubuntu-elimina-get-more-security-updates-through-ubuntu-pro.html
+
+mkdir -p ~/.relocated_apt
+sudo mv /etc/apt/apt.conf.d/20apt-esm-hook.conf ~/.relocated_apt/.
+
+sudo apt list –upgradable
+sudo apt-get dist-upgrade
+
+
