@@ -232,7 +232,8 @@ scrcpy -d
 scrcpy -b 2M -m 1024 --max-fps 25 
 scrcpy --max-fps 15 -m 1024 --video-bit-rate=1000000 --crop 1024:1285:0:150 --display-buffer=50 --audio-buffer=200 --audio-bit-rate=64K
 
-scrcpy
+scrcpy --max-fps 15 -m 1024 --video-bit-rate=1000000 --display-buffer=50 --audio-buffer=200 --audio-bit-rate=64K
+scrcpy --max-fps 15 -m 1024   --display-buffer=50
 
 >>>> {topic} scrcpy WIFI
 # with the phone connect and scrcpy run in usb 
@@ -240,6 +241,14 @@ adb tcpip 5555
 adb connect ip_phone
 
 A00000K580161903805
+
+scrcpy --tcpip=192.168.1.74 --max-fps 10 -m 1024 --display-buffer=50
+scrcpy --tcpip=192.168.0.4 --max-fps 23 -m 600 --display-buffer=300
+
+scrcpy --max-fps 15 -m 1024 --crop 1024:1285:0:100 --display-buffer=50 --audio-buffer=200 --audio-bit-rate=64K
+
+scrcpy --tcpip=192.168.1.38 --max-fps 20 -m 1024 --display-buffer=50 -db-crop 1224:1385:0:150
+scrcpy --tcpip=192.168.1.64 --max-fps 20 -m 1024 
 
 >en computador
 adb devices
