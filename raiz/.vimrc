@@ -4,7 +4,7 @@ so ~/.vim/plugconf.vim
 "so ~/.config/Notas/KeyBindings-Nvim
 "so ~/.config/Notas/KeyBindings-Vim
 "so ~/.vim/coc-settings.json
-so ~/.vim/coc.vim
+"so ~/.vim/coc.vim
 " ~/.config/vim/snippets/textmate
 " ~/.config/vim/snippets/ultisnippets
 
@@ -43,6 +43,10 @@ nmap <leader>f :set filetype=
 ":'<,'>
 vmap <leader>i :''norm 
 nmap <leader><leader>h :cd %:h<CR> 
+
+
+nmap <leader><leader>m :set nonu nornu<CR>
+nmap <leader><leader>mm :set nu rnu<CR>
 
 nmap <leader>so :so ~/.vimrc<CR>
 nmap <leader>e :e ~/.vimrc<CR>
@@ -176,7 +180,8 @@ au FocusGained,BufEnter * :checktime
 
 set cursorline
 " Uncomment below to set the max textwidth. Use a value corresponding to the width of your screen.
-set formatoptions=tcqrn1
+"set formatoptions=tcqrn1
+set formatoptions=ansi
 set noshiftround
 
 set backspace=indent,eol,start " Fixes common blackspace problems
@@ -230,8 +235,8 @@ set tabstop=2 " Taps con dos espacios " set sw=2
 set softtabstop=2
 set shiftwidth=2 " Espaciado automatico despues de enter en {}()[]
 
-set textwidth=80 " Ancho del margen del documento
-"set wrap "  Ancho del documento igual a la ventana
+"set textwidth=80 " Ancho del margen del documento
+set nowrap "  Ancho del documento igual a la ventana
 set relativenumber " Numeros relativos en la parte izquierda
 "set laststatus=1 " Sempre visible barra inferior de estado
 set autoindent " Autoindenta los tap segun la linea anterior

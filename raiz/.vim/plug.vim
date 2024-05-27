@@ -1,8 +1,8 @@
  call plug#begin('~/.config/pluginsVim')
  
 " Autocompletador coc
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
  
 """ Or build from source code by using yarn: https://yarnpkg.com
 "Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install  --frozen-lockfile'}
@@ -28,7 +28,7 @@ Plug 'dense-analysis/ale'
 
 " Snippet
 Plug 'mattn/emmet-vim'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 " Plug 'honza/vim-snippets'
 
 ""Sintax
