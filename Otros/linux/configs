@@ -1,0 +1,5 @@
+>>>> cambiar terminal
+chsh -s $(which fish)
+chsh -s $(which bash)
+
+

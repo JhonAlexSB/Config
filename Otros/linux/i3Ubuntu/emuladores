@@ -1,0 +1,42 @@
+//////////// pcsx2 (ps2 emulador)
+sudo apt install pcsx2
+
+bios
+
+//////////// ppsspp (psp emulador)
+sudo snap instatall ppsspp-emu
+
+bios
+
+//////////// zerotier (jugar interconexion)
+
+sudo apt install snap snapd
+sudo snap install zerotier
+
+zerotier-one -d
+zerotier-one -T
+
+zerotier-one -p 9993
+
+zerotier missing port 
+https://stackoverflow.com/questions/68494575/zerotier-cli-command-giving-error-missing-port-and-zerotier-one-port-not-found
+https://docs.zerotier.com/cli/
+
+sudo zerotier-one service start
+
+sudo zerotier-one join <network-id>
+sudo zerotier-one leave <network-id>
+
+--
+chmod 600 ~/.ssh/id_rsa
+
+-- ssh para usar especificar llave privada a "mi_servidor"
+Host mi_servidor
+    HostName servidor.ejemplo.com
+    User tu_usuario
+    IdentityFile ~/.ssh/id_rsa
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
+
