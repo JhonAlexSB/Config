@@ -226,3 +226,28 @@ https://atareao.es/tutorial/vim/buscar-y-reemplazar-en-vim/
 netsh wlan show profiles
 netsh wlan show profiles name=[profile name] key=clear
 
+>>> sshd no hostkeys available -- exiting.
+https://unix.stackexchange.com/questions/642824/ssh-fails-to-start-due-to-missing-host-keys
+
+ssh-keygen -A
+service ssh --full-restart
+
+>>> ssh conexion segura
+https://parzibyte.me/blog/2019/07/31/servidor-ssh-termux-android/
+
+touch .ssh/authorized_keys
+chmod 600 .ssh/authorized_keys
+chmod 700 .ssh/
+
+cd $PREFIX/etc/ssh
+v sshd_config
+
+PrintMotd no
+PasswordAuthentication no
+PubkeyAcceptedKeyTypes +ssh-dss
+Subsystem sftp /data/data/com.termux/files/usr/libexec/sftp-server
+
+conectarse
+
+ssh @TU_IP -p 8022
+ssh usuario@TU_IP -p 8022

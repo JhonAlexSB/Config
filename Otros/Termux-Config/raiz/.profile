@@ -1,9 +1,10 @@
 
 if [ -n "$TMUX" ];
 then
-  echo Inside tmux
-  fish
+#  fish
   #source ~/.bashrc
+  source ~/.bashrc
+  clear
 else
   source ~/.bashrc
   if [ -f ~/.log.sh ]; then
