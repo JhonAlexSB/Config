@@ -41,4 +41,17 @@ sudo mv /etc/apt/apt.conf.d/20apt-esm-hook.conf ~/.relocated_apt/.
 sudo apt list –upgradable
 sudo apt-get dist-upgrade
 
+---------- deshabilitar hibernación "tener cuidado con temperaturas en espacios cerrados"
 
+Para evitar que Ubuntu entre en suspensión al cerrar la tapa del portátil, 
+puedes seguir estos pasos:
+
+Abre la terminal en Ubuntu.
+Edita el archivo /etc/systemd/logind.conf con permisos de administrador:
+sudo nano /etc/systemd/logind.conf
+
+Busca la opción HandleLidSwitch=suspend y cámbiala a HandleLidSwitch=ignore.
+Guarda los cambios y reinicia los servicios de systemd:
+sudo systemctl restart systemd-logind
+
+si no funciona asegúrate de que en el archivo anterior la opción LidSwitchIgnoreInhibited=no 
