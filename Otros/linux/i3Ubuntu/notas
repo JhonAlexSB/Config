@@ -7,6 +7,17 @@ Manually
 
 ===================
 
+---instalar herramientas
+sudo apt install bluez blueman
+
+---activar herramientas
+sudo systemctl start bluetooth
+sudo systemctl enable bluetooth
+
+
+la siguiente linea dentro de -> ~/.config/i3/config
+exec --no-startup-id blueman-applet
+
 service bluetooth start
 bluetoothctl
 $ power on
