@@ -31,6 +31,8 @@ Plug 'mattn/emmet-vim'
 "Plug 'SirVer/ultisnips'
 " Plug 'honza/vim-snippets'
 
+Plug 'dhruvasagar/vim-table-mode'
+
 ""Sintax
 "Plug 'sheerun/vim-polyglot' "resalta de color los lenguajes de programacion
 "Plug 'lilydjwg/colorizer' "Color hexadecimal en css, pinta

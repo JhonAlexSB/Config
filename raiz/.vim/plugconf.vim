@@ -82,10 +82,10 @@ let b:ale_linters = ['php', 'javascript']
 
 set background=dark
 
-"""Desactivar italica
-  let g:gruvbox_italic=0 
+""""Desactivar italica
+  "let g:gruvbox_italic=0 
 colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'hard'
+"let g:gruvbox_contrast_dark = 'hard'
 
 
 ""colorscheme darkblue
@@ -190,4 +190,14 @@ map <Leader>vl :VimuxRunLastCommand<CR>
 
 " Inspect runner pane
 map <Leader>vi :VimuxInspectRunner<CR>
+
+" ------------
+"  " ( Configuracion  ) { vim-table-mode  }
+" >>>>>>
+" https://github.com/dhruvasagar/vim-table-mode
+" https://www.youtube.com/watch?v=9lVQ0VJY3ps
+"  " ------------
+
+let b:table_mode_corner='+'
+
 
