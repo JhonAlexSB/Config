@@ -92,7 +92,7 @@ color=#91E78B
 [temperature]
 #label=
 label=
-command=~/.config/i3blocks/temperature
+command= ~/.config/i3blocks/temperature
 interval=10
 color=#ff7f00
 
@@ -167,3 +167,12 @@ interval=once
 # https://openweathermap.org/weather-conditions
 # https://github.com/vivien/i3blocks
 # 
+
+[battery]
+command= ~/.config/i3blocks/scripts/battery_notify.sh
+interval=60
+
+[nautilus]
+command= ~/.config/i3blocks/scripts/button_explorer.sh
+interval=once
+signal=1
