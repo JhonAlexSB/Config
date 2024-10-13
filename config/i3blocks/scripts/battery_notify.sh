@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define el umbral de batería baja y llena
-LOW_BATTERY_THRESHOLD=20
+LOW_BATTERY_THRESHOLD=35
 FULL_BATTERY_THRESHOLD=95
 
 # Obtén el porcentaje de la batería actual
