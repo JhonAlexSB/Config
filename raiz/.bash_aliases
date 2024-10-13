@@ -9,8 +9,9 @@ alias ls='ls -CFp $lsc $dirs'
 alias l.='ls -ap $lsc $dirs | grep -E "^\."'
 alias l.s='ls -ap $lsc $dirs | grep -E "^\."'
 alias fclist="fc-list | grep"
-alias sion="/home/jhon/Descargas/velneo-lin64-vclient-setup-34.1.4/Velneo-vClient/vClient.sh"
-alias vadmin="/home/jhon/Descargas/velneo-lin64-vadmin-setup-34.2.5/Velneo-vAdmin/vAdmin.sh"
+alias sion="/home/jhon/Descargas/velneo/Velneo-vClient/vClient.sh"
+alias vadmin="/home/jhon/Descargas/velneo/Velneo-vAdmin/vAdmin.sh"
+alias vdata="/home/jhon/Descargas/velneo/Velneo-vDataClient/vDataClient.sh"
 alias conf="gnome-control-center"
 
 alias q="exit"
@@ -27,7 +28,9 @@ alias ....="cd ../../../"
 alias .....="cd ../../../../"
 alias v="vim"
 alias ppp="tmux new-session  \; split-window -h cmus\; split-window -v keynav\; attach"
-alias n.="nemo"
+alias pppk="pkill cmus; pkill keynav"
+#alias n.="nemo ."
+alias n.="nautilus ."
 alias nv="nvim"
 alias vncc='vncserver :0'
 alias vnck='vncserver -kill '
@@ -43,7 +46,7 @@ alias srcd="deactivate"
 alias protl="proot-distro login archlinux"
 alias txon="termux-open"
 
-alias jpgcomp="jpegoptim -m 30, 100"
+alias jpgcomp="jpegoptim -m 30, 100 *.jpg"
 alias pngcomp="pngquant --quality 30-50 --strip"
 
 # Git shorcuts
@@ -64,11 +67,16 @@ alias pc="pacman"
 alias batp='bat -p'
 alias nanon='nano -jlm' # jumpscreensize ,numbers ,mouse
 alias mysqld='mysqld_safe -u root &'
+# translate-shell
 alias transns='trans en:es '
 alias transsn='trans es:en '
-alias backuprcall="rclone sync -v sdcard/data/Udemy/ mydropbox:Udemy/; rclone sync -v sdcard/data/Platzi/ mydropbox:Platzi; rclone sync -v sdcard/data/Dropbox mydropbox:Dropbox; rclone sync -v sdcard/Pictures/Categorias/ mydropbox:img/categorias/"
+alias transis='trans it:es '
+alias transsi='trans es:it '
+alias backup="rclone sync -v /home/jhon/1_Hospital_Archivos gdriveB:Hospital/"
+alias teclas="screenkey -p fixed -g 50%x10%+25%+75% -t 1"
+alias apuntes='vim /home/jhon/1_Hospital_Archivos/Raiz/apuntes'
+alias shd='~/.local/bin/shutdown.sh'
 
-alias songs="play /data/data/com.termux/files/home/storage/shared/Glue70.mp3"
 
 # Copiado, Movido y borrado recursivo
 alias cpr="cp -r"
@@ -90,6 +98,7 @@ alias ip="curl ipinfo.io"
 alias rcsync="rclone sync -v"
 alias ifc="ifconfig"
 alias dirphp="cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/"
+alias pingg="ping 142.251.132.142 -c 9999"
 
 # find
 alias fd="find -name"

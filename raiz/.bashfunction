@@ -1,11 +1,25 @@
 # >>>>>> Functions
 
-function sftpp(){
-  sftp -oPort=${1} hostname@192.168.${2}
+function encript(){ 
+  openssl enc -aes-256-cbc -salt -in ${1} -out ${1}.enc
 }
 
-function sshp(){
-  ssh -p ${1} hostname@192.168.${2}
+# in = file.ext.enc | out = file.ext
+function decript(){ 
+  openssl enc -d -aes-256-cbc -in ${1} -out ${2}
+}
+
+
+function pin(){ 
+  ping 192.168.16.${1}
+}
+
+function sftpp(){ 
+  sftp -oPort=${1} u0_a197@192.168.${2} 
+}
+
+function sshp(){ 
+  ssh -p ${1} u0_a192@192.168.${2} 
 }
 
 function countdown(){
@@ -52,6 +66,16 @@ function addtag(){
   done
 }
 
+function renamemp3(){
+  mkdir -v "rename"
+
+    contador=1
+  for i in *."$1"
+    do
+    contador=$(($contador + 1))
+    mv "$i" "rename/${contador}${i}"
+  done
+}
 
 # erase add caracteres variables to file 
 # 1 input extension, 2 input number caracters to delete

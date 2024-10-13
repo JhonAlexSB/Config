@@ -2,4 +2,9 @@
 chsh -s $(which fish)
 chsh -s $(which bash)
 
+>>>> apagado mediante terminal
+~/.local/bin/shutdown.sh
+#!/bin/bash
+systemctl poweroff
+
 
