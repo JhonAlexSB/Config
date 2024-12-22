@@ -1,24 +1,32 @@
 # >>>>>> Functions
 
-function encript(){ 
+function encript(){
   openssl enc -aes-256-cbc -salt -in ${1} -out ${1}.enc
 }
 
 # in = file.ext.enc | out = file.ext
-function decript(){ 
+function decript(){
   openssl enc -d -aes-256-cbc -in ${1} -out ${2}
 }
 
+espera() {
+    sleep "$1" && $2
+}
 
 function pin(){ 
   ping 192.168.16.${1}
 }
 
-function sftpp(){ 
+function pin1(){
+  ping 192.168.${1}
+}
+
+
+function sftpp(){
   sftp -oPort=${1} u0_a197@192.168.${2} 
 }
 
-function sshp(){ 
+function sshp(){
   ssh -p ${1} u0_a192@192.168.${2} 
 }
 
