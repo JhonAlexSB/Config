@@ -88,3 +88,11 @@ mysqladmin -u newuser -p password ‘password2’
 
 sudo ln -s /usr/share/phpmyadmin /var/www/
 sudo service apache2 restart
+
+|| ---------- Root password doesn't func ----------
+https://stackoverflow.com/questions/10895163/how-to-find-out-the-mysql-root-password
+
+sudo mysql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password you want to use';
+
+
