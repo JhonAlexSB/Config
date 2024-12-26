@@ -12,7 +12,8 @@ alias fclist="fc-list | grep"
 alias sion="/home/jhon/Descargas/velneo/Velneo-vClient/vClient.sh"
 alias vadmin="/home/jhon/Descargas/velneo/Velneo-vAdmin/vAdmin.sh"
 alias vdata="/home/jhon/Descargas/velneo/Velneo-vDataClient/vDataClient.sh"
-alias conf="gnome-control-center"
+#alias conf="gnome-control-center" # Ubuntu
+alias conf="cinnamon-settings" # Linux mint
 
 alias q="exit"
 alias upbash="source ~/.bashrc"
