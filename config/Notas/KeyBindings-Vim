@@ -160,3 +160,10 @@ vp | Ejecutar comando
 vl | Ejecutar el ultimo comando
 vi | Ejecutar inspector
 
+" ------------
+"  " ( Configuracion  ) { vim-table-mode  }
+" >>>>>>
+" https://github.com/dhruvasagar/vim-table-mode
+"  " ------------
+:TableModeEnable
+<leader> tic | add cow

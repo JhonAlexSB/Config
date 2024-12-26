@@ -1,5 +1,6 @@
 ### Gestor de archivos en la terminal
 ## Ruta Archivo configuracion ~/.config/ranger/rc.conf
+# https://gist.github.com/heroheman/aba73e47443340c35526755ef79647eb
 
 ? = Despliega menu de ayuda
 
