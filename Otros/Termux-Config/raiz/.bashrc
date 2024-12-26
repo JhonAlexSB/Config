@@ -150,3 +150,4 @@ setxkbmap -model pc105
 
 #setxkbmap us
 # setxkbmpa --query
+clear
