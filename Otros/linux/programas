@@ -1,3 +1,15 @@
+linea de comandos
+wipe    | * Eliminacion segura de archivos
+xclip   | * Para tener portapapeles compart-
+vim-gui | ido entre git y el sistema
+rclone  | * Backups
+ncdu    | * Buscar archivos por tamaño
+htop    | * Administrador de tareas
+
+flatpak gui
+flatpak install flathub com.rtosta.zapzap
+flatpak install flathub org.telegram.desktop
+
 ----- gimp
 /////gimp cuado negro
   https://www.youtube.com/watch?v=rAw48FqTptg

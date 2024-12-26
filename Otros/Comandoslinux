@@ -278,5 +278,17 @@ rclone sync -v sdcard/data/Udemy/ mydropbox:Udemy/; rclone sync -v sdcard/data/P
 connmanctl enable wifi
 connmanctl disable wifi
 
+>>> brillo ó iluminación
+
+https://askubuntu.com/questions/1410762/adjusting-screen-brightness-requires-sudo
+usermod -aG video ${USER}
+sudo brightnessctl set 30%
+
+
+>>> Apagar linux desde terminal
+alias shd='~/.local/bin/shutdown.sh'
+
+#!/bin/bash
+sudo shutdown -h now
 
 
