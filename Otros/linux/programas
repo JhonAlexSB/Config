@@ -9,6 +9,8 @@ htop    | * Administrador de tareas
 flatpak gui
 flatpak install flathub com.rtosta.zapzap
 flatpak install flathub org.telegram.desktop
+flatpak install flathub com.visualstudio.code
+flatpak run com.visualstudio.code
 
 ----- gimp
 /////gimp cuado negro

@@ -6,7 +6,12 @@ Borrar archivo y/o carpetas
 rm -rf files/
 
 -- Comando puertos
-sudo /etc/init.d/apache2 stop; sudo /etc/init.d/mysql stop; sudo /etc/init.d/cups stop
+sudo /etc/init.d/apache2 stopps aux | grep sshd; sudo /etc/init.d/mysql stop; sudo /etc/init.d/cups stop
+sudo /etc/init.d/ssh.service stop
+sudo pkill anydesk
+sudo systemctl stop ssh
+sudo systemctl stop ssh.socket
+
 sudo /etc/init.d/apache2 start; sudo /etc/init.d/mysql start;
 
 -- Ejecutar una aplicacion sin depender de la linea de comandos
